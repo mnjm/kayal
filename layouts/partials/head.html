@@ -22,14 +22,8 @@
   {{- end }}
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  {{ partialCached "head/css.html" . }}
-
-  {{ $enableCodeCopy := .Site.Params.enableCodeCopy | default false }}
-  {{ if $enableCodeCopy }}
-  {{ partial "head/js.html" "js/codecopy.js" }}
-  {{ end }}
-
-  {{ partial "head/js.html" "js/theme.js" }}
+  {{ partial "head/css.html" . }}
+  {{ partial "head/js.html" . }}
 
   {{/* Icons */}}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}" />

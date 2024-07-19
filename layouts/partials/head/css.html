@@ -1,9 +1,17 @@
-{{- with resources.Get "css/main.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
+{{ $styles := slice "css/main.css" "css/custom.css" }}
+{{ if eq hugo.Environment "development" }}
+  {{ range $styles }}
+    {{ with resources.Get . }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+  {{ end }}
+{{ else }}
+{{ $cssConcatenated := slice }}
+{{ range $index, $style := $styles }}
+  {{ with resources.Get $style }}
+    {{ $cssConcatenated = $cssConcatenated | append . }}
+  {{ end }}
+{{ end }}
+  {{ $bundleCSS := $cssConcatenated | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink }}" integrity="{{ $bundleCSS.Data.Integrity }}" />
+{{ end }}
