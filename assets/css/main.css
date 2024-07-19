@@ -43,6 +43,7 @@ body {
   color: var(--primary-color);
   display: block;
   margin: 8px;
+  transition: background 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 ::selection {
