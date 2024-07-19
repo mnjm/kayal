@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ $groupByYear := .Params.groupByYear | default (.Site.Params.list.groupByYear | default "none") }}
   {{ $showDate := .Params.showDate | default (.Site.Params.list.showDate | default true) }}
-  <h1 class="pg-title">{{ .Title }}</h1>
+  <h1 class="pg-title">{{ .Title | emojify }}</h1>
   {{ .Content }}
   <section>
 
