@@ -36,6 +36,10 @@ invertPagination = true
 showToC = true
 openToC = false
 
+[params.taxonomy]
+showCount = true
+cardView = true
+
 [[params.social]]
 name = "Email"
 icon = "email"

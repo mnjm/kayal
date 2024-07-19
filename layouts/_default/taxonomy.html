@@ -1,0 +1,32 @@
+{{ define "main" }}
+  {{ $showCount := .Params.showCount | default (.Site.Params.taxonomy.showCount | default true) }}
+  {{ $cardView := .Params.cardView | default (.Site.Params.taxonomy.cardView | default false) }}
+  {{/* Display content if any */}}
+  {{ .Content }}
+<h2> {{ .Title | emojify }} </h2>
+  {{ if not $cardView }}
+    <ul class="lst">
+    {{ range .Data.Terms }}
+      <li>
+        <div class="lst-a">
+          <a href="{{ .Page.RelPermalink }}">{{ .Page.Title | emojify }}</a>
+          {{ if $showCount }}
+            <span class="lst-count"> ({{ .Count }}) </span>
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+  {{ else }}
+  <div class="taxny-card-container">
+    {{ range .Data.Terms }}
+      <div class="taxny-card">
+          <a href="{{ .Page.RelPermalink }}">{{ .Page.Title | emojify }}</a>
+          {{ if $showCount }}
+            <span class="lst-count"> ({{ .Count }}) </span>
+          {{ end }}
+      </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</ul>
+{{ end }}

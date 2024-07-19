@@ -568,3 +568,16 @@ blockquote {
   text-decoration: initial;
   border: initial;
 }
+
+.taxny-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.taxny-card {
+  flex: 1 0 200px;
+  margin: 10px;
+  background-color: var(--secondary-color-dark);
+  padding: 10px;
+  border-radius: 4px;
+}
