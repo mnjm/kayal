@@ -1,0 +1,3 @@
+{{- if not (hugo.Environment "development") }}
+  {{ partial "analytics/google.html" . }}
+{{ end }}

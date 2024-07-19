@@ -45,6 +45,23 @@
   {{/* vendor */}}
   {{ partial "head/vendor.html" . }}
 
+  {{/* analytics */}}
+  {{ partialCached "analytics/main.html" . }}
+
+  {{/* Site Verification */}}
+  {{ with .Site.Params.verification.google }}
+    <meta name="google-site-verification" content="{{ . }}" />
+  {{ end }}
+  {{ with .Site.Params.verification.bing }}
+    <meta name="msvalidate.01" content="{{ . }}" />
+  {{ end }}
+  {{ with .Site.Params.verification.pinterest }}
+    <meta name="p:domain_verify" content="{{ . }}" />
+  {{ end }}
+  {{ with .Site.Params.verification.yandex }}
+    <meta name="yandex-verification" content="{{ . }}" />
+  {{ end }}
+
   {{ if templates.Exists "partials/extend-head.html" }}
   {{ partialCached "extend-head.html" .Site }}
   {{ end }}

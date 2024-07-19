@@ -74,6 +74,10 @@ name = "About"
 url = "/about/"
 weight = 3
 
+# [services]
+#   [services.googleAnalytics]
+#     ID = 'G-MEASUREMENT_ID'p
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
