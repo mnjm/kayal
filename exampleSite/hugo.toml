@@ -1,0 +1,77 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Kayal'
+theme = "kayal"
+paginate = 10
+
+[params]
+copyright = "Manjunath Mohan"
+enableCodeCopy = true
+removeAttribution = false
+showThemeSwitcher = true
+defaultTheme = "auto" # light, dark, auto
+
+[params.homepage]
+headline = "Hi👋, Welcome to my site"
+image = "imgs/profile.jpg"
+where = "right" # right, left, top
+showRecent = true
+showRecentLabel = "Featured"
+showRecentItems = 4
+showMore = true
+showMoreDest = "/posts"
+
+[params.list]
+groupByYear = true
+showDate = true
+
+[params.article]
+hidden = false
+showDate = true
+showModDate = true
+showReadingTime = true
+showPagination = true
+invertPagination = true
+showToC = true
+openToC = false
+
+[[params.social]]
+name = "Email"
+icon = "email"
+url = "mailto:manjunat.mohan@gmail.com"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/mnjm"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://linkedin.com/in/mnjm"
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 1
+
+[[menu.main]]
+name = "Projects"
+url = "/projects"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]

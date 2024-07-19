@@ -1,0 +1,22 @@
+{{ if .Params.showPagination | default (.Site.Params.article.showPagination | default true) }}
+{{ if or .NextInSection .PrevInSection }}
+{{ $next := .NextInSection }}
+{{ $prev := .PrevInSection }}
+{{ if .Params.invertPagination | default (.Site.Params.article.invertPagination | default false) }}
+{{ $next = .PrevInSection }}
+{{ $prev = .NextInSection }}
+{{ end }}
+<nav class="sngl-pagn">
+  <span class="prev">
+  {{ with $prev }}
+  <a href="{{ .RelPermalink }}"> {{ .Title | emojify }} </a>
+  {{ end }}
+  </span>
+  <span class="next">
+  {{ with $next }}
+  <a href="{{ .RelPermalink }}"> {{ .Title | emojify }} </a>
+  {{ end }}
+  </span>
+</nav>
+{{ end }}
+{{ end }}

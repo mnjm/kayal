@@ -1,0 +1,28 @@
+{{ $showRecent := .Site.Params.homepage.showRecent | default true }}
+{{ $showRecentLabel := .Site.Params.homepage.showRecentLabel | default "Recent" }}
+{{ $showRecentItems := .Site.Params.homepage.showRecentItems | default 3 }}
+{{ $showMore := .Site.Params.homepage.showMore | default false }}
+{{ $showMoreDest := .Site.Params.homepage.showMoreDest | default "/posts" }}
+
+{{ if $showRecent }}
+<div class="featured" >
+  <h1>{{ $showRecentLabel }}</h1>
+  {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+  {{ range first $showRecentItems $paginator.Pages }}
+  <section class="list-item">
+    <h2 class="ft-title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h2>
+    <div class="meta">
+      {{ partial "single/meta.html" . }}
+    </div>
+    {{ template "partials/home/pg-desc.html" . }}
+    <div class="readmore"> <a href="{{ .RelPermalink }}">Read more &rarr;</a> </div>
+  </section>
+  {{ end }}
+  {{ if $showMore }}
+  <div class="showmore">
+    <button onclick="window.location.href = '{{ $showMoreDest }}'"> Show More </a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

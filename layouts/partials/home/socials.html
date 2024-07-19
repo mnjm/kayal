@@ -1,0 +1,14 @@
+<div class="socials">
+    <span> Socials </span>
+    <ul>
+        {{- range $index, $key := .Site.Params.Social -}}
+        <li>
+            <a href="{{ $key.url }}" rel="me" title="{{ $key.name }}">
+                <span class="socials-icon">
+                {{ partial "icon.html" $key.icon }}
+                </span>
+            </a>
+        </li>
+        {{- end -}}
+    </ul>
+</div>

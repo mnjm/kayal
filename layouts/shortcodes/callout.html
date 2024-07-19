@@ -1,0 +1,29 @@
+{{ if .IsNamedParams }}
+  {{ $.Scratch.Set "icon" (default "triangle-exclamation" (.Get "icon") ) }}
+  {{ $.Scratch.Set "cardColor" (.Get "cardColor") }}
+  {{ $.Scratch.Set "iconColor" (.Get "iconColor") }}
+  {{ $.Scratch.Set "textColor" (.Get "textColor") }}
+{{ else }}
+  {{ $.Scratch.Set "icon" (default "triangle-exclamation" (.Get 0) ) }}
+{{ end }}
+
+<div class="callout"
+  {{ with $.Scratch.Get "cardColor" }}
+  style="background-color: {{ . }}"
+  {{ end }}
+>
+<span class="icon"
+{{ with $.Scratch.Get "iconColor" }}
+style="color: {{ . }}"
+{{ end }}
+>
+{{ partial "icon.html" ($.Scratch.Get "icon") }}
+</span>
+<span class="txt"
+{{ with $.Scratch.Get "textColor" }}
+style="color: {{ . }}"
+{{ end }}
+>
+{{ .Inner | markdownify }}
+</span>
+</div>

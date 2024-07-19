@@ -1,0 +1,11 @@
+{{ $showTags := .Params.showTags | default (.Site.Params.article.showTags | default true) }}
+{{ with .GetTerms "tags" }}
+{{ if gt (len .) 0 }}
+<p>
+  <span class="meta-icon"> {{ partial "icon.html" "tag" }} </span>
+  {{ range . }}
+  <a class="tag" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+  {{ end }}
+</p>
+{{ end }}
+{{ end }}

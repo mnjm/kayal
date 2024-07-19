@@ -1,0 +1,21 @@
+<header>
+  <div class="title">
+    <a href="{{ "" | relLangURL}}">{{ .Site.Title }}</a>
+  </div>
+  <nav>
+    {{ range .Site.Menus.main }}
+      <a class="menu" href="{{ .URL }}"> {{ .Name }}</a>
+    {{ end }}
+    {{ if .Site.Params.showThemeSwitcher | default false }}
+    |
+    <button id="theme-switcher" aria="Theme switcher">
+      <div id="dark-toggler">
+      {{ partial "icon.html" "moon" }}
+      </div>
+      <div id="light-toggler">
+      {{ partial "icon.html" "sun" }}
+      </div>
+    </button>
+    {{ end }}
+  </nav>
+</header>

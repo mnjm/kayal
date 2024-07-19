@@ -1,0 +1,17 @@
+{{/* Katex */}}
+{{ if .Page.HasShortcode "katex" }}
+{{ $katexCSS := resources.Get "lib/katex/katex.min.css" }}
+{{ $katexCSS := $katexCSS | resources.Fingerprint "sha512" }}
+<link type="text/css" rel="stylesheet" href="{{ $katexCSS.RelPermalink }}" integrity="{{ $katexCSS.Data.Integrity }}" />
+{{ $katexJS := resources.Get "lib/katex/katex.min.js" }}
+{{ $katexJS := $katexJS | resources.Fingerprint "sha512" }}
+<script defer src="{{ $katexJS.RelPermalink }}" integrity="{{ $katexJS.Data.Integrity }}"></script>
+{{ $katexRenderJS := resources.Get "lib/katex/auto-render.min.js" }}
+{{ $katexRenderJS := $katexRenderJS | resources.Fingerprint "sha512" }}
+<script defer src="{{ $katexRenderJS.RelPermalink }}" integrity="{{ $katexRenderJS.Data.Integrity }}"
+  onload="renderMathInElement(document.body);"></script>
+{{ $katexFonts := resources.Match "lib/katex/fonts/*" }}
+{{ range $katexFonts }}
+<!-- {{ .RelPermalink }} -->
+{{ end }}
+{{ end }}

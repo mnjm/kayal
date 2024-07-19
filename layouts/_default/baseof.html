@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" data-default-theme="{{ .Site.Params.defaultTheme | default "light" }}">
+  {{ partial "head.html" . }}
+  <body class="light">
+    <div class="content">
+      {{ partial "header.html" . }}
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
+</html>

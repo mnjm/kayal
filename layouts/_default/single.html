@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<h1 class="pg-title">{{ .Title }}</h1>
+
+{{/* Meta */}}
+<div class="meta">
+  {{ partial "single/meta.html" . }}
+  {{ partial "single/meta-tags.html" . }}
+</div>
+
+{{ partial "single/toc.html" . }}
+
+{{ .Content }}
+
+{{/* Pagination */}}
+{{ partial "single/pagination.html" . }}
+{{ end }}

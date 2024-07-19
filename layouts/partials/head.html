@@ -1,0 +1,55 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="{{ .Site.LanguageCode }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  {{/* Title */}}
+  {{ if .IsHome }}
+  <title>{{ .Site.Title | emojify }}</title>
+  <meta name="title" content="{{ .Site.Title | emojify }}" />
+  {{ else }}
+  <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}</title>
+  <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}" />
+  {{ end }}
+
+  {{/* Metadata */}}
+  {{ with (.Params.Summary | default .Params.Description) | default .Site.Params.description }}
+  <meta name="description" content="{{ . }}" />
+  {{ end }}
+  {{ with  .Params.Tags | default .Site.Params.keywords -}}
+  <meta name="keywords" content="{{ range . }}{{ . }}, {{ end -}}" />
+  {{- end }}
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  {{ partialCached "head/css.html" . }}
+
+  {{ $enableCodeCopy := .Site.Params.enableCodeCopy | default false }}
+  {{ if $enableCodeCopy }}
+  {{ partial "head/js.html" "js/codecopy.js" }}
+  {{ end }}
+
+  {{ partial "head/js.html" "js/theme.js" }}
+
+  {{/* Icons */}}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}" />
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}" />
+
+  {{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink ($.Site.Title | emojify) |
+  safeHTML }}
+  {{ end -}}
+
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+
+  {{/* vendor */}}
+  {{ partial "head/vendor.html" . }}
+
+  {{ if templates.Exists "partials/extend-head.html" }}
+  {{ partialCached "extend-head.html" .Site }}
+  {{ end }}
+
+</head>
