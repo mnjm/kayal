@@ -1,0 +1,27 @@
+{{ define "main" }}
+  {{ $groupByYear := .Params.groupByYear | default (.Site.Params.term.groupByYear | default "none") }}
+  {{ $showDate := .Params.showDate | default (.Site.Params.term.showDate | default true) }}
+  <h1 class="pg-title">{{ .Title }}</h1>
+  {{ .Content }}
+  <section>
+
+    {{ if $groupByYear }}
+      {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+      <h2 class="lst-type"> {{ .Key }} </h2>
+        <ul class="lst">
+        {{ range .Pages }}
+          {{ partial "list/page-link.html" (dict "page" . "showDate" $showDate) }}
+        {{ end }}
+        </ul>
+      {{ end }}
+    {{ else }}
+    <ul class="lst">
+    {{ range (.Paginate .Pages).Pages }}
+      {{ partial "list/page-link.html" (dict "page" . "showDate" $showDate) }}
+    {{ end }}
+    </ul>
+    {{ end }}
+
+    {{ template "_internal/pagination.html" . }}
+  </section>
+{{ end }}

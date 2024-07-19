@@ -40,6 +40,10 @@ openToC = false
 showCount = true
 cardView = true
 
+[params.term]
+groupByYear = true
+showDate = true
+
 [[params.social]]
 name = "Email"
 icon = "email"
