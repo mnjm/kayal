@@ -36,7 +36,6 @@
     var links = mainmenu.querySelectorAll('a');
 
     links.forEach(function(link) {
-      console.log(link.getAttribute('href'));
       if (link.getAttribute('href') === path) {
         link.classList.add('active');
       }
