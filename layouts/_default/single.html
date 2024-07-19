@@ -14,4 +14,16 @@
 
 {{/* Pagination */}}
 {{ partial "single/pagination.html" . }}
+
+{{/* Comments */}}
+{{ if .Params.showComments | default (.Site.Params.article.showComments | default false) }}
+  {{ if templates.Exists "partials/comments.html" }}
+  <div class="pt-3">
+    {{ partial "comments.html" . }}
+  </div>
+  {{ else }}
+    {{ warnf "Comments are enabled for %s but no comments partial exists." .File.Path }}
+  {{ end }}
+{{ end }}
+
 {{ end }}
