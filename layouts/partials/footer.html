@@ -2,7 +2,6 @@
   <div class="copyright">
    © {{ dateFormat "2006" now }} {{ with .Site.Params.copyright }} {{ . | safeHTML }} {{ end }}
   </div>
-  {{/* TODO: Change attribution */}}
   {{ if not .Site.Params.removeAttribution }}
   <div class="attribution">
     Built with <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/mnjm/kayal">Kayal</a>

@@ -18,7 +18,7 @@
 {{/* Comments */}}
 {{ if .Params.showComments | default (.Site.Params.article.showComments | default false) }}
   {{ if templates.Exists "partials/comments.html" }}
-  <div class="pt-3">
+  <div class="comment">
     {{ partial "comments.html" . }}
   </div>
   {{ else }}
