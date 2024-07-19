@@ -131,15 +131,15 @@ h5::before { content: '##### '; }
 h6::before { content: '###### '; }
 
 ul {
-    list-style-type: none; /* Remove default list style */
-    padding-left: 20px; /* Add some left padding for the dash */
+    list-style-type: none;
+    padding-left: 20px;
 }
 
 ul li::before {
-    content: "-"; /* Use a dash as the content */
+    content: "-";
     display: inline-block;
-    width: 1em; /* Adjust as needed */
-    margin-left: -1em; /* Adjust to align properly with text */
+    width: 1em;
+    margin-left: -1em;
 }
 
 img {
@@ -147,6 +147,7 @@ img {
   height: auto;
   display: block;
   margin: auto;
+  border-radius: 4px;
 }
 
 figcaption {
