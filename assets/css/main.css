@@ -79,6 +79,10 @@ header {
   border-bottom: none;
 }
 
+.menu.active {
+  border-bottom: 2px solid var(--tertiary-color);
+}
+
 .menu:hover, .title a:hover, .socials a:hover {
   color: var(--link-color);
   border-bottom: 2px solid var(--tertiary-color);
