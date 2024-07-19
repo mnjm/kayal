@@ -16,7 +16,6 @@ function setTheme(theme) {
             document.body.classList.remove('light');
             document.body.classList.add('dark');
         }
-        console.log(document.body.classList);
     } else if (theme === "light") {
         toggleIcon("light-toggler", "dark-toggler");
         if (document.body) {

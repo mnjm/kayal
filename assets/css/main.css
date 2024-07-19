@@ -7,7 +7,7 @@
   --secondary-color: #EFEFE6;
   --tertiary-color: #FF7F11;
   --link-color: #449DD1;
-  --tartiary-color-light: #FFB370;
+  --tertiary-color-light: #FFB370;
   --secondary-color-dark: #DFDFCD;
   --black-always-clr: #292929;
 }
@@ -17,7 +17,7 @@
   --secondary-color: #292929;
   --tertiary-color: #FF7F11;
   --link-color: #449DD1;
-  --tartiary-color-light: #A34C00;
+  --tertiary-color-light: #A34C00;
   --secondary-color-dark: #3D3D29;
   --black-always-clr: #292929;
 }
@@ -92,6 +92,11 @@ a {
 
 a:hover {
   color: var(--link-color);
+}
+
+mark {
+  background-color: var(--tertiary-color-light);
+  color: var(--primary-color);
 }
 
 footer {
@@ -294,7 +299,7 @@ pre code {
   border: 1px solid var(--tertiary-color);
   padding: 2px;
   border-radius: 4px;
-  background: var(--tartiary-color-light );
+  background: var(--tertiary-color-light );
   margin: 0 2px;
 }
 
@@ -356,7 +361,7 @@ blockquote {
   padding: 0.25rem 0.5rem;
   cursor:pointer;
   white-space:nowrap;
-  background-color: var(--tartiary-color-light);
+  background-color: var(--tertiary-color-light);
   border-radius: 4px;
 }
 
@@ -402,7 +407,7 @@ blockquote {
 }
 
 .sngl-pagn a:hover {
-  background-color: var(--tartiary-color-light);
+  background-color: var(--tertiary-color-light);
   color: var(--primary-color);
 }
 
@@ -544,4 +549,11 @@ blockquote {
 
 .page-item.disabled {
   opacity: 0.5;
+}
+
+.gist a {
+  color: initial;
+  background-color: initial;
+  text-decoration: initial;
+  border: initial;
 }
