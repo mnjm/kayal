@@ -1,0 +1,9 @@
+baseURL = 'https://example.org'
+languageCode = 'en-us'
+title = 'Kayal'
+theme = "kayal"
+paginate = 10
+
+# [services]
+#   [services.googleAnalytics]
+#     ID = 'G-MEASUREMENT_ID'p
