@@ -72,6 +72,12 @@ header {
   border-bottom: none;
 }
 
+.menu svg {
+  height: 1.1em;
+  width: 1.1em;
+  vertical-align: text-top;
+}
+
 .menu {
   margin: 0.5em;
   font-size: 1.1rem;

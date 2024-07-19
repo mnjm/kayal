@@ -4,7 +4,14 @@
   </div>
   <nav class="main-menu">
     {{ range .Site.Menus.main }}
-      <a class="menu" href="{{ .URL }}"> {{ .Name }}</a>
+      <a class="menu" href="{{ .URL }}">
+      {{ if .Pre }}
+        <span>
+          {{ partial "icon.html" .Pre }}
+        </span>
+      {{ end }}
+      {{ .Name }}
+      </a>
     {{ end }}
     {{ if .Site.Params.showThemeSwitcher | default false }}
     |
