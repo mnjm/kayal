@@ -4,24 +4,15 @@
   {{ $scripts = $scripts | append "js/codecopy.js" }}
 {{ end }}
 
-{{- if eq hugo.Environment "development" }}
-  {{ range $scripts }}
-      {{ with resources.Get . }}
-        {{- with . | js.Build }}
-          <script src="{{ .RelPermalink }}"></script>
-        {{- end }}
-      {{ end }}
-  {{ end }}
-{{- else }}
-{{ $jsBuilt := slice }}
-  {{ range $scripts }}
-    {{ range $index, $script := $scripts }}
-      {{ $r := resources.Get $script }}
-      {{ if $r }}
-        {{ $jsBuilt = $jsBuilt | append (js.Build $r) }}
+{{ range $scripts }}
+  {{ with resources.Get . }}
+    {{ with . | js.Build }}
+      {{- if eq hugo.Environment "development" }}
+        <script src="{{ .RelPermalink }}"></script>
+      {{ else }}
+        {{ $builtJS := . | resources.Minify | resources.Fingerprint "sha512" }}
+        <script defer type="text/javascript" src="{{ $builtJS.RelPermalink }}" integrity="{{ $builtJS.Data.Integrity }}"> </script>
       {{ end }}
     {{ end }}
   {{ end }}
-  {{ $bundleJS := $jsBuilt | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
-  <script defer type="text/javascript" id="script-bundle" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}"> </script>
-{{- end }}
+{{ end }}
