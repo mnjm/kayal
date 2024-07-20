@@ -1,0 +1,7 @@
+{{ $showAnchor := .Page.Params.showHeadingAnchors | default (.Page.Site.Params.article.showHeadingAnchors | default true) }}
+<h{{ .Level }} id="{{ .Anchor }}">
+  {{ .Text | safeHTML }}
+  {{ if $showAnchor }}
+  <a hidden class="anchor" href="#{{ .Anchor }}">{{ partial "icon.html" "link" }} </a>
+  {{ end }}
+</h{{ .Level }}>

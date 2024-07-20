@@ -612,3 +612,22 @@ body:not(.dark) #sun {
 .comment {
   margin-top: 1rem;
 }
+
+.anchor svg {
+  width: 0.75em;
+  height: auto;
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+  display: inline;
+  color: var(--tertiary-color);
+  margin-inline-start: 8px;
+  user-select: none;
+  text-decoration: none;
+  border: none;
+}
