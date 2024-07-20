@@ -41,7 +41,8 @@ body {
   color: var(--primary-color);
   display: block;
   margin: 8px;
-  transition: background 250ms ease-in-out, color 250ms ease-in-out;
+  padding: 0px;
+  transition: background 50ms ease-in-out, color 50ms ease-in-out;
 }
 
 ::selection {
@@ -71,24 +72,29 @@ header {
   border-bottom: none;
 }
 
-.menu svg {
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu .lnk svg {
   height: 1.1em;
   width: 1.1em;
   vertical-align: text-top;
 }
 
-.menu {
+.menu .lnk {
   margin: 0.5em;
   font-size: 1.1rem;
   font-weight: 550;
   border-bottom: none;
 }
 
-.menu.active {
+.lnk.active {
   border-bottom: 2px solid var(--tertiary-color);
 }
 
-.menu:hover, .title a:hover, .socials a:hover {
+.menu.lnk:hover, .title a:hover, .socials a:hover {
   color: var(--link-color);
   border-bottom: 2px solid var(--tertiary-color);
 }
@@ -134,7 +140,7 @@ ul {
     padding-left: 20px;
 }
 
-ul li::before {
+ul li:before {
     content: "-";
     display: inline-block;
     width: 1em;
@@ -278,7 +284,6 @@ pre code {
   flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .lst time {
@@ -461,11 +466,15 @@ blockquote {
   border-bottom: none;
 }
 
+.toc li:before {
+  content: none;
+}
+
 #theme-switcher {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border: none;
-  margin-bottom: 2px;
+  height: 1.1rem;
 }
 
 #theme-switcher div {

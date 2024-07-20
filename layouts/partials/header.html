@@ -2,15 +2,17 @@
   <div class="title">
     <a href="{{ "" | relLangURL}}">{{ .Site.Title }}</a>
   </div>
+  <div class="menu">
   <nav class="main-menu">
     {{ range .Site.Menus.main }}
-      <a class="menu" href="{{ .URL }}">
+      <a class="lnk" href="{{ .URL }}">
       {{ if .Pre }}
         <span>
           {{ partial "icon.html" .Pre }}
         </span>
       {{ end }}{{ .Name }}</a>
     {{ end }}
+  </nav>
     {{ if .Site.Params.showThemeSwitcher | default false }}
     |
     <button id="theme-switcher" aria="Theme switcher">
@@ -22,7 +24,7 @@
       </div>
     </button>
     {{ end }}
-  </nav>
+  </div>
   {{ if .Site.Params.highlightCurrentMenu }}
   <script>
   (function() {
@@ -30,7 +32,6 @@
     if (!mainmenu) return;
 
     var path = window.location.pathname;
-    console.log(path);
     var links = mainmenu.querySelectorAll('a');
 
     links.forEach(function(link) {
