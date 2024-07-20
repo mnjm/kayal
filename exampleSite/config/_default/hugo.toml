@@ -1,4 +1,4 @@
-baseURL = 'https://example.org'
+baseURL = 'https://mnjm.github.io/kayal'
 languageCode = 'en-us'
 title = 'Kayal'
 theme = "kayal"
@@ -6,4 +6,4 @@ paginate = 10
 
 # [services]
 #   [services.googleAnalytics]
-#     ID = 'G-MEASUREMENT_ID'p
+#     ID = 'G-MEASUREMENT_ID'

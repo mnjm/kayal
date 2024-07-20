@@ -1,14 +1,24 @@
+# Add a training '/' to local project urls.
+# For ex: /posts/
+# NOT: /posts
+
 [[main]]
-name = "Posts"
-url = "/posts/"
+name = "Docs"
+url = "/docs/"
 weight = 1
 
 [[main]]
-name = "Projects"
-url = "/projects/"
+name = "Examples"
+url = "/examples/"
+weight = 1
+
+[[main]]
+name = "Shortcodes"
+url = "/shortcodes/"
 weight = 2
 
 [[main]]
-name = "About"
-url = "/about/"
+pre = "github"
+name = ""
+url = "https://github.com/mnjm/kayal"
 weight = 3

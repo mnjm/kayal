@@ -1,22 +1,24 @@
+logo = "/imgs/logo.png"
 copyright = "Manjunath Mohan"
 enableCodeCopy = true
 removeAttribution = false
 showThemeSwitcher = true
 defaultTheme = "auto" # light, dark, auto
 highlightCurrentMenu = true
+mainSections = ["docs"]
 
 [homepage]
-headline = "Hi👋, Welcome to my site"
-image = "imgs/profile.jpg"
-where = "right" # right, left, top
+headline = "👋 Welcome"
+image = "imgs/profile.png"
+where = "top" # right, left, top
 showRecent = true
 showRecentLabel = "Featured"
 showRecentItems = 4
 showMore = true
-showMoreDest = "/posts"
+showMoreDest = "/docs"
 
 [list]
-groupByYear = true
+groupByYear = false
 showDate = true
 
 [article]
@@ -34,20 +36,15 @@ showCount = true
 cardView = true
 
 [term]
-groupByYear = true
+groupByYear = false
 showDate = true
-
-[[social]]
-name = "Email"
-icon = "email"
-url = "mailto:manjunat.mohan@gmail.com"
 
 [[social]]
 name = "GitHub"
 icon = "github"
-url = "https://github.com/mnjm"
+url = "https://github.com/mnjm/kayal"
 
 [[social]]
-name = "LinkedIn"
-icon = "linkedin"
-url = "https://linkedin.com/in/mnjm"
+name = "Demo"
+icon = "link"
+url = "https://mnjm.github.io/kayal"
