@@ -1,7 +1,13 @@
 {{ $showDate := .showDate }}
 {{ with .page }}
 <li>
-    <div class="lst-a"> <a href="{{ .RelPermalink }}">{{ .LinkTitle }} </a> </div>
+    <div class="lst-a">
+    {{ with .Params.externalUrl }}
+        <a href="{{ . }}" target="_blank" rel="external">
+    {{ else }}
+        <a href="{{ .RelPermalink }}">
+    {{ end }}
+        {{ .LinkTitle }} </a> </div>
     {{ if $showDate }}
     {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
     {{ $dateHuman := dateFormat "Jan 01, 2006" .Date }}

@@ -6,17 +6,25 @@
 {{ $next = .PrevInSection }}
 {{ $prev = .NextInSection }}
 {{ end }}
-<nav class="sngl-pagn">
-  <span class="prev">
+<nav class="pagenav">
   {{ with $prev }}
-  <a href="{{ .RelPermalink }}"> {{ .Title | emojify }} </a>
+    <a class="prev" href="{{ .RelPermalink }}">
+      <span class="direction">« Prev</span>
+      <br>
+      <span> {{ .Title | emojify }} </span>
+    </a>
+  {{ else }}
+  <div></div>
   {{ end }}
-  </span>
-  <span class="next">
   {{ with $next }}
-  <a href="{{ .RelPermalink }}"> {{ .Title | emojify }} </a>
+    <a class="next" href="{{ .RelPermalink }}">
+      <span class="direction">Next »</span>
+      <br>
+      <span> {{ .Title | emojify }} </span>
+    </a>
+  {{ else }}
+  <div></div>
   {{ end }}
-  </span>
 </nav>
 {{ end }}
 {{ end }}

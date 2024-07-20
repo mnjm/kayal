@@ -1,5 +1,6 @@
 :root{
   --ff: 'Ubuntu';
+  --radius: 6px;
 }
 
 .light {
@@ -148,7 +149,7 @@ img {
   height: auto;
   display: block;
   margin: auto;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 figcaption {
@@ -310,7 +311,7 @@ pre code {
 .meta a {
   border: 1px solid var(--tertiary-color);
   padding: 2px;
-  border-radius: 4px;
+  border-radius: var(--radius);
   background: var(--tertiary-color-light );
   margin: 0 2px;
 }
@@ -348,7 +349,7 @@ blockquote {
   background-color: var(--tertiary-color);
   color: var(--black-always-clr);
   padding: 2px 4px;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .highlight-wrapper {
@@ -374,7 +375,7 @@ blockquote {
   cursor:pointer;
   white-space:nowrap;
   background-color: var(--tertiary-color-light);
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .copy-textarea {
@@ -393,60 +394,53 @@ blockquote {
   background-color: var(--secondary-color);
   font-size: 1em;
   padding: .2em .4em;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .showmore button:hover {
   border: 2px solid var(--link-color);
 }
 
-.sngl-pagn {
+.pagenav {
   display: flex;
-  justify-content: space-between;
   background-color: var(--secondary-color-dark);
-  border-radius: 6px;
-  margin-top: 2em;
-  margin-bottom: 0.2em;
+  border-radius: var(--radius);
 }
 
-.sngl-pagn a {
-  margin: 1em 0.2em;
-  padding: 0.2em 0.2em;
+.pagenav .prev, .pagenav .next {
+  width: 50%;
   border: none;
-  display:flex;
-  font-weight: 425;
-  border-radius: 6px;
+  padding: 10px 20px;
 }
 
-.sngl-pagn a:hover {
+.pagenav .prev {
+  text-align: left;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.pagenav .next {
+  margin-inline-start: auto;
+  text-align: right;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.pagenav .direction {
+  font-size: small;
+  font-weight: bold;
+  color: var(--tertiary-color);
+}
+
+.pagenav .prev:hover, .pagenav .next:hover {
   background-color: var(--tertiary-color-light);
   color: var(--primary-color);
 }
 
-.sngl-pagn .prev {
-  text-align: left;
-}
-
-.sngl-pagn .next {
-  text-align: right;
-}
-
-.sngl-pagn .prev a::before {
-  content: '\2190';
-  padding-right: 0.4em;
-}
-
-.sngl-pagn .next a::after {
-  content: '\2192';
-  padding-left: 0.4em;
-}
-
 .toc {
   background-color: var(--secondary-color-dark);
-  width: min(40%);
+  min-width: 40%;
   margin-top: 10px;
   padding: 0.4em;
-  border-radius: 5px;
+  border-radius: var(--radius);
   display: inline-block;
 }
 
@@ -495,7 +489,7 @@ blockquote {
   padding: .75rem;
   margin: 0;
   background: var(--secondary-color-dark);
-  border-radius: 4px;
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
 }
@@ -547,7 +541,7 @@ blockquote {
 .page-item {
   background-color: var(--tertiary-color);
   color: var(--black-always-clr);
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .page-item:not(.disabled):not(.active):hover {
@@ -580,7 +574,7 @@ blockquote {
   margin: 10px;
   background-color: var(--secondary-color-dark);
   padding: 10px;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .comment {
