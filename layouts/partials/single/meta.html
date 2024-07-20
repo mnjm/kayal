@@ -35,7 +35,7 @@
 <p>
   {{ range $idx, $ent := $meta }}
     {{ $iname := index $icons $idx }}
-  <span class="meta-icon"> {{ partial "icon.html" $iname }} </span> {{ $ent | safeHTML }}
+    <span class="meta-icon"> {{ partial "icon.html" $iname }} </span> {{ $ent | safeHTML }}
   {{ end }}
 </p>
 {{ end }}
