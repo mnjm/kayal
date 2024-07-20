@@ -1,7 +1,7 @@
 <ul>
     {{- range $index, $key := .Site.Params.Social -}}
     <li>
-        <a href="{{ $key.url }}" rel="me" title="{{ $key.name }}">
+        <a href="{{ $key.url }}" rel="me" title="{{ $key.name }}" target="_blank">
             <span class="socials-icon">
             {{ partial "icon.html" $key.icon }}
             </span>

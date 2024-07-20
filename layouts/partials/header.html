@@ -3,7 +3,7 @@
     {{ with resources.Get .Site.Params.logo }}
       <img src="{{ .RelPermalink }}" />
     {{ end }}
-    {{ .Site.Title }}
+    <span>{{ .Site.Title }}</span>
     </a>
   <div class="menu">
   <nav class="main-menu">

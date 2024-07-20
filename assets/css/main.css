@@ -107,7 +107,7 @@ header {
   border-bottom: 2px solid var(--tertiary-color);
 }
 
-.menu.lnk:hover, .socials a:hover {
+.main-menu a.lnk:hover, .socials-icon svg:hover {
   color: var(--link-color);
   border-bottom: 2px solid var(--tertiary-color);
 }
@@ -277,7 +277,8 @@ pre code {
 
 .socials-icon svg {
   height:1.5em;
-  width:1.5em
+  width:1.5em;
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .lst-type {
@@ -625,8 +626,8 @@ h4:hover .anchor,
 h5:hover .anchor,
 h6:hover .anchor {
   display: inline;
-  color: var(--tertiary-color);
-  margin-inline-start: 8px;
+  opacity: .7;
+  color: var(--primary-color);
   user-select: none;
   text-decoration: none;
   border: none;
