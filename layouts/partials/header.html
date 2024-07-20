@@ -9,17 +9,15 @@
         <span>
           {{ partial "icon.html" .Pre }}
         </span>
-      {{ end }}
-      {{ .Name }}
-      </a>
+      {{ end }}{{ .Name }}</a>
     {{ end }}
     {{ if .Site.Params.showThemeSwitcher | default false }}
     |
     <button id="theme-switcher" aria="Theme switcher">
-      <div id="dark-toggler">
+      <div id="moon">
       {{ partial "icon.html" "moon" }}
       </div>
-      <div id="light-toggler">
+      <div id="sun">
       {{ partial "icon.html" "sun" }}
       </div>
     </button>

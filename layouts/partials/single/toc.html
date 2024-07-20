@@ -3,7 +3,7 @@
 {{ if (in .TableOfContents "<ul") }}
   <div class="toc">
     <details {{ if $openToC }}open{{ end }}>
-      <summary>
+      <summary accesskey="c" title="(Alt+C)">
         <h4> Table of Contents </h4>
       </summary>
       <div class="toc-innr">

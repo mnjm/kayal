@@ -1,9 +1,6 @@
 :root{
   --ff: 'Ubuntu';
   --radius: 6px;
-}
-
-.light {
   --primary-color: #292929;
   --secondary-color: #EFEFE6;
   --tertiary-color: #FF7F11;
@@ -456,6 +453,10 @@ blockquote {
   padding-right: 2em;
 }
 
+.toc-innr ul {
+    margin: 0;
+}
+
 .toc-innr a {
   border-bottom: none;
 }
@@ -477,12 +478,16 @@ blockquote {
   vertical-align: text-top;
 }
 
-#light-toggler {
-  display: none;
-}
-
 #theme-switcher:hover {
   color: var(--tertiary-color);
+}
+
+body.dark #moon {
+    display: none;
+}
+
+body:not(.dark) #sun {
+    display: none;
 }
 
 .callout {
