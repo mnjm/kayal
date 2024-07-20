@@ -65,11 +65,24 @@ header {
   border-bottom: 1px solid var(--secondary-color-dark);
 }
 
-.title a {
+.title {
+  display: inline-flex;
+  align-items: center;
   color: var(--tertiary-color);
   font-size: 1.5rem;
   font-weight: 700;
   border-bottom: none;
+}
+
+.title img {
+  margin-right: 0.2em;
+  display: inline;
+  width: 1.6rem;
+  height: auto;
+}
+
+.title:hover {
+  color: var(--link-color);
 }
 
 .menu {
@@ -94,7 +107,7 @@ header {
   border-bottom: 2px solid var(--tertiary-color);
 }
 
-.menu.lnk:hover, .title a:hover, .socials a:hover {
+.menu.lnk:hover, .socials a:hover {
   color: var(--link-color);
   border-bottom: 2px solid var(--tertiary-color);
 }
