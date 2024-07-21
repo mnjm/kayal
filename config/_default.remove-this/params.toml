@@ -8,15 +8,15 @@
 # Site logo, this will be added before Site Title in the header
 # logo = "/imgs/logo.png"
 # Site description
-description = "Kayal is a Hugo theme designed to be minimal, lightweight with warm markdown-ish aesthetics for personal blogsites."
+# description = "A Hugo Theme"
 # Copyright owner name
-copyright = "Manjunath Mohan"
+copyright = ""
 
 enableCodeCopy = true
 showThemeSwitcher = true
-defaultTheme = "auto" # light, dark, auto
+defaultTheme = "auto" # Valid Options: light, dark, auto
 highlightCurrentMenu = true
-mainSections = ["docs"]
+mainSections = ["posts"]
 removeAttribution = false
 showHeadingAnchors = true
 
@@ -27,15 +27,17 @@ showHeadingAnchors = true
 # yandex = ""
 
 [homepage]
-headline = "👋 Welcome to the demo page of Kayal"
+headline = "👋 Welcome to my site"
+# profile image
 image = "imgs/profile.svg"
+# image position
 where = "right" # right, left, top
 showRecent = true
 showRecentLabel = "Featured"
 showRecentItems = 4
 showReadMore = true
 showMore = true
-showMoreDest = "/docs"
+showMoreDest = "/posts"
 
 [list]
 groupByYear = false

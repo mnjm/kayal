@@ -1,6 +1,6 @@
 <footer>
   <div class="copyright">
-   © {{ dateFormat "2006" now }} {{ with .Site.Params.copyright }} {{ . | safeHTML }} {{ end }}
+    {{ with .Site.Params.copyright }} © {{ dateFormat "2006" now }}  {{ . | safeHTML }} {{ end }}
   </div>
   {{ if not .Site.Params.removeAttribution }}
   <div class="attribution">

@@ -8,23 +8,23 @@
 
 # `pre` is a icon id. for list of all available icons check [https://github.com/mnjm/kayal/tree/main/assets/icons]
 
-[[main]]
-name = "Docs"
-url = "/docs/"
-weight = 1
-
-[[main]]
-name = "Examples"
-url = "/examples/"
-weight = 2
-
-[[main]]
-name = "Shortcodes"
-url = "/shortcodes/"
-weight = 3
-
-[[main]]
-pre = "github"
-name = ""
-url = "https://github.com/mnjm/kayal"
-weight = 4
+# [[main]]
+# name = "Posts"
+# url = "/posts/"
+# weight = 1
+#
+# [[main]]
+# name = "Tags"
+# url = "/tags/"
+# weight = 2
+#
+# [[main]]
+# name = "About"
+# url = "/shortcodes/"
+# weight = 3
+#
+# [[main]]
+# pre = "github"
+# name = ""
+# url = "https://github.com/mnjm/kayal"
+# weight = 4

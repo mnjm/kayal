@@ -3,10 +3,11 @@
 # https://blowfish.page/docs/getting-started/
 
 # baseURL = "https://your_domain.com/"
-baseURL = 'https://mnjm.github.io/kayal'
 languageCode = 'en-us'
-title = 'Kayal'
-theme = "kayal"
+# title = "Site Title"
+# theme = "kayal" # UNCOMMENT THIS LINE
+paginate = 10
+enableEmoji = true
 
 enableRobotsTXT = true
 paginate = 10
