@@ -10,15 +10,15 @@ weight = 1
 [[main]]
 name = "Examples"
 url = "/examples/"
-weight = 1
+weight = 2
 
 [[main]]
 name = "Shortcodes"
 url = "/shortcodes/"
-weight = 2
+weight = 3
 
 [[main]]
 pre = "github"
 name = ""
 url = "https://github.com/mnjm/kayal"
-weight = 3
+weight = 4

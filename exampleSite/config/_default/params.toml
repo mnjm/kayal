@@ -1,19 +1,29 @@
 logo = "/imgs/logo.png"
+description = "A Hugo Theme"
 copyright = "Manjunath Mohan"
+
 enableCodeCopy = true
-removeAttribution = false
 showThemeSwitcher = true
 defaultTheme = "auto" # light, dark, auto
 highlightCurrentMenu = true
 mainSections = ["docs"]
+removeAttribution = false
+showHeadingAnchors = true
+
+# [verification]
+# google = ""
+# bing = ""
+# pinterest = ""
+# yandex = ""
 
 [homepage]
-headline = "👋 Welcome"
+headline = "👋 Welcome to the demo page of Kayal"
 image = "imgs/profile.png"
 where = "top" # right, left, top
 showRecent = true
 showRecentLabel = "Featured"
 showRecentItems = 4
+showReadMore = true
 showMore = true
 showMoreDest = "/docs"
 
@@ -23,13 +33,16 @@ showDate = true
 
 [article]
 hidden = false
+externalURL = false
 showDate = true
 showModDate = true
 showReadingTime = true
+showTags = true
 showPagination = true
 invertPagination = true
 showToC = true
 openToC = false
+showComments = false
 
 [taxonomy]
 showCount = true

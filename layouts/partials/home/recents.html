@@ -1,6 +1,7 @@
 {{ $showRecent := .Site.Params.homepage.showRecent | default true }}
 {{ $showRecentLabel := .Site.Params.homepage.showRecentLabel | default "Recent" }}
 {{ $showRecentItems := .Site.Params.homepage.showRecentItems | default 3 }}
+{{ $showReadMore := .Site.Params.homepage.showReadMore | default true }}
 {{ $showMore := .Site.Params.homepage.showMore | default false }}
 {{ $showMoreDest := .Site.Params.homepage.showMoreDest | default "/posts" }}
 
@@ -16,7 +17,9 @@
       {{ partial "single/meta.html" . }}
     </div>
     {{ template "partials/home/pg-desc.html" . }}
-    <div class="readmore"> <a href="{{ .RelPermalink }}">Read more &rarr;</a> </div>
+    {{ if $showReadMore }}
+      <div class="readmore"> <a href="{{ .RelPermalink }}">Read more &rarr;</a> </div>
+    {{ end }}
   </section>
   {{ end }}
   {{ if $showMore }}
