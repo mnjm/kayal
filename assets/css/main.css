@@ -1,34 +1,4 @@
-:root{
-  --ff: 'Ubuntu';
-  --radius: 6px;
-  --primary-color: #292929;
-  --secondary-color: #EFEFE6;
-  --tertiary-color: #FF7F11;
-  --link-color: #449DD1;
-  --tertiary-color-light: #FFB370;
-  --secondary-color-dark: #DFDFCD;
-  --black-always-clr: #292929;
-}
-
-.dark {
-  --primary-color: #EFEFE6;
-  --secondary-color: #292929;
-  --tertiary-color: #FF7F11;
-  --link-color: #449DD1;
-  --tertiary-color-light: #A34C00;
-  --secondary-color-dark: #3D3D29;
-  --black-always-clr: #292929;
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/Ubuntu-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('/fonts/Ubuntu-Regular.woff') format('woff'), /* Modern Browsers */
-    url('/fonts/Ubuntu-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-}
+@import url("theme.css");
 
 html {
   line-height: 1.5rem;

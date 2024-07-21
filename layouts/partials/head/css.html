@@ -1,4 +1,4 @@
-{{ $styles := slice "css/main.css" "css/custom.css" }}
+{{ $styles := slice "css/theme.css" "css/main.css" "css/custom.css" }}
 {{ if eq hugo.Environment "development" }}
   {{ range $styles }}
     {{ with resources.Get . }}
