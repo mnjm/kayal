@@ -39,9 +39,8 @@ html {
 body {
   background: var(--secondary-color);
   color: var(--primary-color);
-  display: block;
-  margin: 8px;
-  padding: 0px;
+  margin: 0 8px;
+  padding: 0;
   transition: background 50ms ease-in-out, color 50ms ease-in-out;
 }
 
@@ -90,21 +89,66 @@ header {
   align-items: center;
 }
 
-.menu .lnk svg {
-  height: 1.1em;
-  width: 1.1em;
-  vertical-align: text-top;
+#main-menu ul {
+  margin: 0;
 }
 
-.menu .lnk {
+#main-menu li {
+  display: inline;
+}
+
+#main-menu li:before {
+  content: none;
+}
+
+#main-menu a {
   margin: 0.5em;
   font-size: 1.1rem;
   font-weight: 550;
   border-bottom: none;
 }
 
-.lnk.active {
+#main-menu a svg {
+  height: 1.1em;
+  width: 1.1em;
+  vertical-align: text-top;
+}
+
+#main-menu a.active {
   border-bottom: 2px solid var(--tertiary-color);
+}
+
+.mm-normal {
+  display: inline
+}
+
+.mm-mobile-open ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+#mob-hb-icon, #mob-x-icon {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #mob-hb-icon {
+    display: block;
+  }
+  .mm-normal {
+    display: none;
+  }
 }
 
 .main-menu a.lnk:hover, .socials-icon svg:hover {
@@ -387,6 +431,7 @@ blockquote {
 }
 
 .copy-button {
+  opacity: 0.8;
   visibility:hidden;
   position:absolute;
   top:0px;
@@ -396,7 +441,9 @@ blockquote {
   cursor:pointer;
   white-space:nowrap;
   background-color: var(--tertiary-color-light);
+  color: var(--primary-color);
   border-radius: var(--radius);
+  border: 1px solid var(--primary-color);
 }
 
 .copy-textarea {
@@ -423,6 +470,7 @@ blockquote {
 }
 
 .pagenav {
+  margin-top: 2rem;
   display: flex;
   background-color: var(--secondary-color-dark);
   border-radius: var(--radius);
@@ -489,18 +537,17 @@ blockquote {
   content: none;
 }
 
-#theme-switcher {
+#theme-switcher, #mob-hb-icon, #mob-x-icon {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border: none;
-  height: 1.1rem;
 }
 
 #theme-switcher div {
   display: inline;
 }
 
-#theme-switcher svg {
+#theme-switcher svg, #mob-hb-icon svg, #mob-x-icon svg {
   height: 1.1em;
   width: 1.1em;
   vertical-align: text-top;

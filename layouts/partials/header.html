@@ -6,18 +6,21 @@
     <span>{{ .Site.Title }}</span>
     </a>
   <div class="menu">
-  <nav class="main-menu">
+  <nav id="main-menu" class="mm-normal">
+    <ul>
+    <li> <button id="mob-x-icon"> {{ partial "icon.html" "xmark" }} </button> </li>
     {{ range .Site.Menus.main }}
-      <a class="lnk" href="{{ .URL }}">
+      <li><a href="{{ .URL }}">
       {{ if .Pre }}
         <span>
           {{ partial "icon.html" .Pre }}
         </span>
-      {{ end }}{{ .Name }}</a>
+          {{ end }}{{ .Name }}</li></a>
     {{ end }}
+    </ul>
   </nav>
+    <div class="side-menu">
     {{ if .Site.Params.showThemeSwitcher | default false }}
-    |
     <button id="theme-switcher" aria="Theme switcher">
       <div id="moon">
       {{ partial "icon.html" "moon" }}
@@ -27,11 +30,35 @@
       </div>
     </button>
     {{ end }}
+    </div>
+    <button id="mob-hb-icon">
+      {{ partial "icon.html" "bars" }}
+    </button>
   </div>
+  <script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+    const openBtn = document.getElementById('mob-hb-icon');
+    const closeBtn = document.getElementById('mob-x-icon');
+    const mainMenu = document.getElementById('main-menu');
+    const htmlEl = document.documentElement;
+    const bodyEl = document.body;
+
+    openBtn.addEventListener('click', function() {
+        mainMenu.classList.replace('mm-normal', 'mm-mobile-open');
+        closeBtn.style.display = 'block';
+    });
+    closeBtn.addEventListener('click', function() {
+        mainMenu.classList.replace('mm-mobile-open', 'mm-normal');
+        closeBtn.style.display = 'none';
+    });
+    })
+  })();
+  </script>
   {{ if .Site.Params.highlightCurrentMenu }}
   <script>
   (function() {
-    var mainmenu = document.querySelector('.main-menu');
+    var mainmenu = document.getElementById('main-menu');
     if (!mainmenu) return;
 
     var path = window.location.pathname;

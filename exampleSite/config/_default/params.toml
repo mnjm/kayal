@@ -18,8 +18,8 @@ showHeadingAnchors = true
 
 [homepage]
 headline = "👋 Welcome to the demo page of Kayal"
-image = "imgs/profile.png"
-where = "top" # right, left, top
+image = "imgs/profile.svg"
+where = "right" # right, left, top
 showRecent = true
 showRecentLabel = "Featured"
 showRecentItems = 4
