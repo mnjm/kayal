@@ -384,6 +384,10 @@ body:not(.dark) #sun {
 }
 
 /* List */
+.lst-content {
+  margin-top: 2rem;
+}
+
 .lst-type {
   margin-bottom: 0.2em;
   margin-top: 1.2em;

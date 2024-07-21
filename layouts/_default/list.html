@@ -3,8 +3,7 @@
   {{ $showDate := .Params.showDate | default (.Site.Params.list.showDate | default true) }}
   <h1 class="pg-title">{{ .Title | emojify }}</h1>
   {{ .Content }}
-  <section>
-
+  <section class="lst-content">
     {{ if $groupByYear }}
       {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
       <h2 class="lst-type"> {{ .Key }} </h2>
@@ -21,7 +20,7 @@
     {{ end }}
     </ul>
     {{ end }}
-
     {{ template "_internal/pagination.html" . }}
   </section>
+
 {{ end }}
