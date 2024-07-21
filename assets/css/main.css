@@ -22,8 +22,8 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'Ubuntu'
-    font-style: normal;
+  font-family: 'Ubuntu';
+  font-style: normal;
   font-weight: 400;
   src: url('../fonts/Ubuntu-Regular.woff2') format('woff2'), /* Super Modern Browsers */
     url('../fonts/Ubuntu-Regular.woff') format('woff'), /* Modern Browsers */
@@ -87,6 +87,7 @@ header {
 .menu {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #main-menu ul {
@@ -537,23 +538,26 @@ blockquote {
   content: none;
 }
 
-#theme-switcher, #mob-hb-icon, #mob-x-icon {
+.menu-btn {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #theme-switcher div {
   display: inline;
 }
 
-#theme-switcher svg, #mob-hb-icon svg, #mob-x-icon svg {
+.menu-btn svg {
   height: 1.1em;
   width: 1.1em;
   vertical-align: text-top;
 }
 
-#theme-switcher:hover {
+.menu-btn:hover {
   color: var(--tertiary-color);
 }
 

@@ -8,7 +8,7 @@
   <div class="menu">
   <nav id="main-menu" class="mm-normal">
     <ul>
-    <li> <button id="mob-x-icon"> {{ partial "icon.html" "xmark" }} </button> </li>
+    <li> <button id="mob-x-icon" class="menu-btn"> {{ partial "icon.html" "xmark" }} </button> </li>
     {{ range .Site.Menus.main }}
       <li><a href="{{ .URL }}">
       {{ if .Pre }}
@@ -21,7 +21,7 @@
   </nav>
     <div class="side-menu">
     {{ if .Site.Params.showThemeSwitcher | default false }}
-    <button id="theme-switcher" aria="Theme switcher">
+    <button id="theme-switcher" class="menu-btn" aria="Theme switcher">
       <div id="moon">
       {{ partial "icon.html" "moon" }}
       </div>
@@ -31,7 +31,7 @@
     </button>
     {{ end }}
     </div>
-    <button id="mob-hb-icon">
+    <button id="mob-hb-icon" class="menu-btn">
       {{ partial "icon.html" "bars" }}
     </button>
   </div>
