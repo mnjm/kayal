@@ -128,6 +128,7 @@ pre {
   line-height: 1.5;
   overflow-x: auto;
   padding: 1em;
+  border-radius: var(--radius);
 }
 
 pre code {
@@ -164,6 +165,23 @@ blockquote {
   margin: 0;
   padding-left: 2rem;
   background: var(--secondary-color-dark);
+}
+
+details {
+  border-left: 4px solid var(--tertiary-color);
+  margin: 0;
+  padding-inline: 1rem;
+  background: var(--secondary-color-dark);
+}
+
+/* Custom animation */
+@keyframes revealContent {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+details[open] div {
+  animation: revealContent 0.5s ease-out forwards;
 }
 
 ::selection {
@@ -460,12 +478,13 @@ body:not(.dark) #sun {
 }
 
 .highlight-wrapper {
-  display:block
+  display:block;
+  border-radius: var(--radius);
 }
 
 .highlight {
   position:relative;
-  z-index:0
+  z-index:0;
 }
 
 .highlight:hover>.copy-button {

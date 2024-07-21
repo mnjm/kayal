@@ -137,7 +137,7 @@ git submodule update --remote --merge
 Once the submodule has been updated, rebuild your site and check everything works as expected.
 {{< /collapse >}}
 
-{{< collapse summary="Update using Hugo" open=true >}}
+{{< collapse summary="Update using Hugo" >}}
 Hugo makes updating modules super easy. Simply change into your project directory and execute the following command:
 
 ```shell
