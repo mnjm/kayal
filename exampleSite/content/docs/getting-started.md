@@ -115,7 +115,7 @@ _default
 
 ### Next steps
 
-The basic Kayal installation is now complete. Continue to the [Customization](TODO) section to learn more about configuring the theme.
+The basic Kayal installation is now complete. Continue to the [Customization]({{< ref "configuration" >}}) section to learn more about configuring the theme.
 
 ---
 

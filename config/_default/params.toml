@@ -1,0 +1,116 @@
+# -- Theme Options --
+# These options control how the theme functions and allow you to
+# customize the display of your website.
+
+# [Optional] Site logo, displayed before the Site Title in the header.
+logo = "/imgs/logo.png"
+# Site description.
+description = "A Hugo Theme"
+# [Optional] Copyright owner name.
+copyright = ""
+
+# Whether to enable copy button in code blocks.
+enableCodeCopy = true
+# Show the icon that switches between dark and light themes when clicked.
+showThemeSwitcher = true
+# Default theme to start from. If "auto", it detects the previous preference/system theme.
+defaultTheme = "auto"  # Valid Options: light, dark, auto
+# When enabled, highlight the current menu item in the menu bar.
+highlightCurrentMenu = true
+# The sections to display in the recent articles list. If not provided, the section with the most articles is used.
+mainSections = ["posts"]
+# Whether to remove Hugo and theme attribution in the footer.
+removeAttribution = false
+# Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.
+showHeadingAnchors = true
+
+# Site search engine verification tags.
+# [verification]
+# google = ""
+# bing = ""
+# pinterest = ""
+# yandex = ""
+
+# Homepage settings
+[homepage]
+# [Optional] Displayed at the top of your homepage.
+headline = "👋 Welcome to my site"
+
+# [Optional] Profile image
+image = "imgs/profile.svg"
+
+# Image position.
+where = "right"  # Options: right, left, top
+
+# Whether to show recent items on the homepage.
+showRecent = true
+
+# Heading label for recent items.
+showRecentLabel = "Featured
+
+# Number of recent items to show.
+showRecentItems = 4
+
+# Whether to show "Read more" buttons at the end of each article entry.
+showReadMore = true
+# Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
+showMore = true
+showMoreDest = "/posts"
+
+# Article settings
+[article]
+# Whether to display article dates.
+showDate = true
+# Whether to display modified dates of articles.
+showModDate = true
+# Whether to display reading time of articles.
+showReadingTime = true
+# Whether to display tags mentioned in the front matter.
+showTags = true
+# Whether to display next/previous article links in the article footer.
+showPagination = true
+# Whether to reverse the direction of next/previous article links.
+invertPagination = true
+# Whether to display the table of contents on articles.
+showToC = true
+# Whether to open the Table of Contents when the page is loaded.
+openToC = false
+# Whether to include the comments partial after the article footer. (Check advanced configuration for more info)
+showComments = false
+
+# List template settings
+[list]
+# Whether to group articles by year.
+groupByYear = false
+# Whether to show dates with article listings.
+showDate = true
+
+# Taxonomy settings
+[taxonomy]
+# Whether to show counts of each taxonomy term.
+showCount = true
+# Whether to display taxonomies as a grid of cards.
+cardView = true
+
+# Term settings
+[term]
+# Whether to group articles by year.
+groupByYear = false
+# Whether to show dates with article listings.
+showDate = true
+
+# Social links
+[[social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/mnjm/kayal"
+
+[[social]]
+name = "Email"
+icon = "mail"
+url = "mailto:name@example.com"
+
+[[social]]
+name = "Twitter / X"
+icon = "x-twitter"
+url = "https://x.com/sample"

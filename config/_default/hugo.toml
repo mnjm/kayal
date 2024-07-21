@@ -1,0 +1,31 @@
+# -- Site Configuration --
+
+# URL to the root of your website.
+# baseURL = "https://your_domain.com/"
+
+# Site's language code
+# languageCode = 'en-us'
+
+# title = "Site Title"
+
+# theme = "kayal" # UNCOMMENT THIS LINE
+
+# Number of articles per page in the listing.
+# paginate = 10
+
+# Enable processing of emojis in markdown.
+# enableEmoji = true
+
+# Enable creation of robots.txt for search engine crawling.
+# enableRobotsTXT = true
+
+# Length of default summaries.
+# summaryLength = 70
+
+# Build drafts during site generation.
+# buildDrafts = true
+
+# Google Analytics Configuration
+# [services]
+#   [services.googleAnalytics]
+#     ID = 'G-MEASUREMENT_ID'

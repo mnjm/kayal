@@ -1,5 +1,6 @@
 # -- Main Menu --
-# The main menu is displayed in the header at the top of the page.
+
+# The menus are displayed in the header at the top of the page.
 # Acceptable parameters are name, page, url, pre, weight.
 
 # Add a training '/' to local urls.
