@@ -35,22 +35,16 @@ showHeadingAnchors = true
 [homepage]
 # [Optional] Displayed at the top of your homepage.
 headline = "👋 Welcome to my site"
-
 # [Optional] Profile image
 image = "imgs/profile.svg"
-
 # Image position.
 where = "right"  # Options: right, left, top
-
 # Whether to show recent items on the homepage.
 showRecent = true
-
 # Heading label for recent items.
-showRecentLabel = "Featured
-
+showRecentLabel = "Featured"
 # Number of recent items to show.
 showRecentItems = 4
-
 # Whether to show "Read more" buttons at the end of each article entry.
 showReadMore = true
 # Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.

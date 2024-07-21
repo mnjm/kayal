@@ -8,23 +8,23 @@ weight: 1
 ## Install Hugo
 
 - First Install Hugo, Simply follow the standard Hugo [Quick Start](https://gohugo.io/getting-started/quick-start/) procedure to get setup and running quickly.
-- Theme is tested with Hugo v0.125 but might work with lower versions.
-- Theme's installation instructions can be found below. Instructions for updating are provided too.
+- The theme is tested with Hugo v0.125 but may work with lower versions.
+- Installation instructions for the theme are provided below, Instructions for updating are provided too.
 
 ## Getting Started 🚀
 
 ### Create a new Hugo site
 
-Run this command to create a new Hugo site in a directory named `mywebsite`.
+Run the following command to create a new Hugo site in a directory named `mywebsite`.
 ```bash
 hugo new site mywebsite
 ```
 **Note:**
-- you can name the project directory whatever you choose, but the instructions below will assume it’s named `mywebsite`.
+- You can name the project directory whatever you choose, but the instructions below assume it’s named `mywebsite`.
 - If you use a different name, be sure to substitute it accordingly.
 - Read more here about [Hugo Docs's - hugo new site command](https://gohugo.io/commands/hugo_new_site/#synopsis)
 
-After you have created a new site, follow the below steps to add **Kayal** as a theme.
+Once you've created a new site, follow the steps below to add the **Kayal** theme.
 
 ### Download Kayal
 
@@ -34,7 +34,7 @@ There several different ways to install the Kayal theme into your Hugo website. 
 - Hugo module
 - Manual file copy
 
-If you're unsure, choose the Git submodule method.
+If unsure, choose the Git submodule method.
 
 {{< collapse summary="<b>Install as Git submodule</b>" open=true >}}
 
@@ -52,12 +52,9 @@ Then continue to [set up the theme configuration files](#set-up-theme-configurat
 {{< /collapse >}}
 
 {{< collapse summary="<b>Install as Hugo Module</b>" >}}
-For this method you'll use Hugo to manage your themes. Hugo uses **Go** to initialise and manage modules so you need to ensure you have `go` installed before proceeding.
+For this method, use Hugo to manage your themes. Make sure you have **Go** installed before proceeding.
 
-1. [Download](https://golang.org/dl/) and install Go. You can check if it's already installed by using the command `go version`.
-
-   **Note:** Make sure you are using **Go version 1.12** or later as Hugo requires this for modules to work correctly.
-
+1. [Download](https://golang.org/dl/) and install Go. Verify with `go version` (requires Go version 1.12 or later).
 2. From your Hugo project directory (that you created above), initialise modules for your website:
 
    ```shell
@@ -121,9 +118,7 @@ The basic Kayal installation is now complete. Continue to the [Customization]({{
 
 ## Installing updates
 
-From time to time there will be [new releases](https://github.com/mnjm/kayal/releases) posted that apply fixes and add new functionality to the theme. In order to take advantage of these changes, you will need to update the theme files on your website.
-
-How you go about this will depend on the installation method you chose when the theme was originally installed. Instructions for each method can be found below.
+Periodically, new [releases](https://github.com/mnjm/kayal/releases) may include fixes and new features. Update theme files on your website based on your initial installation method.
 
 {{< collapse summary="<b>Update using git</b>" open=true >}}
 
@@ -153,7 +148,7 @@ Updating Kayal manually requires you to download the latest copy of the theme an
 
 **Note**: Any local customisations you have made to the theme files will be lost during this process.
 
-1. Download the latest release of the theme source code. Download [link](https://github.com/mnjm/kayal/releases/latest).
-2. Extract the archive, rename the folder to `kayal` and move it to the `themes/` directory inside your Hugo project's root folder. You will need to overwrite the existing directory to replace all the theme files.
+1. Download the latest theme release [here](https://github.com/mnjm/kayal/releases/latest).
+2. Extract and move `kayal` to `themes/` in your Hugo project.
 3. Rebuild your site and check everything works as expected.
 {{< /collapse >}}
