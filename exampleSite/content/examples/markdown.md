@@ -2,9 +2,10 @@
 title: 'Markdown'
 date: 2024-07-20T22:45:51+05:30
 draft: false
+weight: 1
 ---
 
-This article offers a sample of basic Markdown formatting that can be used in Blowfish, also it shows how some basic HTML elements are decorated.
+This article offers a sample of basic Markdown formatting that can be used in Kayal, also it shows how some basic HTML elements are decorated.
 
 <!--more-->
 

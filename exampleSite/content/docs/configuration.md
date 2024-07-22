@@ -1,7 +1,8 @@
 ---
 title: 'Configuration'
 date: 2024-07-21T21:28:49+05:30
-draft: true
+draft: false
+weight: 2
 hidden: false
 externalURL: false
 showDate: true

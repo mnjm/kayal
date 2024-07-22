@@ -9,7 +9,7 @@ KaTeX can be used to render mathematical notation within articles.
 
 {{< katex >}}
 
-Blowfish will only bundle the KaTeX assets into your project if you make use of mathematical notation. In order for this to work, simply include the [`katex` shortcode]({{< ref "shortcodes" >}}) within the article. Example below:
+Kayal will only bundle the KaTeX assets into your project if you make use of mathematical notation. In order for this to work, simply include the [`katex` shortcode]({{< ref "shortcodes" >}}) within the article. Example below:
 
 ```md
 {{</* katex */>}}

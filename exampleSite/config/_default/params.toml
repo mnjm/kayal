@@ -35,7 +35,7 @@ showRecentLabel = "Featured"
 showRecentItems = 4
 showReadMore = true
 showMore = true
-showMoreDest = "/docs"
+showMoreDest = "docs"
 
 [list]
 groupByYear = false
