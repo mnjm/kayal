@@ -1,31 +1,20 @@
-name = 'Theme name'
+name = 'Kayal'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
-description = 'Theme description'
+licenselink = 'https://github.com/mnjm/kayal/LICENSE'
+description = 'A minimal, lightweight with warm markdown-ish aesthetics for personal blogsites.'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/owner/repo'
+homepage = 'https://github.com/mnjm/kayal'
 
 # If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
+demosite = 'https://mnjm.github.io/kayal'
 
 # Taxonomy terms
-tags = ['blog', 'company']
-features = ['some', 'awesome', 'features']
-
-# If the theme has multiple authors
-authors = [
-  {name = 'Name of author', homepage = 'Website of author'},
-  {name = 'Name of author', homepage = 'Website of author'}
-]
-
-# If the theme has a single author
-[author]
-  name = 'Your name'
-  homepage = 'Your website'
+tags = ['blog', 'minimal', 'responsive', 'light', 'dark', 'clean', 'warm']
+features = ['dark mode', 'emoji', 'blog', 'table of contents', 'code copy', 'analytics', 'markdown-ish ui']
 
 # If porting an existing theme
 [original]
-  author = 'Name of original author'
-  homepage = 'Website of original author'
-  repo = 'https://github.com/owner/repo'
+  author = 'Manjunath Mohan'
+  homepage = 'mnjm.github.io'
+  repo = 'https://github.com/mnjm/kayal'

@@ -34,6 +34,7 @@
 {{ if gt (len $meta) 0 }}
 <p>
   {{ range $idx, $ent := $meta }}
+    {{ if gt $idx 0 }} &middot; {{ end }}
     {{ $iname := index $icons $idx }}
     <span class="meta-icon"> {{ partial "icon.html" $iname }} </span> {{ $ent | safeHTML }}
   {{ end }}

@@ -5,9 +5,9 @@ draft: false
 showHeadingAnchors: false
 ---
 
-**Kayal** is a Hugo theme designed to be minimal, lightweight with warm markdown-ish aesthetics for personal blogsites.
+Kayal is a Hugo theme designed to be minimal and lightweight, with markdown-ish aesthetics for personal blog sites.
 
-## Features:
+## Features
 - Clean and Responsive Design
 - Light and Dark Color Modes: Automatically adjusts based on browser preferences and/or manual toggle.
 - Profile Homepage
@@ -21,11 +21,11 @@ showHeadingAnchors: false
 - Google Analytics
 - SVG Icons from FontAwesome 6
 - SEO Friendly.
-- Exensibility: Placeholders to include
-    - a Custom Homepage
+- Extensibility: Includes placeholders for
+    - Custom Homepage
     - Other Analytics
     - Comments
     - Custom CSS
-    - Custom header and footer
+    - Custom header
 - Site hosted assets / no CDNs
-- Many more
+- And Many more...
