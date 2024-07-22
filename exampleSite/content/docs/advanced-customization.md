@@ -77,4 +77,4 @@ If you can't find the icons you need in this [list](https://github.com/mnjm/kaya
 Modify the SVG file by changing the fill color attributes to `fill="currentColor"` to match Kayal's theme color.
 {{< /callout >}}
 
-You can also include these icons in your article content using the [Icon shortcode](TODO).
+You can also include these icons in your article content using the [Icon shortcode]({{< ref "shortcodes#icon" >}})

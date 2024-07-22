@@ -39,8 +39,10 @@ Menus appear at the top of the header on your page. Each menu entry includes:
 
 - `name`: Displayed name or title.
 - `url`: Link destination for the menu item.
-- `pre` - This is used as an icon name. All available icons are listed [here](https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/hugo.toml). Also new icons can be added, Check [here](TODO).
+- `pre` - This is used as an icon name. All available icons are listed [here](https://github.com/mnjm/kayal/tree/main/assets/icons).
 - `weight`: Position within the menu. Lighter weights float to the top or appear first.
+
+Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
 
 {{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/menus.toml" type="toml" >}}
 
@@ -54,7 +56,7 @@ Kayal provides large number of configuration options to fit and suite your needs
 
 ### Homepage
 
-By default Kayal uses a profile layout for homepage. You can override this by providing a layout html file in your site's `layout/partials/homepage.html`. Check [here](TODO) for more info.
+By default Kayal uses a profile layout for homepage. You can override this by providing a layout html file in your site's `layout/partials/homepage.html`. Check [here]({{<ref "advanced-customization#custom-homepage" >}}) for more info.
 
 {{< callout >}} The content for the homepage is sourced from `content/_index.md`. {{</ callout >}}
 
@@ -82,7 +84,9 @@ These settings can be overridden by page-specific front matter (in `_index.md` f
 
 Social links are provided as a TOML list, with each entry containing
 - `name`
-- `icon`: Icon name. Browse available icons [here](https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/hugo.toml).
-- 'url'
+- `icon`: Icon name. All available icons are listed [here](https://github.com/mnjm/kayal/tree/main/assets/icons).
+- `url`
+
+Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
 
 {{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" >}}

@@ -140,7 +140,7 @@ blockquote {
 details {
   border-left: 4px solid var(--tertiary-color);
   margin: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
   background: var(--secondary-color-dark);
   border-radius: 0 var(--radius) var(--radius) 0;
 }
