@@ -1,4 +1,4 @@
 public
 resources
-exampleSite/public
+themes/
 **/.hugo_build.lock

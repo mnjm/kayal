@@ -2,10 +2,11 @@
 
 Kayal is a Hugo theme designed to be minimal and lightweight, with markdown-ish aesthetics for personal blog sites.
 
-[Demo](TBD)
+<h2 align="center"><a href="https://mnjm.github.io/kayal/">Demo site</a></h2>
 
-![Light SS](https://github.com/mnjm/github-media-repo/blob/main/kayal/light.png?raw=true)
-![Dark SS](https://github.com/mnjm/github-media-repo/blob/main/kayal/dark.png?raw=true)
+| Light Mode | Dark Mode |
+| ---- | ---- |
+|![Light SS](https://github.com/mnjm/github-media-repo/blob/main/kayal/light.png?raw=true)|![Dark SS](https://github.com/mnjm/github-media-repo/blob/main/kayal/dark.png?raw=true)|
 
 ## Features
 - Clean and Responsive Design
@@ -33,7 +34,7 @@ Kayal is a Hugo theme designed to be minimal and lightweight, with markdown-ish 
 ## Installation
 Kayal supports several installation methods: as a git submodule, a Hugo Module, or through manual installation.
 
-Detailed instructions on how to install Kayal can be found in [Installation](TBD) on the demo site. Here's a quick guide on how to install the theme as a git submodule:
+Detailed instructions on how to install Kayal can be found in [Installation](https://mnjm.github.io/kayal/docs/getting-started/) on the demo site. Here's a quick guide on how to install the theme as a git submodule:
 
 1. In your Hugo site directory, run the following command:
 
@@ -41,14 +42,14 @@ Detailed instructions on how to install Kayal can be found in [Installation](TBD
     git submodule add -b main https://github.com/mnjm/kayal.git themes/kayal --depth 1
     ```
 
-2. Copy config files from `themes/kayal/config/_default` to `config/_default` at the root of your Hugo project. Make necessary configuration changes in these files. Refer to [Configuration](TBD) on the demo site for more information.
+2. Copy config files from `themes/kayal/config/_default` to `config/_default` at the root of your Hugo project. Make necessary configuration changes in these files. Refer to [Configuration](https://mnjm.github.io/kayal/docs/configuration/) on the demo site for more information.
 3. Remove `hugo.toml` if present, and build the site.
 
 ## Configuration
 
 The config files included with Kayal contain all possible settings recognized by the theme. By default, many of these settings are commented out, but you can simply uncomment them to activate or modify.
 
-Refer to [Configuration](TBD) on the demo site for more details.
+Refer to [Configuration](https://mnjm.github.io/kayal/docs/configuration/) on the demo site for more details.
 
 ## Contribution
 Found a bug or have a new feature idea? Create an issue to let me know, or even better, submit a pull request directly!
