@@ -25,7 +25,5 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Ubuntu-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/Ubuntu-Regular.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/Ubuntu-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  src: url('../fonts/Ubuntu-Regular.woff2') format('woff2');
 }

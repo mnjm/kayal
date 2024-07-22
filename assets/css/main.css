@@ -140,8 +140,9 @@ blockquote {
 details {
   border-left: 4px solid var(--tertiary-color);
   margin: 0;
-  padding-inline: 1rem;
+  padding: 0.5rem 1rem;
   background: var(--secondary-color-dark);
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 /* Custom animation */
@@ -472,9 +473,9 @@ body:not(.dark) #sun {
   cursor:pointer;
   white-space:nowrap;
   background-color: var(--tertiary-color-light);
-  color: var(--primary-color);
+  border: none;
+  color: var(--black-always-clr);
   border-radius: var(--radius);
-  border: 1px solid var(--primary-color);
 }
 
 .copy-textarea {
