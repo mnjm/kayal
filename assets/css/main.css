@@ -61,7 +61,6 @@ h5::before { content: '##### '; }
 h6::before { content: '###### '; }
 
 ul {
-    list-style-type: none;
     padding-left: 20px;
 }
 
@@ -290,9 +289,15 @@ body:not(.dark) #sun {
   display: inline;
 }
 
-/* Footer */
+.list-item {
+  background-color: var(--secondary-color-dark);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+}
+
 .ft-title {
-  margin-bottom: .2rem;
+  margin: 0.5rem 0;
 }
 
 .ft-title a {
@@ -588,14 +593,12 @@ body:not(.dark) #sun {
 .icon {
   position: relative;
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .icon svg {
   width: 1em;
   height: 1em;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
 }
 
 .pagination {
