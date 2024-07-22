@@ -4,6 +4,9 @@ Kayal is a Hugo theme designed to be minimal and lightweight, with markdown-ish 
 
 [Demo](TBD)
 
+![Light SS](https://github.com/mnjm/github-media-repo/blob/main/kayal/light.png?raw=true)
+![Dark SS](https://github.com/mnjm/github-media-repo/blob/main/kayal/dark.png?raw=true)
+
 ## Features
 - Clean and Responsive Design
 - Light and Dark Color Modes: Automatically adjusts based on browser preferences and/or manual toggle.
