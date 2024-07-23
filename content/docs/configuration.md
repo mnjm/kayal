@@ -15,6 +15,7 @@ showToC: true
 openToC: false
 showComments: false
 showHeadingAnchors: true
+summary: "This page contains configuration instructions for customizing Kayal according to your specific needs."
 ---
 
 The config files that included with Kayal contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific feature.

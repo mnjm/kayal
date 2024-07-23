@@ -7,25 +7,4 @@ showHeadingAnchors: false
 
 Kayal is a Hugo theme designed to be minimal and lightweight, with markdown-ish aesthetics for personal blog sites.
 
-## Features
-- Clean and Responsive Design
-- Light and Dark Color Modes: Automatically adjusts based on browser preferences and/or manual toggle.
-- Profile Homepage
-- Customizable Configuration: Easily adjust settings to personalize
-- Shortcodes: Includes Callouts, Markdown and Code import from 3rd Party sites.
-- KaTeX Support
-- Cross-linking: Ability to link posts on third party sites.
-- Table of Contents
-- Code Copy
-- Heading Anchors
-- Google Analytics
-- SVG Icons from FontAwesome 6
-- SEO Friendly.
-- Extensibility: Includes placeholders for
-    - Custom Homepage
-    - Other Analytics
-    - Comments
-    - Custom CSS
-    - Custom header
-- Site hosted assets / no CDNs
-- And Many more...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum, tellus non varius viverra, massa justo porttitor risus, quis tempor ante magna at elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In imperdiet metus arcu, sed mattis metus vehicula non. Integer quis est sem. Ut hendrerit lobortis diam sit amet malesuada. Quisque lobortis nisi et ipsum aliquam placerat. Sed ullamcorper felis nec ex facilisis, eget faucibus turpis venenatis.

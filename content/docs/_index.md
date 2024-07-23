@@ -5,4 +5,4 @@ draft: false
 ---
 Discover everything about Kayal here.
 
-Start with the Getting Started if you're new, or explore the Samples section to see Kayal in action.
+Start with the Getting Started if you're new, or explore the Examples and Shortcodes section to see Kayal in action.

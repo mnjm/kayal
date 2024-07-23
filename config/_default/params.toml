@@ -68,6 +68,16 @@ icon = "github"
 url = "https://github.com/mnjm/kayal"
 
 [[social]]
-name = "Demo"
-icon = "wand-magic-sparkles"
-url = "https://mnjm.github.io/kayal"
+name = "Twitter"
+icon = "x-twitter"
+url = "https://twitter.com"
+
+[[social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://linkedin.com"
+
+[[social]]
+name = "Email"
+icon = "email"
+url = "mailto:name@example.com"
