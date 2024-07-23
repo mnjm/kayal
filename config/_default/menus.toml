@@ -8,27 +8,27 @@
 
 # `pre` is an icon ID. For a list of all available icons, check [https://github.com/mnjm/kayal/tree/main/assets/icons]
 
-[[main]]
-name = "posts"
-title = "Posts"
-url = "/posts/"
-weight = 1
-
-[[main]]
-name = "tags"
-title = "Tags"
-url = "/tags/"
-weight = 2
-
-[[main]]
-name = "about"
-title = "About"
-url = "/about/"
-weight = 3
-
-[[main]]
-name = "github"
-pre = "github"
-name = ""
-url = "https://github.com/mnjm/kayal"
-weight = 4
+# [[main]]
+# name = "posts"
+# title = "Posts"
+# url = "/posts/"
+# weight = 1
+#
+# [[main]]
+# name = "tags"
+# title = "Tags"
+# url = "/tags/"
+# weight = 2
+#
+# [[main]]
+# name = "about"
+# title = "About"
+# url = "/about/"
+# weight = 3
+#
+# [[main]]
+# name = "github"
+# pre = "github"
+# name = ""
+# url = "https://github.com/mnjm/kayal"
+# weight = 4
