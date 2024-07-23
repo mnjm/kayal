@@ -43,8 +43,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
+      - name: Clone theme
+        run: git clone https://github.com/mnjm/kayal.git themes/kayal --depth 1 --single-branch --branch main
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
