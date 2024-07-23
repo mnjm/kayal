@@ -231,21 +231,17 @@ details[open] div {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(var(--secondary-color), 0.7);
   z-index: 30;
-  transition-property: opacity;
-  transition-duration: 300ms;
-  opacity: 0;
-  cursor: default;
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
 }
 
 #mob-hb-icon, #mob-x-icon {
