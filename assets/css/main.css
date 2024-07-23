@@ -99,6 +99,7 @@ pre {
   overflow-x: auto;
   padding: 1em;
   border-radius: var(--radius);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 pre code {
@@ -143,6 +144,7 @@ details {
   padding: 0.25rem 0.5rem;
   background: var(--secondary-color-dark);
   border-radius: 0 var(--radius) var(--radius) 0;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Custom animation */
@@ -236,13 +238,15 @@ details[open] div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary-color);
+  background-color: rgba(var(--secondary-color), 0.7);
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
 }
 
 #mob-hb-icon, #mob-x-icon {
   display: none;
+  background-color: inherit;
 }
 
 @media (max-width: 800px) {
@@ -295,6 +299,7 @@ body:not(.dark) #sun {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   border-radius: var(--radius);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .ft-title {
@@ -512,6 +517,7 @@ body:not(.dark) #sun {
   display: flex;
   background-color: var(--secondary-color-dark);
   border-radius: var(--radius);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .pagenav .prev, .pagenav .next {
@@ -549,6 +555,11 @@ body:not(.dark) #sun {
   padding: 0.4em;
   border-radius: var(--radius);
   display: inline-block;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.toc details {
+  box-shadow: none;
 }
 
 .toc h4 {
@@ -582,6 +593,7 @@ body:not(.dark) #sun {
   border-radius: var(--radius);
   display: flex;
   align-items: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .callout svg {
