@@ -16,6 +16,7 @@ openToC: false
 showComments: false
 showHeadingAnchors: true
 summary: "This page contains all advanced changes that Kayal supports."
+tags: ["kayal", "advanced config", "partial"]
 ---
 
 There are many ways you can make advanced changes to Kayal. Read below to learn more about what can be customized and the best way to achieve your desired result.

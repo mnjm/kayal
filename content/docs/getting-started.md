@@ -4,6 +4,7 @@ date: 2024-07-20T22:37:14+05:30
 draft: false
 weight: 1
 summary: "This page contains installation instructions for both Hugo and Kayal, as well as instructions for future updates."
+tags: ["hugo", "kayal", "install"]
 ---
 
 ## Install Hugo

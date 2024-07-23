@@ -11,21 +11,25 @@
 
 [[main]]
 name = "Docs"
+title = "Docs"
 url = "/docs/"
 weight = 1
 
 [[main]]
 name = "Examples"
+title = "Examples"
 url = "/examples/"
 weight = 2
 
 [[main]]
 name = "Shortcodes"
+title = "Shortcodes"
 url = "/shortcodes/"
 weight = 3
 
 [[main]]
+name = "GitHub"
+title = ""
 pre = "github"
-name = ""
 url = "https://github.com/mnjm/kayal"
 weight = 4
