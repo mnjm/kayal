@@ -13,7 +13,7 @@
 {{ end }}
 {{ if $img }}
 {{ $where := $.Site.Params.homepage.where | default "top" }}
-<div class="avatar {{ $where }}"> <img src="{{ $img.RelPermalink }}" /> </div>
+<div class="avatar {{ $where }}"> <img alt="Profile" src="{{ $img.RelPermalink }}" /> </div>
 {{ end }}
 {{ end }}
 

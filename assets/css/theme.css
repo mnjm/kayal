@@ -3,11 +3,12 @@
   --radius: 6px;
   --primary-color: #292929;
   --secondary-color: #EFEFE6;
-  --tertiary-color: #FF7F11;
+  --tertiary-color: #E0002D;
+  /*--tertiary-color: #A20021;*/
   --link-color: #449DD1;
   --tertiary-color-light: #FFB370;
   --secondary-color-dark: #DFDFCD;
-  --black-always-clr: #292929;
+  --black: #292929;
 }
 
 .dark {
@@ -17,7 +18,7 @@
   --link-color: #449DD1;
   --tertiary-color-light: #A34C00;
   --secondary-color-dark: #3D3D29;
-  --black-always-clr: #292929;
+  --black: #292929;
 }
 
 @font-face {

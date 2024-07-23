@@ -136,6 +136,7 @@ blockquote {
   margin: 0;
   padding-left: 2rem;
   background: var(--secondary-color-dark);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 details {
@@ -173,7 +174,7 @@ details[open] div {
   align-items: center;
   color: var(--tertiary-color);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: bold;
   border-bottom: none;
 }
 
@@ -207,10 +208,14 @@ details[open] div {
 }
 
 #main-menu a {
-  margin: 0.5em;
-  font-size: 1.1rem;
-  font-weight: 550;
+  margin: 0.7em 0.5em;
+  font-size: 1rem;
+  font-weight: 600;
   border-bottom: none;
+}
+
+#main-menu a:hover {
+  border-bottom: 2px solid var(--tertiary-color);
 }
 
 #main-menu a svg {
@@ -461,7 +466,7 @@ body:not(.dark) #sun {
 
 .draft-lbl {
   background-color: var(--tertiary-color);
-  color: var(--black-always-clr);
+  color: var(--black);
   padding: 2px 4px;
   border-radius: var(--radius);
 }
@@ -492,7 +497,7 @@ body:not(.dark) #sun {
   white-space:nowrap;
   background-color: var(--tertiary-color-light);
   border: none;
-  color: var(--black-always-clr);
+  color: var(--black);
   border-radius: var(--radius);
 }
 
@@ -535,10 +540,12 @@ body:not(.dark) #sun {
 
 .pagenav .prev {
   text-align: left;
+  padding-right: 0;
   border-radius: var(--radius) 0 0 var(--radius);
 }
 
 .pagenav .next {
+  padding-left: 0;
   margin-inline-start: auto;
   text-align: right;
   border-radius: 0 var(--radius) var(--radius) 0;
@@ -547,7 +554,7 @@ body:not(.dark) #sun {
 .pagenav .direction {
   font-size: small;
   font-weight: bold;
-  color: var(--tertiary-color);
+  opacity: 0.5;
 }
 
 .pagenav .prev:hover, .pagenav .next:hover {
@@ -569,12 +576,9 @@ body:not(.dark) #sun {
   box-shadow: none;
 }
 
-.toc h4 {
-  display: inline;
-}
-
-.toc h4:before {
-  content: none;
+.toc summary {
+  font-weight: bold;
+  font-size: 1.05rem;
 }
 
 .toc-innr {
@@ -647,7 +651,7 @@ body:not(.dark) #sun {
 
 .page-item {
   background-color: var(--tertiary-color);
-  color: var(--black-always-clr);
+  color: var(--black);
   border-radius: var(--radius);
 }
 
