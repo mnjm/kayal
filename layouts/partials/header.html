@@ -41,16 +41,17 @@
     const openBtn = document.getElementById('mob-hb-icon');
     const closeBtn = document.getElementById('mob-x-icon');
     const mainMenu = document.getElementById('main-menu');
-    const htmlEl = document.documentElement;
-    const bodyEl = document.body;
+    const body = document.body;
 
     openBtn.addEventListener('click', function() {
         mainMenu.classList.replace('mm-normal', 'mm-mobile-open');
         closeBtn.style.display = 'block';
+        body.style.overflow = 'hidden';
     });
     closeBtn.addEventListener('click', function() {
         mainMenu.classList.replace('mm-mobile-open', 'mm-normal');
         closeBtn.style.display = 'none';
+        body.style.overflow = '';
     });
     })
   })();
