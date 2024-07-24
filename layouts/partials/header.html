@@ -1,8 +1,11 @@
 <header>
-    <a class="title" href="{{ "" | relLangURL}}">
     {{ with resources.Get .Site.Params.logo }}
+    <a class="title" href="{{ "" | relLangURL}}">
       <img alt="Site Logo" src="{{ .RelPermalink }}" />
+    </a>
     {{ end }}
+    <div class="header-cntr">
+    <a class="title" href="{{ "" | relLangURL}}">
     <span>{{ .Site.Title }}</span>
     </a>
   <div class="menu">
@@ -73,4 +76,5 @@
   })();
   </script>
   {{ end }}
+</div>
 </header>
