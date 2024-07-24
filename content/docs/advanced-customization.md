@@ -1,5 +1,5 @@
 ---
-title: 'Advanced Customization'
+title: 'Advanced Customization :toolbox:'
 date: 2024-07-22T07:40:43+05:30
 draft: false
 weight: 3

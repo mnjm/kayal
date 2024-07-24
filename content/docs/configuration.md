@@ -1,5 +1,5 @@
 ---
-title: 'Configuration'
+title: 'Configuration :nut_and_bolt:'
 date: 2024-07-21T21:28:49+05:30
 draft: false
 weight: 2

@@ -1,5 +1,5 @@
 ---
-title: 'Getting Started'
+title: 'Getting Started :rocket:'
 date: 2024-07-20T22:37:14+05:30
 draft: false
 weight: 1
@@ -13,7 +13,7 @@ tags: ["hugo", "kayal", "install"]
 - The theme is tested with Hugo v0.125 but may work with lower versions.
 - Installation instructions for the theme are provided below, Instructions for updating are provided too.
 
-## Getting Started 🚀
+## Getting Started
 
 ### Create a new Hugo site
 
