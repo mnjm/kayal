@@ -251,11 +251,6 @@ details[open] div {
   backdrop-filter: blur(10px);
 }
 
-.mm-mobile-open ul {
-  padding: 10px;
-}
-
-
 #mob-hb-icon, #mob-x-icon {
   display: none;
   background-color: inherit;
@@ -709,4 +704,13 @@ h6:hover .anchor {
   user-select: none;
   text-decoration: none;
   border: none;
+}
+
+.katex > .katex-html {
+	white-space: normal;
+}
+
+.katex .base {
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
