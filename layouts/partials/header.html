@@ -6,7 +6,7 @@
     {{ end }}
     <div class="header-cntr">
     <a class="title" href="{{ "" | relLangURL}}">
-    <span>{{ .Site.Title }}</span>
+    <span>{{ .Site.Title | emojify }}</span>
     </a>
   <div class="menu">
   <nav id="main-menu" class="mm-normal">
@@ -18,7 +18,7 @@
         <span>
           {{ partial "icon.html" .Pre }}
         </span>
-          {{ end }}{{ .Title }}</li></a>
+          {{ end }}{{ .Title | emojify }}</li></a>
     {{ end }}
     </ul>
   </nav>

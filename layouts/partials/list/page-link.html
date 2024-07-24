@@ -7,7 +7,7 @@
     {{ else }}
         <a href="{{ .RelPermalink }}">
     {{ end }}
-        {{ .LinkTitle }} </a> </div>
+        {{ .LinkTitle | emojify }} </a> </div>
     {{ if $showDate }}
     {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
     {{ $dateHuman := dateFormat "Jan 01, 2006" .Date }}
