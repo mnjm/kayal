@@ -25,6 +25,11 @@ summaryLength = 70
 # Build drafts during site generation.
 buildDrafts = true
 
+[sitemap]
+  changefreq = 'daily'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
 # Google Analytics Configuration
 # [services]
 #   [services.googleAnalytics]
