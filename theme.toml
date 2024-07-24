@@ -1,7 +1,7 @@
 name = 'Kayal'
 license = 'MIT'
 licenselink = 'https://github.com/mnjm/kayal/LICENSE'
-description = 'A minimal, lightweight with warm markdown-ish aesthetics for personal blogsites.'
+description = 'A minimal, lightweight with markdown-ish aesthetics for personal blogsites.'
 
 # The home page of the theme, where the source can be found
 homepage = 'https://github.com/mnjm/kayal'
