@@ -1,4 +1,4 @@
-# Kayal \[Work In Progress\]
+# Kayal
 
 Kayal is a Hugo theme designed to be minimal and lightweight, with markdown-ish aesthetics for personal blog sites.
 
