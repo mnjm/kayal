@@ -6,7 +6,7 @@
 # https://mnjm.github.io/kayal/docs/configuration/#theme-parameters
 
 # Site logo, this will be added before Site Title in the header
-# logo = "/imgs/logo.png"
+logo = "/imgs/logo.png"
 # Site description
 description = "Kayal is a Hugo theme designed to be minimal, lightweight with warm markdown-ish aesthetics for personal blogsites."
 # Copyright owner name
