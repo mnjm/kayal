@@ -4,9 +4,13 @@ Kayal is a Hugo theme designed to be minimal and lightweight, with markdown-ish 
 
 <h2 align="center"><a href="https://mnjm.github.io/kayal/">Demo site</a></h2>
 
+![Demo Site GH Pages](https://github.com/mnjm/kayal/actions/workflows/main.yaml/badge.svg)
+
 | Desktop | Mobile |
 | ---- | ---- |
-|![Desktop](https://github.com/mnjm/kayal/blob/main/images/screenshot.png?raw=true)|![Mobile](https://github.com/mnjm/kayal/blob/main/images/mobile.png?raw=true)|
+|![Desktop](https://github.com/mnjm/kayal/blob/main/images/tn.png?raw=true)|![Mobile](https://github.com/mnjm/kayal/blob/main/images/mobile.png?raw=true)|
+
+Source for the Demo site is available in [exampleSite](https://github.com/mnjm/kayal/tree/exampleSite) branch.
 
 ## Features
 - Clean and Responsive Design
