@@ -3,6 +3,7 @@
 {{ $startLine := .Get "startLine" | default 1 | int }}
 {{ $startLine = sub $startLine 1 }}
 {{ $endLine := .Get "endLine" | default -1 | int }}
+{{ $showLineNos := .Get "showLineNos" | default false }}
 {{ $selectedLines := slice }}
 {{ with resources.GetRemote (urls.Parse $url) }}
   {{ $lines := split .Content "\n" }}
@@ -17,6 +18,9 @@
   {{ end }}
   {{ $selectedLines := first $endLine $lines }}
   {{ $selectedLines = after $startLine $selectedLines }}
+  {{ if $showLineNos }}
+    {{ $type = printf "%s {linenos=true,linenostart=%d}" $type (add $startLine 1) }}
+  {{ end }}
   {{ $codeBlock := printf "```%s\n%s\n```" $type (delimit $selectedLines "\n") }}
   {{ $codeBlock | markdownify }}
 {{ else }}

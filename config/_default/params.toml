@@ -8,7 +8,6 @@ logo = "/imgs/logo.png"
 description = "A Hugo Theme"
 # [Optional] Copyright owner name.
 copyright = ""
-
 # Whether to enable copy button in code blocks.
 enableCodeCopy = true
 # Show the icon that switches between dark and light themes when clicked.

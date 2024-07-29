@@ -119,6 +119,7 @@ pre:has(code) {
 .highlight>div {
   border-radius: var(--radius);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  overflow-x: auto;
 }
 
 .highlight tbody pre {
