@@ -24,4 +24,4 @@ This is the Demo site branch for Kayal. Visit [main branch](https://github.com/m
    cd ./exampleSite
    hugo -gc [server] --themesDir ../..
    ```
-   - **Important**: Make sure that the root directory (where the repository was cloned) is named `kayal`.
+   - **Important**: Make sure that the root directory (where the repository was cloned) is named `kayal` or pass `--theme <dir name>` to hugo.
