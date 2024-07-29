@@ -124,6 +124,7 @@ codeimport` can be used for importing code from external sources easily without 
 | `type`    | Code type used for syntax highlighting. |
 | `startLine` | **Optional** The line number to start the import from. |
 | `endLine` | **Optional** The line number to end the import at.|
+| `showLineNos` | **Optional** Whether to show line numbers <br> Default: `false` |
 
 **Example 1**
 ```markdown
@@ -133,7 +134,7 @@ codeimport` can be used for importing code from external sources easily without 
 
 **Example 2**
 ```markdown
-{{</* codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" */>}}
+{{</* codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true */>}}
 
 ```
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true >}}
