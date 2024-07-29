@@ -36,3 +36,22 @@ The vimeo shortcode will embed a Vimeo video.
 {{</* vimeo 64575379 */>}}
 ```
 {{< vimeo 64575379 >}}
+
+
+## Highlight
+Code block can be highlighted with Hugo's internal highlight shortcode. Available [options](https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode).
+
+```html
+{{</* highlight html */>}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Example HTML5 Document</title>
+</head>
+<body>
+  <p>Test</p>
+</body>
+</html>
+{{</* /highlight */>}}
+```
