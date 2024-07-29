@@ -477,18 +477,18 @@ body:not(.dark) #sun {
   border-radius: var(--radius);
 }
 
-.highlight {
+pre, .highlight {
   position:relative;
-  z-index:0;
 }
 
-.highlight:hover>.copy-button {
-  visibility:visible
+div.highlight:hover .copy-button,
+pre:hover .copy-button {
+    display: block;
 }
 
 .copy-button {
   opacity: 0.8;
-  visibility:hidden;
+  display: none;
   position:absolute;
   top:0px;
   right:0px;
