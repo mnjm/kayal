@@ -2,41 +2,29 @@
 {{ $showModDate := .Params.showModDate | default (.Site.Params.article.showModDate | default false) }}
 {{ $showReadingTime := .Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true) }}
 
-{{ $meta := slice }}
-{{ $icons := slice }}
+<p>
 {{/* Date Reading time and Draft label */}}
 {{ if $showDate }}
-{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-{{ $dateHuman := .Date | time.Format "Jan 01, 2006" }}
-{{ $icons = $icons | append "calender" }}
-{{ $meta = $meta | append (printf "Posted on <time datetime=\"%s\">%s</time>" $dateMachine $dateHuman) }}
-
-{{ $dateModMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
-{{ $dateModHuman := .Lastmod | time.Format "Jan 01, 2006" }}
-{{ if and $showModDate (ne $dateModHuman $dateHuman) }}
-{{ $icons = $icons | append "pencil" }}
-{{ $meta = $meta | append (printf "Last edited <time datetime=\"%s\">%s</time>" $dateModMachine $dateModHuman) }}
-{{ end }}
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format "Jan 2, 2006" }}
+  <span class="meta-icon">{{ partial "icon.html" "calender" }}</span>
+  Posted on <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  {{ $dateModMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateModHuman := .Lastmod | time.Format "Jan 2, 2006" }}
+  {{ if and $showModDate (ne $dateModHuman $dateHuman) }}
+    <span class="meta-icon">{{ partial "icon.html" "pencil" }}</span>
+    Last edited <time datetime="{{ $dateModMachine }}">{{ $dateModHuman }}</time>
+  {{ end }}
 {{ end }}
 {{ if $showReadingTime }}
-{{ $icons = $icons | append "time" }}
-{{ if gt .ReadingTime 1 }}
-{{ $meta = $meta | append (printf "%s mins" (.ReadingTime | markdownify)) }}
-{{ else }}
-{{ $meta = $meta | append (printf "%s min" (.ReadingTime | markdownify)) }}
-{{ end }}
+  <span class="meta-icon">{{ partial "icon.html" "time" }}</span>
+  {{ if gt .ReadingTime 1 }}
+    {{ printf "%s mins" (.ReadingTime | markdownify) }}
+  {{ else }}
+    {{ printf "%s min" (.ReadingTime | markdownify) }}
+  {{ end }}
 {{ end}}
 {{ if .Draft }}
-{{ $icons = $icons | append "edit" }}
-{{ $meta = $meta | append "<span class=\"draft-lbl\">DRAFT</span>" }}
+  <span class="draft-lbl"><span class="meta-icon">{{ partial "icon.html" "edit" }}</span>DRAFT</span>
 {{ end }}
-{{/* $meta := delimit $meta " | " */}}
-{{ if gt (len $meta) 0 }}
-<p>
-  {{ range $idx, $ent := $meta }}
-    {{ if gt $idx 0 }} &middot; {{ end }}
-    {{ $iname := index $icons $idx }}
-    <span class="meta-icon"> {{ partial "icon.html" $iname }} </span> {{ $ent | safeHTML }}
-  {{ end }}
 </p>
-{{ end }}
