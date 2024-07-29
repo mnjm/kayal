@@ -31,7 +31,7 @@ As outlined in the [installation]({{< ref "getting-started#set-up-theme-configur
 
 The site configuration is managed through `config/_default/hugo.toml` file.
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/hugo.toml" type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/hugo.toml" type="toml" showLineNos=true >}}
 
 ## Menus
 
@@ -47,7 +47,7 @@ Menus appear at the top of the header on your page. Each menu entry includes:
 
 Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/menus.toml" type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/menus.toml" type="toml" showLineNos=true >}}
 
 ## Theme Parameters
 
@@ -55,7 +55,7 @@ Kayal provides large number of configuration options to fit and suite your needs
 
 ### Global
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=5 endLine=24 type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=5 endLine=24 type="toml" showLineNos=true >}}
 
 ### Homepage
 
@@ -63,11 +63,11 @@ By default Kayal uses a profile layout for homepage. You can override this by pr
 
 {{< callout >}} The content for the homepage is sourced from `content/_index.md`. {{</ callout >}}
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=33 endLine=51 type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=33 endLine=51 type="toml" showLineNos=true >}}
 
 ### Article Settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=53 endLine=72 type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=53 endLine=72 type="toml" showLineNos=true >}}
 
 These settings can be overridden by page-specific front matter with the same name. Additionally, two additional front matter parameters are provided:
 
@@ -76,12 +76,12 @@ These settings can be overridden by page-specific front matter with the same nam
 
 ### List template settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=74 endLine=79 type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=74 endLine=79 type="toml" showLineNos=true >}}
 These settings can be overridden by page-specific front matter (in `_index.md` files for lists) with the same name.
 
 ### Taxonomy and Term Settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=81 endLine=93 type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=81 endLine=93 type="toml" showLineNos=true >}}
 
 ### Social Links
 
@@ -92,4 +92,4 @@ Social links are provided as a TOML list, with each entry containing
 
 Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true >}}
