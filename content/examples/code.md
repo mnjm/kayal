@@ -1,7 +1,7 @@
 ---
 title: 'Code Blocks Highlights'
 date: 2024-07-29T10:08:36+05:30
-draft: true
+draft: false
 hidden: false
 externalURL: false
 showDate: true
