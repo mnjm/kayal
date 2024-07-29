@@ -98,9 +98,7 @@ code {
 pre {
   line-height: 1.5;
   overflow-x: auto;
-  padding: 1em;
-  border-radius: var(--radius);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
 }
 
 pre code {
@@ -108,6 +106,23 @@ pre code {
   color: inherit;
   font-size: 100%;
   padding: 0;
+}
+
+pre:has(code) {
+  color: #f8f8f2;
+  background-color: #272822;
+  border-radius: var(--radius);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.highlight>pre,
+.highlight>div {
+  border-radius: var(--radius);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.highlight tbody pre {
+  margin: 0;
 }
 
 .highlight pre ::selection {
@@ -276,7 +291,8 @@ details[open] div {
   border-bottom: 2px solid var(--tertiary-color);
 }
 
-.menu-btn svg {
+.menu-btn svg,
+.copy-button svg {
   height: 1.1em;
   width: 1.1em;
   vertical-align: text-top;
@@ -490,16 +506,17 @@ pre:hover .copy-button {
   opacity: 0.8;
   display: none;
   position:absolute;
-  top:0px;
-  right:0px;
+  top:2px;
+  right:2px;
   z-index:10;
-  padding: 0.25rem 0.5rem;
+  /*padding: 0.25rem 0.5rem;*/
   cursor:pointer;
-  white-space:nowrap;
-  background-color: var(--tertiary-color-light);
+  background-color: inherit;
   border: none;
-  color: var(--black);
-  border-radius: var(--radius);
+}
+
+.copy-button svg {
+  color: var(--tertiary-color-light);
 }
 
 .copy-textarea {
@@ -600,7 +617,7 @@ pre:hover .copy-button {
 
 .callout {
   padding: .75rem;
-  margin: 0;
+  margin: 1em 0;
   background: var(--secondary-color-dark);
   border-radius: var(--radius);
   display: flex;
