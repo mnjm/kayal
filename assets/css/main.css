@@ -151,8 +151,8 @@ details {
 
 /* Custom animation */
 @keyframes revealContent {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+0% { opacity: 0; }
+100% { opacity: 1; }
 }
 
 details[open] div {
@@ -483,7 +483,7 @@ pre, .highlight {
 
 div.highlight:hover .copy-button,
 pre:hover .copy-button {
-    display: block;
+  display: block;
 }
 
 .copy-button {
@@ -713,10 +713,14 @@ h6:hover .anchor {
 }
 
 .katex > .katex-html {
-	white-space: normal;
+  white-space: normal;
 }
 
 .katex .base {
-	margin-top: 2px;
-	margin-bottom: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.gist .markdown-body .highlight pre, .gist .markdown-body pre {
+  box-shadow: none;
 }
