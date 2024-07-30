@@ -1,5 +1,6 @@
 ---
-title: 'Math'
+title: 'Math using KateX'
+weight: 4
 date: 2024-07-20T22:49:47+05:30
 ---
 

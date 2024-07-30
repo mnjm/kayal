@@ -21,6 +21,7 @@ In addition to all the default Hugo shortcodes, Kayals adds a few extras for add
 {{</* callout */>}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in lectus efficitur, in consequat purus ultricies.
 {{</* /callout */>}}
+Rendered as:
 ```
 {{< callout >}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in lectus efficitur, in consequat purus ultricies.
@@ -32,9 +33,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in 
 Feel free to show your support by giving a star 🌟 on [GitHub](https://github.com/mnjm/kayal)
 {{</* /callout */>}}
 ```
+Rendered as:
 {{< callout github >}}
 Feel free to show your support by giving a star 🌟 on [GitHub](https://github.com/mnjm/kayal)
 {{< /callout >}}
+
+## Code Importer
+
+`codeimport` can be used for importing code from external sources easily without copying and pasting.
+
+| Parameter | Description |
+| ---- | ---- |
+| `url`     | **Required** URL to an externally hosted code file. |
+| `type`    | Code type used for syntax highlighting. |
+| `startLine` | **Optional** The line number to start the import from. |
+| `endLine` | **Optional** The line number to end the import at.|
+| `showLineNos` | **Optional** Whether to show line numbers <br> Default: `false` |
+
+**Example 1**
+```markdown
+{{</* codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/layouts/shortcodes/mdimport.html" type="go" */>}}
+```
+Rendered as:
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/layouts/shortcodes/mdimport.html" type="go" >}}
+
+**Example 2**
+```markdown
+{{</* codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true */>}}
+
+```
+Rendered as:
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true >}}
 
 ## Collapse
 
@@ -53,7 +82,7 @@ Feel free to show your support by giving a star 🌟 on [GitHub](https://github.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in lectus efficitur, in consequat purus ultricies.
 {{</* /collapse */>}}
 ```
-
+Rendered as:
 {{< collapse summary="Click to expand" open=true >}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in lectus efficitur, in consequat purus ultricies.
 {{< /collapse >}}
@@ -66,6 +95,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in 
 ```markdown
 GitHub Icon {{</* icon "github" */>}}
 ```
+Rendered as:
 
 GitHub Icon {{< icon "github" >}}
 
@@ -78,6 +108,8 @@ GitHub Icon {{< icon "github" >}}
 {{</* katex */>}}
 \\(f(a,b,c) = (a^2+b^2+c^2)^3\\)
 ```
+Rendered as:
+
 {{< katex >}}
 \\(f(a,b,c) = (a^2+b^2+c^2)^3\\)
 
@@ -94,6 +126,7 @@ $$
 \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix}
 $$
 ```
+Rendered as:
 $$
 \det(A) = a_{11} \begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix} - a_{12} \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} + a_{13} \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix}
 $$
@@ -106,35 +139,38 @@ $$
 | `url` | **Required** URL to an externally hosted markdown file. |
 
 ```markdown
-<hr>
 {{</* mdimport url="https://raw.githubusercontent.com/mnjm/mnjm/master/README.md" */>}}
-<hr>
 ```
+Rendered as:
 <hr>
 {{< mdimport url="https://raw.githubusercontent.com/mnjm/mnjm/master/README.md" >}}
 <hr>
 
-## Code Importer
+## Mermaid
 
-codeimport` can be used for importing code from external sources easily without copying and pasting.
+`mermaid` can be used for create diagrams and visualizations using text and code. It uses [**Mermaid.js**](https://mermaid.js.org/) which is a JavaScript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams.
 
-| Parameter | Description |
-| ---- | ---- |
-| `url`     | **Required** URL to an externally hosted code file. |
-| `type`    | Code type used for syntax highlighting. |
-| `startLine` | **Optional** The line number to start the import from. |
-| `endLine` | **Optional** The line number to end the import at.|
-| `showLineNos` | **Optional** Whether to show line numbers <br> Default: `false` |
+Refer [here]({{< ref "examples/diagram.md" >}}) for more examples.
 
-**Example 1**
+**Example**
 ```markdown
-{{</* codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/layouts/shortcodes/mdimport.html" type="go" */>}}
+{{</* mermaid */>}}
+graph TD
+    B[Boil Water] --> C[Add Tea Powder]
+    C --> D[Add Milk]
+    D --> E[Add Sugar]
+    E --> F[Strain]
+    F --> G[Drink]
+    G --> |Repeat|B
+{{</* /mermaid */>}}
 ```
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/layouts/shortcodes/mdimport.html" type="go" >}}
-
-**Example 2**
-```markdown
-{{</* codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true */>}}
-
-```
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true >}}
+Rendered as:
+{{< mermaid >}}
+graph TD
+    B[Boil Water] --> C[Add Tea Powder]
+    C --> D[Add Milk]
+    D --> E[Add Sugar]
+    E --> F[Strain]
+    F --> G[Drink]
+    G --> |Repeat|B
+{{< /mermaid >}}

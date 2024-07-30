@@ -1,5 +1,6 @@
 ---
 title: 'Emoji'
+weight: 6
 date: 2024-07-20T22:48:09+05:30
 ---
 Emoji is supported throughout Kayal by default. Emoji can be used in titles, menu items and article content.
