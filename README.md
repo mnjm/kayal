@@ -19,6 +19,7 @@ Source for the Demo site is available in [exampleSite](https://github.com/mnjm/k
 - Customizable Configuration: Easily adjust settings to personalize
 - Shortcodes: Includes Callouts, Markdown and Code import from 3rd Party sites.
 - KaTeX Support
+- Mermaid Diagrams Support
 - Cross-linking: Ability to link posts on third party sites.
 - Table of Contents
 - Code Copy
