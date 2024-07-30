@@ -743,3 +743,7 @@ h6:hover .anchor {
 .gist .markdown-body .highlight pre, .gist .markdown-body pre {
   box-shadow: none;
 }
+
+.mermaid {
+  background-color: #292929;
+}

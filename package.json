@@ -1,0 +1,51 @@
+{
+  "name": "kayal",
+  "version": "0.1.1",
+  "description": "Minimal and lightweight Hugo theme with markdown-ish aesthetics",
+  "scripts": {
+    "postinstall": "vendor-copy",
+    "test": "echo \"test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnjm/kayal.git"
+  },
+  "keywords": [
+    "hugo",
+    "hugo-theme"
+  ],
+  "author": "mnjm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mnjm/kayal/issues"
+  },
+  "homepage": "https://github.com/mnjm/kayal#readme",
+  "dependencies": {
+    "katex": "^0.16.11",
+    "mermaid": "^10.9.1",
+    "vendor-copy": "^3.0.1"
+  },
+  "vendorCopy": [],
+  "devVendorCopy": [
+    {
+      "from": "node_modules/mermaid/dist/mermaid.min.js",
+      "to": "assets/lib/mermaid/mermaid.min.js"
+    },
+    {
+      "from": "node_modules/katex/dist/katex.min.js",
+      "to": "assets/lib/katex/katex.min.js"
+    },
+    {
+      "from": "node_modules/katex/dist/katex.min.css",
+      "to": "assets/lib/katex/katex.min.css"
+    },
+    {
+      "from": "node_modules/katex/dist/contrib/auto-render.min.js",
+      "to": "assets/lib/katex/auto-render.min.js"
+    },
+    {
+      "from": "node_modules/katex/dist/fonts/",
+      "to": "assets/lib/katex/fonts/"
+    }
+  ]
+}
