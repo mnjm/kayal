@@ -21,8 +21,8 @@ In addition to all the default Hugo shortcodes, Kayals adds a few extras for add
 {{</* callout */>}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in lectus efficitur, in consequat purus ultricies.
 {{</* /callout */>}}
-Rendered as:
 ```
+Rendered as:
 {{< callout >}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in lectus efficitur, in consequat purus ultricies.
 {{< /callout >}}
@@ -139,7 +139,9 @@ $$
 | `url` | **Required** URL to an externally hosted markdown file. |
 
 ```markdown
+<hr>
 {{</* mdimport url="https://raw.githubusercontent.com/mnjm/mnjm/master/README.md" */>}}
+<hr>
 ```
 Rendered as:
 <hr>

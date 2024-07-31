@@ -35,7 +35,7 @@ Kayal also includes some placeholder partial templates that you can use to exten
 
 ## Custom Homepage
 
-If you want to modify and provide a custom homepage, you can create a `examplesite/layouts/partials/homepage.html` [partial template](https://gohugo.io/templates/partial/) to override the default. This will override the theme's `_profile_` partial located in `themes/kayal/partials/home/profile.html`.
+If you want to modify and provide a custom homepage, you can create a `examplesite/layouts/partials/homepage.html` [partial template](https://gohugo.io/templates/partial/) to override the default. This will override the theme's _profile_ partial located in `themes/kayal/partials/home/profile.html`.
 
 ## Analytics
 
