@@ -2,7 +2,7 @@
 # These options control how the theme functions and allow you to
 # customize the display of your website.
 
-# [Optional] Site logo, displayed before the Site Title in the header.
+# [Optional] Path to the site logo image relative to assets/ folder. Displayed before the Site Title in the header. Minimum size: 64x64px.
 logo = "/imgs/logo.png"
 # Site description.
 description = "A Hugo Theme"
@@ -34,7 +34,7 @@ showHeadingAnchors = true
 [homepage]
 # [Optional] Displayed at the top of your homepage.
 headline = "👋 Welcome to my site"
-# [Optional] Profile image
+# [Optional] Path to the profile image relative to assets/ folder. Minimum size: 200x200px.
 image = "imgs/profile.svg"
 # Image position.
 where = "right"  # Options: right, left, top
