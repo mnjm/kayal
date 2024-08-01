@@ -29,13 +29,13 @@ There are many ways you can make advanced changes to Kayal. Read below to learn 
 
 If you don't like or want to modify something in the theme, it's best to follow Hugo's practice. Never modify the files in the `themes/kayal` directory; rather, copy the file that you want to modify to your site's directory and make modifications there. Hugo's file lookup order will prioritize your site's files over the theme's.
 
-For example, if you want to modify the `single.html` template for articles, you can copy the file from `examplesite/themes/kayal/layouts/_default/single.html` to `examplesite/layouts/_default/single.html` and make modifications there.
+For example, if you want to modify the `single.html` template for articles, you can copy the file from `mywebsite/themes/kayal/layouts/_default/single.html` to `mywebsite/layouts/_default/single.html` and make modifications there.
 
 Kayal also includes some placeholder partial templates that you can use to extend its capabilities. More details below.
 
 ## Custom Homepage
 
-If you want to modify and provide a custom homepage, you can create a `examplesite/layouts/partials/homepage.html` [partial template](https://gohugo.io/templates/partial/) to override the default. This will override the theme's _profile_ partial located in `themes/kayal/partials/home/profile.html`.
+If you want to modify and provide a custom homepage, you can create a `mywebsite/layouts/partials/homepage.html` [partial template](https://gohugo.io/templates/partial/) to override the default. This will override the theme's _profile_ partial located in `themes/kayal/partials/home/profile.html`.
 
 ## Analytics
 
@@ -51,11 +51,11 @@ Kayal supports Google Analytics using Hugo's [Google Analytics embedded template
 
 ### Other Analytics
 
-If you prefer to use a different analytics provider, you can override the analytics partial and provide your own script. Simply create the file `examplesite/layouts/partials/analytics/custom.html` with the code provided by your analytics provider.
+If you prefer to use a different analytics provider, you can override the analytics partial and provide your own script. Simply create the file `mywebsite/layouts/partials/analytics/custom.html` with the code provided by your analytics provider.
 
 ## Comments
 
-To add comments to your articles, Kayal includes support for a comments partial that is included at the base of each article page. Simply provide a `examplesite/layouts/partials/comments.html` containg the code required to display your chosen comments.
+To add comments to your articles, Kayal includes support for a comments partial that is included at the base of each article page. Simply provide a `mywebsite/layouts/partials/comments.html` containing the code required to display your chosen comments.
 
 You can use either the built-in Hugo _Disqus_ template or provide your own custom code. Refer to the [Hugo documentation](https://gohugo.io/content-management/comments/) for more details.
 
@@ -63,17 +63,17 @@ Once you've added comments to your site, ensure you enable them either in `param
 
 ## Overriding the stylesheet
 
-If you wish to modify the site's theme, copy the `examplesite/themes/kayal/assets/css/theme.css` file to `examplesite/assets/css/theme.css`. Modify the stylesheet properties in the copied file.
+If you wish to modify the site's theme, copy the `mywebsite/themes/kayal/assets/css/theme.css` file to `mywebsite/assets/css/theme.css`. Modify the stylesheet properties in the copied file.
 
-Psst..., you can include a custom stylesheet by creating `examplesite/assets/css/custom.css` and adding your styles there.
+Psst..., you can include a custom stylesheet by creating `mywebsite/assets/css/custom.css` and adding your styles there.
 
 ## Custom Head
 
-The theme allows inserting additional code directly into the `<head>` section. Simply provide a `examplesite/layouts/partials/extend-head.html`.
+The theme allows inserting additional code directly into the `<head>` section. Simply provide a `mywebsite/layouts/partials/extend-head.html`.
 
 ## Icons
 
-If you can't find the icons you need in this [list](https://github.com/mnjm/kayal/tree/main/assets/icons), you can add your own by including the icon's SVG file in `examplesite/assets/icons/`. Kayal will recognize these icons for configurations in `socials` and `menu`.
+If you can't find the icons you need in this [list](https://github.com/mnjm/kayal/tree/main/assets/icons), you can add your own by including the icon's SVG file in `mywebsite/assets/icons/`. Kayal will recognize these icons for configurations in [socials]({{< ref "configuration#social-links" >}}) and [menu]({{< ref "configuration#menus" >}}).
 
 {{< callout >}}
 Modify the SVG file by changing the fill color attributes to `fill="currentColor"` to match Kayal's theme color.

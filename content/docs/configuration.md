@@ -58,7 +58,7 @@ Kayal provides large number of configuration options to fit and suite your needs
 {{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=5 endLine=24 type="toml" showLineNos=true >}}
 
 {{< callout >}}
-`logo` is optional and should be the path to the site logo image relative to the `site/assets/` folder with Minimum size of 64x64px.
+`logo` is optional and should be the path to the site logo image relative to the `mywebsite/assets/` folder with Minimum size of 64x64px.
 {{< /callout >}}
 
 ### Homepage
@@ -70,7 +70,7 @@ By default Kayal uses a profile layout for homepage. You can override this by pr
 {{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=33 endLine=51 type="toml" showLineNos=true >}}
 
 {{< callout >}}
-`image` is optional and should be a path to the profile image in the `site/assets/` folder. Minimum size: 200x200 px.
+`image` is optional and should be a path to the profile image in the `mywebsite/assets/` folder. Minimum size: 200x200 px.
 {{< /callout >}}
 
 ### Article Settings

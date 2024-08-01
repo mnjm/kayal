@@ -91,6 +91,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in 
 
 `icon` outputs an SVG icon and takes the icon name as its only parameter. The icon is scaled to match the current text size.
 
+Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
+
 **Example**
 ```markdown
 GitHub Icon {{</* icon "github" */>}}
