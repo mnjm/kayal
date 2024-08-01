@@ -3,7 +3,7 @@
 # customize the display of your website.
 
 # [Optional] Path to the site logo image relative to assets/ folder. Displayed before the Site Title in the header. Minimum size: 64x64px.
-logo = "/imgs/logo.png"
+# logo = "/imgs/logo.png"
 # Site description.
 description = "A Hugo Theme"
 # [Optional] Copyright owner name.
@@ -35,7 +35,7 @@ showHeadingAnchors = true
 # [Optional] Displayed at the top of your homepage.
 headline = "👋 Welcome to my site"
 # [Optional] Path to the profile image relative to assets/ folder. Minimum size: 200x200px.
-image = "imgs/profile.svg"
+# image = "imgs/profile.svg"
 # Image position.
 where = "right"  # Options: right, left, top
 # Whether to show recent items on the homepage.
@@ -93,17 +93,17 @@ groupByYear = false
 showDate = true
 
 # Social links
-[[social]]
-name = "GitHub"
-icon = "github"
-url = "https://github.com/mnjm/kayal"
-
-[[social]]
-name = "Email"
-icon = "mail"
-url = "mailto:name@example.com"
-
-[[social]]
-name = "Twitter / X"
-icon = "x-twitter"
-url = "https://x.com/sample"
+# [[social]]
+# name = "GitHub"
+# icon = "github"
+# url = "https://github.com/mnjm/kayal"
+#
+# [[social]]
+# name = "Email"
+# icon = "mail"
+# url = "mailto:name@example.com"
+#
+# [[social]]
+# name = "Twitter / X"
+# icon = "x-twitter"
+# url = "https://x.com/sample"

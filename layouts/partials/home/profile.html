@@ -20,7 +20,8 @@
 {{/* Content from _index.html */}}
 {{ .Content }}
 
-<div class="socials">
-<span> Socials </span>
-{{ partial "home/socials.html" . }}
-</div>
+{{ if .Site.Params.Social }}
+  <div class="socials">
+  {{ partial "home/socials.html" . }}
+  </div>
+{{ end }}
