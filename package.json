@@ -6,7 +6,7 @@
     "postinstall": "vendor-copy",
     "demo": "cd exampleSite; hugo --themesDir ../.. serve -D --disableFastRender -b http://localhost:1313 ; cd ..",
     "demo-build": "cd exampleSite; hugo --themesDir ../.. -D; cd ..",
-    "test": "echo \"test\""
+    "demo-clean": "rm -r exampleSite/public"
   },
   "repository": {
     "type": "git",
