@@ -101,3 +101,19 @@ Social links are provided as a TOML list, with each entry containing
 Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
 
 {{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true >}}
+
+## Favicons
+
+Place favicon assets in the `static` folder (`mywebsite/static`). Use the filenames listed below. If using [favicon.io](https://favicon.io), it will generate these filenames automatically.
+
+```
+static/
+├── android-chrome-192x192.png
+├── android-chrome-512x512.png
+├── apple-touch-icon.png
+├── favicon-16x16.png
+├── favicon-32x32.png
+├── favicon.ico
+└── site.webmanifest
+```
+To override the default favicon inclusion, see [Overriding Favicons]({{< ref "advanced-customization#overriding-favicons" >}}).

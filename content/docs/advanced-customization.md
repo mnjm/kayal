@@ -51,11 +51,11 @@ Kayal supports Google Analytics using Hugo's [Google Analytics embedded template
 
 ### Other Analytics
 
-If you prefer to use a different analytics provider, you can override the analytics partial and provide your own script. Simply create the file `mywebsite/layouts/partials/analytics/custom.html` with the code provided by your analytics provider.
+If you prefer to use a different analytics provider, you can override the analytics partial and provide your own script. Create `mywebsite/layouts/partials/analytics/custom.html` file with the code provided by your analytics provider.
 
 ## Comments
 
-To add comments to your articles, Kayal includes support for a comments partial that is included at the base of each article page. Simply provide a `mywebsite/layouts/partials/comments.html` containing the code required to display your chosen comments.
+To add comments to your articles, Kayal includes support for a comments partial that is included at the base of each article page. Create `mywebsite/layouts/partials/comments.html` file containing the code required to display your chosen comments.
 
 You can use either the built-in Hugo _Disqus_ template or provide your own custom code. Refer to the [Hugo documentation](https://gohugo.io/content-management/comments/) for more details.
 
@@ -69,7 +69,7 @@ Psst..., you can include a custom stylesheet by creating `mywebsite/assets/css/c
 
 ## Custom Head
 
-The theme allows inserting additional code directly into the `<head>` section. Simply provide a `mywebsite/layouts/partials/extend-head.html`.
+The theme allows inserting additional code directly into the `<head>` section. Create `mywebsite/layouts/partials/extend-head.html` file the additional code, this will added at the end of `<head>` section.
 
 ## Icons
 
@@ -80,3 +80,7 @@ Modify the SVG file by changing the fill color attributes to `fill="currentColor
 {{< /callout >}}
 
 You can also include these icons in your article content using the [Icon shortcode]({{< ref "shortcodes#icon" >}})
+
+## Overriding Favicons
+
+You can override the default [favicon]({{< ref "configuration#favicons" >}}) inclusion. Create `mywebsite/layouts/partials/favicons.html` file with favicon HTML tags and assets. This will be injected into the site <head> in place of the default inclusion.
