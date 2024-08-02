@@ -33,7 +33,7 @@ showHeadingAnchors = true
 # Homepage settings
 [homepage]
 # [Optional] Displayed at the top of your homepage.
-headline = "👋 Welcome to my site"
+# headline = "👋 Welcome to my site"
 # [Optional] Path to the profile image relative to assets/ folder. Minimum size: 200x200px.
 # image = "imgs/profile.svg"
 # Image position.
@@ -68,7 +68,7 @@ invertPagination = true
 showToC = true
 # Whether to open the Table of Contents when the page is loaded.
 openToC = false
-# Whether to include the comments partial after the article footer. (Check advanced configuration for more info)
+# Check https://mnjm.github.io/kayal/docs/advanced-customization/#comments
 showComments = false
 
 # List template settings
@@ -100,7 +100,7 @@ showDate = true
 #
 # [[social]]
 # name = "Email"
-# icon = "mail"
+# icon = "email"
 # url = "mailto:name@example.com"
 #
 # [[social]]
