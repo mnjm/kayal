@@ -44,7 +44,7 @@ Detailed instructions on how to install Kayal can be found in [Installation](htt
 1. In your Hugo site directory, run the following command:
 
     ```bash
-    git submodule add -b main https://github.com/mnjm/kayal.git themes/kayal --depth 1
+    git submodule add -b main https://github.com/mnjm/kayal.git themes/kayal
     ```
 
 2. Copy config files from `themes/kayal/config/_default` to `config/_default` at the root of your Hugo project. Make necessary configuration changes in these files. Refer to [Configuration](https://mnjm.github.io/kayal/docs/configuration/) on the demo site for more information.
