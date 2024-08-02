@@ -47,7 +47,7 @@ Change into the directory for your Hugo website (that you created above), initia
 ```bash
 cd mywebsite
 git init
-git submodule add -b main https://github.com/mnjm/kayal.git themes/kayal --depth 1
+git submodule add -b main https://github.com/mnjm/kayal.git themes/kayal
 ```
 
 Then continue to [set up the theme configuration files](#set-up-theme-configuration-files).
