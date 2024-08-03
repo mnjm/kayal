@@ -59,7 +59,7 @@ To add comments to your articles, Kayal includes support for a comments partial 
 
 You can use either the built-in Hugo _Disqus_ template or provide your own custom code. Refer to the [Hugo documentation](https://gohugo.io/content-management/comments/) for more details.
 
-Once you've added comments to your site, ensure you enable them either in `params.toml` or in the front matter of your pages. Fyi, page-specific settings override those in `params.toml`.
+After adding comments to your site, enable them in `params.toml` by setting `showComments: true`. Note that page front matter settings override those in params.toml, so to disable comments on a specific page, set `showComments: false` in its front matter.
 
 ## Overriding the stylesheet
 
