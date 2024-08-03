@@ -1,0 +1,11 @@
+{{ $url := replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" }}
+<ul class="breadcrumbs">
+  <li><a href="{{ "" | absLangURL }}">{{ partial "icon.html" "home" }}</a></li>
+  {{ range split $url "/" }}
+    {{ if ne . "" }}
+    {{ with site.GetPage (printf "%s/" .) }}
+      <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
+    {{ end }}
+    {{ end }}
+  {{ end }}
+</ul>

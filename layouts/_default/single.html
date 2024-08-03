@@ -1,5 +1,10 @@
 {{ define "main" }}
 
+{{/* Breadcrumbs */}}
+{{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false ) }}
+{{ partial "breadcrumbs.html" . }}
+{{ end }}
+
 <h1 class="pg-title">{{ .Title | emojify }}</h1>
 
 {{/* Meta */}}
