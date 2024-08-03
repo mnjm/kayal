@@ -294,7 +294,7 @@ details[open] div {
 }
 
 .menu-btn svg,
-.copy-button svg {
+.copy-button svg{
   height: 1.1em;
   width: 1.1em;
   vertical-align: text-top;
@@ -448,7 +448,7 @@ body:not(.dark) #sun {
 
 .pg-title {
   padding: 0;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 /* Meta */
@@ -745,4 +745,38 @@ h6:hover .anchor {
 
 .mermaid {
   background-color: #292929;
+}
+
+.breadcrumbs {
+  padding: 0;
+  margin: 0;
+  opacity: 0.5;
+  display: inline-flex;
+  font-size: 0.98em;
+  align-items: center;
+}
+
+.breadcrumbs li::before {
+  content: none;
+}
+
+.breadcrumbs li::after {
+  content: "»";
+  width: 1em;
+  text-align: center;
+  display: inline-block;
+}
+
+.breadcrumbs a {
+  border: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumbs a svg {
+  width: 0.94em;
+  height: auto;
+  text-align: center;
+  vertical-align: text-top;
+  opacity: inherit;
 }

@@ -1,6 +1,12 @@
 {{ define "main" }}
   {{ $groupByYear := .Params.groupByYear | default (.Site.Params.list.groupByYear | default "none") }}
   {{ $showDate := .Params.showDate | default (.Site.Params.list.showDate | default true) }}
+
+  {{/* Breadcrumbs */}}
+  {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false ) }}
+  {{ partial "breadcrumbs.html" . }}
+  {{ end }}
+
   <h1 class="pg-title">{{ .Title | emojify }}</h1>
   {{ .Content }}
   <section class="lst-content">
