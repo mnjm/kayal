@@ -70,6 +70,8 @@ showToC = true
 openToC = false
 # Check https://mnjm.github.io/kayal/docs/advanced-customization/#comments
 showComments = false
+# Whether to display breadcrumbs
+showBreadcrumbs = false
 
 # List template settings
 [list]
@@ -77,6 +79,8 @@ showComments = false
 groupByYear = false
 # Whether to show dates with article listings.
 showDate = true
+# Whether to display breadcrumbs
+showBreadcrumbs = false
 
 # Taxonomy settings
 [taxonomy]
