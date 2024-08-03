@@ -55,7 +55,7 @@ If you prefer to use a different analytics provider, you can override the analyt
 
 ## Comments
 
-To add comments to your articles, Kayal includes support for a comments partial that is included at the base of each article page. Create `mywebsite/layouts/partials/comments.html` file containing the code required to display your chosen comments.
+If you want to add comments to your site, Kayal can be extended to support any comments provider. Create a `mywebsite/layouts/partials/comments.html` partial template file containing the code needed to display comments from your chosen provider.
 
 You can use either the built-in Hugo _Disqus_ template or provide your own custom code. Refer to the [Hugo documentation](https://gohugo.io/content-management/comments/) for more details.
 
