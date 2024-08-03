@@ -75,7 +75,7 @@ By default Kayal uses a profile layout for homepage. You can override this by pr
 
 ### Article Settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=53 endLine=72 type="toml" showLineNos=true >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=53 endLine=74 type="toml" showLineNos=true >}}
 
 These settings can be overridden by page-specific front matter with the same name. Additionally, two additional front matter parameters are provided:
 
@@ -84,12 +84,12 @@ These settings can be overridden by page-specific front matter with the same nam
 
 ### List template settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=74 endLine=79 type="toml" showLineNos=true >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=77 endLine=83 type="toml" showLineNos=true >}}
 These settings can be overridden by page-specific front matter (in `_index.md` files for lists) with the same name.
 
 ### Taxonomy and Term Settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=81 endLine=93 type="toml" showLineNos=true >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=85 endLine=97 type="toml" showLineNos=true >}}
 
 ### Social Links
 
@@ -100,7 +100,7 @@ Social links are provided as a TOML list, with each entry containing
 
 Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=95 type="toml" showLineNos=true >}}
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=99 type="toml" showLineNos=true >}}
 
 ## Favicons
 

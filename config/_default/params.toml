@@ -40,6 +40,7 @@ showMoreDest = "docs"
 [list]
 groupByYear = false
 showDate = true
+showBreadcrumbs = true
 
 [article]
 hidden = false
@@ -53,6 +54,7 @@ invertPagination = true
 showToC = true
 openToC = false
 showComments = false
+showBreadcrumbs = true
 
 [taxonomy]
 showCount = true
