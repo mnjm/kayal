@@ -745,6 +745,8 @@ h6:hover .anchor {
 
 .mermaid {
   background-color: var(--black);
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 ::-webkit-scrollbar {
