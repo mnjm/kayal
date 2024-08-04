@@ -4,21 +4,25 @@
   --primary-color: #292929;
   --secondary-color: #EFEFE6;
   --tertiary-color: #E0002D;
-  /*--tertiary-color: #A20021;*/
   --link-color: #449DD1;
   --tertiary-color-light: #FFB370;
   --secondary-color-dark: #DFDFCD;
   --black: #292929;
+  --code-bg: #272822; /*Monokai*/
+  --code-fg: #f8f8f2; /*Monokai*/
+  --code-scroll-thumb: #525252;
+  --scrollbar-track: #EFEFE6;
+  --scrollbar-thumb: #B7B78F;
 }
 
 .dark {
   --primary-color: #EFEFE6;
   --secondary-color: #292929;
   --tertiary-color: #FF7F11;
-  --link-color: #449DD1;
   --tertiary-color-light: #A34C00;
   --secondary-color-dark: #3D3D29;
-  --black: #292929;
+  --scrollbar-track: #292929;
+  --scrollbar-thumb: #525252;
 }
 
 @font-face {

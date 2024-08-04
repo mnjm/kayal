@@ -109,8 +109,8 @@ pre code {
 }
 
 pre:has(code) {
-  color: #f8f8f2;
-  background-color: #272822;
+  color: var(--code-fg);
+  background-color: var(--code-bg);
   border-radius: var(--radius);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -744,5 +744,39 @@ h6:hover .anchor {
 }
 
 .mermaid {
-  background-color: #292929;
+  background-color: var(--black);
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--radius);
+}
+
+.highlight pre::-webkit-scrollbar-track,
+.highlight>div::-webkit-scrollbar-track,
+pre:has(code)::-webkit-scrollbar-track {
+  background: var(--code-bg) !important;
+}
+
+.highlight pre::-webkit-scrollbar-thumb,
+.highlight>div::-webkit-scrollbar-thumb,
+pre:has(code)::-webkit-scrollbar-thumb {
+  background: var(--code-scroll-thumb) !important;
+}
+
+::-webkit-scrollbar-thumb:hover,
+.highlight pre::-webkit-scrollbar-thumb:hover,
+.highlight>div::-webkit-scrollbar-thumb:hover,
+pre:has(code)::-webkit-scrollbar-thumb:hover {
+  background: var(--tertiary-color-light) !important;
 }
