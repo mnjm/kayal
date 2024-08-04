@@ -27,6 +27,7 @@ Source for the Demo site is available in [exampleSite](https://github.com/mnjm/k
 - Google Analytics
 - SVG Icons from FontAwesome 6
 - SEO Friendly.
+- Breadcrumbs
 - Extensibility: Includes placeholders for
     - Custom Homepage
     - Other Analytics
@@ -34,7 +35,7 @@ Source for the Demo site is available in [exampleSite](https://github.com/mnjm/k
     - Custom CSS
     - Custom header
 - Site hosted assets / no CDNs
-- And Many more...
+- And many more...
 
 ## Installation
 Kayal supports several installation methods: as a git submodule, a Hugo Module, or through manual installation.
