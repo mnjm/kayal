@@ -97,7 +97,6 @@ code {
 
 pre {
   line-height: 1.5;
-  overflow-x: auto;
   padding: 0.5em;
 }
 
@@ -106,6 +105,12 @@ pre code {
   color: inherit;
   font-size: 100%;
   padding: 0;
+  display: block;
+  overflow-x: auto;
+}
+
+.highlight pre code {
+  overflow-x: unset;
 }
 
 pre:has(code) {
@@ -513,6 +518,7 @@ pre:hover .copy-button {
   /*padding: 0.25rem 0.5rem;*/
   cursor:pointer;
   background-color: inherit;
+  color: var(--code-fg);
   border: none;
 }
 
@@ -766,19 +772,19 @@ h6:hover .anchor {
 
 .highlight pre::-webkit-scrollbar-track,
 .highlight>div::-webkit-scrollbar-track,
-pre:has(code)::-webkit-scrollbar-track {
+pre code::-webkit-scrollbar-track {
   background: var(--code-bg) !important;
 }
 
 .highlight pre::-webkit-scrollbar-thumb,
 .highlight>div::-webkit-scrollbar-thumb,
-pre:has(code)::-webkit-scrollbar-thumb {
+pre code::-webkit-scrollbar-thumb {
   background: var(--code-scroll-thumb) !important;
 }
 
 ::-webkit-scrollbar-thumb:hover,
 .highlight pre::-webkit-scrollbar-thumb:hover,
 .highlight>div::-webkit-scrollbar-thumb:hover,
-pre:has(code)::-webkit-scrollbar-thumb:hover {
+pre code::-webkit-scrollbar-thumb:hover {
   background: var(--tertiary-color-light) !important;
 }
