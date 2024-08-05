@@ -19,7 +19,7 @@
       {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
       <h2 class="lst-type"> {{ .Key }} </h2>
       <ul class="{{ $class }}">
-        {{ range .Pages }}
+        {{ range .Pages.ByWeight }}
           {{ partial $partial (dict "page" . "showDate" $showDate "lvl" "3") }}
         {{ end }}
         </ul>
