@@ -1,0 +1,7 @@
+{{ if .Params.coverImg }}
+  {{ $coverImg := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.coverImg)) }}
+  {{ $coverImg = (or $coverImg (resources.ByType "image").GetMatch (printf "*%s*" (.Params.coverImg))) }}
+  {{ with $coverImg }}
+    <img class="cover-img" alt="Cover Image" src="{{ .RelPermalink }}" />
+  {{ end }}
+{{ end }}
