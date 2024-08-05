@@ -77,8 +77,6 @@ showBreadcrumbs = false
 [list]
 # Whether to group articles by year.
 groupByYear = false
-# Whether to show dates with article listings.
-showDate = true
 # Whether to display breadcrumbs
 showBreadcrumbs = false
 # Whether to display pages as a card
@@ -95,8 +93,6 @@ cardView = true
 [term]
 # Whether to group articles by year.
 groupByYear = false
-# Whether to show dates with article listings.
-showDate = true
 # Whether to display breadcrumbs
 showBreadcrumbs = false
 # Whether to display pages as a card
