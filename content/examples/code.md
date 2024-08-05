@@ -19,6 +19,8 @@ showHeadingAnchors: true
 
 This page provides examples on how to include code blocks with syntax highlighting.
 
+<!--more-->
+
 ## Inline Code
 
 To include inline code, use single backticks:

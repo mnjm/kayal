@@ -41,6 +41,7 @@ showMoreDest = "docs"
 groupByYear = false
 showDate = true
 showBreadcrumbs = true
+cardView = true
 
 [article]
 hidden = false

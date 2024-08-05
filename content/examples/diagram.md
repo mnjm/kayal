@@ -16,7 +16,9 @@ openToC: false
 showComments: false
 showHeadingAnchors: true
 ---
-Kayal supports Mermaid diagrams using the mermaid [shortcode]({{< ref "shortcodes.md#mermaid" >}}). Wrap your diagram markup within this shortcode. Currently, Kayal displays Mermaid diagrams in dark mode, but this may be updated to support dark-light mode switching in later releases.
+Kayal supports Mermaid diagrams using the mermaid [shortcode]({{< ref "shortcodes.md#mermaid" >}}). Wrap your diagram markup within this shortcode.
+<!--more-->
+Currently, Kayal displays Mermaid diagrams in dark mode, but this may be updated to support dark-light mode switching in later releases.
 
 The examples below are taken from the [official Mermaid docs](https://mermaid-js.github.io/mermaid/).
 

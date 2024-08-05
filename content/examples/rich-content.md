@@ -5,6 +5,8 @@ weight: 2
 ---
 Hugo ships with several built-in shortcodes for rich content, along with a privacy config and a set of simple shortcodes that enable static and no-JS versions of various social media embeds.
 
+<!--more-->
+
 ## YouTube
 Below is an example using the built-in youtube shortcode.
 
