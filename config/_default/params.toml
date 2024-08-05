@@ -44,8 +44,6 @@ showRecent = true
 showRecentLabel = "Featured"
 # Number of recent items to show.
 showRecentItems = 4
-# Whether to show "Read more" buttons at the end of each article entry.
-showReadMore = true
 # Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
 showMore = true
 showMoreDest = "/posts"
