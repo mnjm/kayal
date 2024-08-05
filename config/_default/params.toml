@@ -97,6 +97,10 @@ cardView = true
 groupByYear = false
 # Whether to show dates with article listings.
 showDate = true
+# Whether to display breadcrumbs
+showBreadcrumbs = false
+# Whether to display pages as a card
+cardView = true
 
 # Social links
 # [[social]]

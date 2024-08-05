@@ -1,37 +1,8 @@
 {{ define "main" }}
-  {{ $groupByYear := .Params.groupByYear | default (.Site.Params.list.groupByYear | default "none") }}
-  {{ $showDate := .Params.showDate | default (.Site.Params.list.showDate | default true) }}
-  {{ $partial := "list/basic.html" }}
-  {{ $class := "lst-basic" }}
-  {{ if .Params.cardView | default (.Site.Params.list.cardView | default false) }}
-    {{ $partial = "list/card.html" }}
-    {{ $class = "lst-card" }}
-  {{ end }}
-
-  {{/* Breadcrumbs */}}
-  {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false ) }}
-  {{ partial "breadcrumbs.html" . }}
-  {{ end }}
-  <h1 class="pg-title">{{ .Title | emojify }}</h1>
-  {{ .Content }}
-  <section class="lst-content">
-    {{ if $groupByYear }}
-      {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
-      <h2 class="lst-type"> {{ .Key }} </h2>
-      <ul class="{{ $class }}">
-        {{ range .Pages.ByWeight }}
-          {{ partial $partial (dict "page" . "showDate" $showDate "lvl" "3") }}
-        {{ end }}
-        </ul>
-      {{ end }}
-    {{ else }}
-    <ul class="{{ $class }}">
-    {{ range (.Paginate .Pages).Pages }}
-      {{ partial $partial (dict "page" . "showDate" $showDate "lvl" "2") }}
-    {{ end }}
-    </ul>
-    {{ end }}
-    {{ template "_internal/pagination.html" . }}
-  </section>
+  {{ $groupByYear := .Params.groupByYear | default (.Site.Params.list.groupByYear | default false) }}
+  {{ $cardView := .Params.cardView | default (.Site.Params.list.cardView | default false) }}
+  {{ $showBreadcrumbs := .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
+  {{ $args := dict "groupByYear" $groupByYear "cardView" $cardView "showBreadcrumbs" $showBreadcrumbs }}
+  {{ partial "list/main.html" (dict "context" . "args" $args) }}
 
 {{ end }}
