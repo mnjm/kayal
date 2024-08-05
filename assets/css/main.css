@@ -330,30 +330,6 @@ body:not(.dark) #sun {
   display: inline;
 }
 
-.list-item {
-  background-color: var(--secondary-color-dark);
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  border-radius: var(--radius);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.ft-title {
-  margin: 0.5rem 0;
-}
-
-.ft-title a {
-  border-bottom: 2px solid var(--tertiary-color);
-  line-height: normal;
-}
-
-/* Homepage - Profile */
-.hm-hl {
-  font-size: 1.1rem;
-  font-weight: 500;
-  display: block;
-}
-
 .avatar img {
   height: 100px;
   width: 100px;
@@ -380,10 +356,6 @@ body:not(.dark) #sun {
 .featured {
   margin-top: 0.2rem;
   clear: both;
-}
-
-.readmore {
-  text-align: right;
 }
 
 .socials span {
