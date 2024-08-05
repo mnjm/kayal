@@ -428,15 +428,20 @@ body:not(.dark) #sun {
   margin-top: 1.2em;
 }
 
-.lst {
+.lst-basic,
+.lst-card {
   margin-top: .2em;
 }
 
-.lst li {
+.lst-card {
+  padding-left: 0;
+}
+
+.lst-basic li {
   display: flex;
 }
 
-.lst-a {
+.lst-basic li div {
   flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -444,6 +449,28 @@ body:not(.dark) #sun {
 
 .lst time {
   white-space: nowrap;
+}
+
+.lst-card li::before {
+  content: none;
+}
+
+.lst-card li {
+  padding: 0.2em 1em;
+  margin-block: 1em;
+  padding-block: 1em;
+  background-color: var(--secondary-color-dark);
+  border-radius: var(--radius);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.lst-card li h2,
+.lst-card li h3 {
+  margin: 0;
+}
+
+.lst-card li p {
+  margin: 0;
 }
 
 /* Page */

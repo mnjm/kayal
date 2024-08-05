@@ -81,6 +81,8 @@ groupByYear = false
 showDate = true
 # Whether to display breadcrumbs
 showBreadcrumbs = false
+# Whether to display pages as a card
+cardView = true
 
 # Taxonomy settings
 [taxonomy]

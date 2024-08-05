@@ -1,28 +1,33 @@
 {{ define "main" }}
   {{ $groupByYear := .Params.groupByYear | default (.Site.Params.list.groupByYear | default "none") }}
   {{ $showDate := .Params.showDate | default (.Site.Params.list.showDate | default true) }}
+  {{ $partial := "list/basic.html" }}
+  {{ $class := "lst-basic" }}
+  {{ if .Params.cardView | default (.Site.Params.list.cardView | default false) }}
+    {{ $partial = "list/card.html" }}
+    {{ $class = "lst-card" }}
+  {{ end }}
 
   {{/* Breadcrumbs */}}
   {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false ) }}
   {{ partial "breadcrumbs.html" . }}
   {{ end }}
-
   <h1 class="pg-title">{{ .Title | emojify }}</h1>
   {{ .Content }}
   <section class="lst-content">
     {{ if $groupByYear }}
       {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
       <h2 class="lst-type"> {{ .Key }} </h2>
-        <ul class="lst">
+      <ul class="{{ $class }}">
         {{ range .Pages }}
-          {{ partial "list/basic.html" (dict "page" . "showDate" $showDate) }}
+          {{ partial $partial (dict "page" . "showDate" $showDate "lvl" "3") }}
         {{ end }}
         </ul>
       {{ end }}
     {{ else }}
-    <ul class="lst">
+    <ul class="{{ $class }}">
     {{ range (.Paginate .Pages).Pages }}
-      {{ partial "list/basic.html" (dict "page" . "showDate" $showDate) }}
+      {{ partial $partial (dict "page" . "showDate" $showDate "lvl" "2") }}
     {{ end }}
     </ul>
     {{ end }}
