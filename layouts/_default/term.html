@@ -10,14 +10,14 @@
       <h2 class="lst-type"> {{ .Key }} </h2>
         <ul class="lst">
         {{ range .Pages }}
-          {{ partial "list/page-link.html" (dict "page" . "showDate" $showDate) }}
+          {{ partial "list/basic.html" (dict "page" . "showDate" $showDate) }}
         {{ end }}
         </ul>
       {{ end }}
     {{ else }}
     <ul class="lst">
     {{ range (.Paginate .Pages).Pages }}
-      {{ partial "list/page-link.html" (dict "page" . "showDate" $showDate) }}
+      {{ partial "list/basic.html" (dict "page" . "showDate" $showDate) }}
     {{ end }}
     </ul>
     {{ end }}
