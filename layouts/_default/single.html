@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{ partial "single/cover-img.html" . }}
+
 {{/* Breadcrumbs */}}
 {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false ) }}
 {{ partial "breadcrumbs.html" . }}

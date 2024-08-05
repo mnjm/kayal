@@ -821,3 +821,8 @@ pre code::-webkit-scrollbar-thumb:hover {
   vertical-align: text-top;
   opacity: inherit;
 }
+
+.cover-img {
+  width: 100%;
+  height: auto;
+}
