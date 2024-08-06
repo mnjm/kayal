@@ -1,7 +1,8 @@
 <header>
-    {{ with resources.Get .Site.Params.logo }}
+    {{ if .Site.Params.logo }}
     <a class="title" href="{{ "" | relLangURL}}">
-      <img alt="Site Logo" src="{{ .RelPermalink }}" />
+      {{ $imgData := dict "Page" . "URL" .Site.Params.logo "Alt" "Site Logo" "Size" "64x64" }}
+      {{ partial "image-renderer.html" $imgData }}
     </a>
     {{ end }}
     <div class="header-cntr">

@@ -9,7 +9,7 @@
 {{ if $img }}
   <div class="avatar {{ $where }}">
   {{ $imgData := dict "Page" . "URL" $img "Alt" "Profile Image" "Size" "200x200" }}
-  {{ partial "image-optimizer.html" $imgData }}
+  {{ partial "image-renderer.html" $imgData }}
   </div>
 {{ end }}
 

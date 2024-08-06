@@ -3,7 +3,7 @@
 {{/* Cover Image */}}
 {{ if .Params.coverImg }}
   {{ $imgData := dict "Page" . "URL" .Params.coverImg "Alt" "Cover Image" "Style" "cover-img" }}
-  {{ partial "image-optimizer.html" $imgData }}
+  {{ partial "image-renderer.html" $imgData }}
 {{ end }}
 
 {{/* Breadcrumbs */}}
