@@ -3,6 +3,7 @@ title: 'Configuration :nut_and_bolt:'
 date: 2024-07-21T21:28:49+05:30
 draft: false
 weight: 2
+coverImg: "cover.webp"
 hidden: false
 externalURL: false
 showDate: true

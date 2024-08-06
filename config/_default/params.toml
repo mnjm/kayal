@@ -38,9 +38,8 @@ showMore = true
 showMoreDest = "docs"
 
 [list]
-groupByYear = false
-showDate = true
 showBreadcrumbs = true
+groupByYear = false
 cardView = true
 
 [article]
@@ -62,8 +61,9 @@ showCount = true
 cardView = true
 
 [term]
+showBreadcrumbs = true
 groupByYear = false
-showDate = true
+cardView = true
 
 [[social]]
 name = "GitHub"

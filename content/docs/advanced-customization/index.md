@@ -3,6 +3,7 @@ title: 'Advanced Customization :toolbox:'
 date: 2024-07-22T07:40:43+05:30
 draft: false
 weight: 3
+coverImg: "cover.webp"
 hidden: false
 externalURL: false
 showDate: true
