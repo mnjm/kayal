@@ -1,6 +1,10 @@
 {{ define "main" }}
 
-{{ partial "single/cover-img.html" . }}
+{{/* Cover Image */}}
+{{ if .Params.coverImg }}
+  {{ $imgData := dict "Page" . "URL" .Params.coverImg "Alt" "Cover Image" "Style" "cover-img" }}
+  {{ partial "image-optimizer.html" $imgData }}
+{{ end }}
 
 {{/* Breadcrumbs */}}
 {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false ) }}
