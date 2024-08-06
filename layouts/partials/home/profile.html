@@ -1,20 +1,16 @@
 {{/* headline */}}
 {{ with .Site.Params.homepage.headline }}
-<span class="hm-hl">{{ . | markdownify }}</span>
+  <span class="hm-hl">{{ . | markdownify }}</span>
 {{ end }}
 
 {{/* image */}}
-{{ with .Site.Params.homepage.image }}
-{{ $img := "" }}
-{{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
-{{ $img = resources.GetRemote . }}
-{{ else }}
-{{ $img = resources.Get . }}
-{{ end }}
+{{ $img := .Site.Params.homepage.image }}
+{{ $where := .Site.Params.homepage.where }}
 {{ if $img }}
-{{ $where := $.Site.Params.homepage.where | default "top" }}
-<div class="avatar {{ $where }}"> <img alt="Profile" src="{{ $img.RelPermalink }}" /> </div>
-{{ end }}
+  <div class="avatar {{ $where }}">
+  {{ $imgData := dict "Page" . "URL" $img "Alt" "Profile Image" "Size" "200x200" }}
+  {{ partial "image-optimizer.html" $imgData }}
+  </div>
 {{ end }}
 
 {{/* Content from _index.html */}}
