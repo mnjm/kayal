@@ -12,6 +12,7 @@ description = "Kayal is a Hugo theme designed to be minimal, lightweight with wa
 # Copyright owner name
 copyright = "Manjunath Mohan"
 
+optimizeImg = true
 enableCodeCopy = true
 showThemeSwitcher = true
 defaultTheme = "auto" # light, dark, auto
