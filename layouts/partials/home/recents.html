@@ -14,6 +14,7 @@
   {{ range first $showRecentItems $paginator.Pages }}
     {{ partial "list/card.html" (dict "page" . "lvl" 2) }}
   {{ end }}
+  </ul>
   {{ if $showMore }}
   <div class="showmore">
     <button onclick="window.location.href = '{{ $showMoreDest }}'" aria-label="Show More"> Show More </a>
