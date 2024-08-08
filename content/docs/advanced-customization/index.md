@@ -74,7 +74,7 @@ The theme allows inserting additional code directly into the `<head>` section. C
 
 ## Icons
 
-If you can't find the icons you need in this [list](https://github.com/mnjm/kayal/tree/main/assets/icons), you can add your own by including the icon's SVG file in `mywebsite/assets/icons/`. Kayal will recognize these icons for configurations in [socials]({{< ref "configuration#social-links" >}}) and [menu]({{< ref "configuration#menus" >}}).
+If you can't find the icons you need in this [list]({{< ref "examples/icons" >}}), you can add your own by including the icon's SVG file in `mywebsite/assets/icons/`. Kayal will recognize these icons for configurations in [socials]({{< ref "configuration#social-links" >}}) and [menu]({{< ref "configuration#menus" >}}).
 
 {{< callout >}}
 Modify the SVG file by changing the fill color attributes to `fill="currentColor"` to match Kayal's theme color.

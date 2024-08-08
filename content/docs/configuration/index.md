@@ -59,7 +59,7 @@ Each menu entry in the toml list includes:
 | `name` | Unique Identifier |
 | `title` | Displayed text |
 | `url` | Link destination for the menu item. |
-| `pre` | _(Optional)_ Icon name to be used. All available icons are listed here. |
+| `pre` | _(Optional)_ Icon name to be used. All available icons are listed [here]({{< ref "examples/icons" >}}). |
 | `weight` | Determines the position within the menu. Items with lighter weights appear higher or first |
 
 Here's menu config file for this site.
@@ -169,7 +169,7 @@ Social links are configured as a TOML list, with each entry containing:
 | Name   | Default | Description                                                                              |
 | ------ | ------- | ---------------------------------------------------------------------------------------- |
 | `name` | Unique Identifier | The unique identifier for the social link.                                               |
-| `icon` | Icon name | The icon name. All available icons are listed [here](https://github.com/mnjm/kayal/tree/main/assets/icons). |
+| `icon` | Icon name | The icon name. All available icons are listed [here]({{< ref "examples/icons" >}}). |
 | `url`  | Link destination | The URL for the social media link.                                                          |
 
 Example:

@@ -90,7 +90,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in 
 
 ## Icon
 
-`icon` outputs an SVG icon and takes the icon name as its only parameter. The icon is scaled to match the current text size.
+`icon` outputs an SVG icon and takes the icon name as its only parameter. The icon is scaled to match the current text size. [Here]({{< ref "examples/icons" >}}) you can find all available icons.
 
 Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
 
