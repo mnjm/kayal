@@ -1,14 +1,3 @@
-# -- Main Menu --
-
-# The menus are displayed in the header at the top of the page.
-# Acceptable parameters are name, page, url, pre, weight.
-
-# Add a training '/' to local urls.
-# For ex: /posts/
-# NOT: /posts
-
-# `pre` is a icon id. for list of all available icons check [https://github.com/mnjm/kayal/tree/main/assets/icons]
-
 [[main]]
 name = "Docs"
 title = "Docs"

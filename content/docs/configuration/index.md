@@ -20,7 +20,7 @@ summary: "This page contains configuration instructions for customizing Kayal ac
 tags: ["kayal", "config"]
 ---
 
-The config files that included with Kayal contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific feature.
+The config files that included with Kayal contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific configuration.
 
 > The configuration files are provided in TOML format, which is the default syntax used by Hugo. Feel free to convert to YAML or JSON if you wish.
 
@@ -30,82 +30,166 @@ As outlined in the [installation]({{< ref "getting-started#set-up-theme-configur
 
 ## Basic Site Configuration
 
-The site configuration is managed through `config/_default/hugo.toml` file.
+The site configuration is managed through the `config/_default/hugo.toml` file. The following outlines all of the settings that Kayal expects to function properly.
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/hugo.toml" type="toml" showLineNos=true >}}
+| Name                         | Default                  | Description                                                                                       |
+| ---------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
+| `theme`                      | `"kayal"`                | The theme to use. Should be set to `"kayal"` for the theme to work. <br> **Required** if you didn't use Hugo Modules to install Kayal. |
+| `baseURL`                    | `Not Set`                | **Required** The URL to the root of the website.                                                  |
+| `languageCode`               | `en-us`                  | Language ISO 639 code for your site.                                                              |
+| `title`                      | `Not Set`                | **Required**: The site’s title.                                                                    |
+| `paginate`                   | `5`                      | The number of articles listed on each page of the article listing.                               |
+| `enableEmoji`                | `true`                   | Enables emoji processing in markdown.                                                             |
+| `enableRobotsTXT`            | `true`                   | Enables the creation of a `robots.txt` file, which allows search engines to crawl your site.       |
+| `summaryLength`              | `0`                      | Number of words for auto-generating an article summary if not provided in the front matter. A value of 0 uses the first sentence. |
+| `buildDrafts`                | `true`                   | Includes pages with draft status while building the site.                                         |
+| `buildFuture`                | `true`                   | Includes pages with future dates while building the site.                                         |
+| `services.googleAnalytics`  | `Not Set`                | Used to enable Google Analytics service. Check [here]({{< ref "advanced-customization#google-analytics" >}}) for more details. |
+
+You can find the `hugo.toml` config file for this site [here](https://github.com/mnjm/kayal/blob/exampleSite/config/_default/hugo.toml) for reference.
 
 ## Menus
 
-Menu configuration is managed through `config/_default/menus.toml` file.
+Menus appear at the top of the header on your page. Menu configuration is managed through `config/_default/menus.toml` file as a toml list.
 
-Menus appear at the top of the header on your page. Each menu entry includes:
+Each menu entry in the toml list includes:
 
-- `name`: unique identifier
-- `title`: Displayed text
-- `url`: Link destination for the menu item.
-- `pre` - This is used as an icon name. All available icons are listed [here](https://github.com/mnjm/kayal/tree/main/assets/icons).
-- `weight`: Position within the menu. Lighter weights float to the top or appear first.
+| Name | Description |
+| ---- | ---- |
+| `name` | Unique Identifier |
+| `title` | Displayed text |
+| `url` | Link destination for the menu item. |
+| `pre` | _(Optional)_ Icon name to be used. All available icons are listed here. |
+| `weight` | Determines the position within the menu. Items with lighter weights appear higher or first |
+
+Here's menu config file for this site.
+{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/exampleSite/config/_default/menus.toml" type="toml" showLineNos=true >}}
+
+{{< callout >}}
+Add a trailing `/` to local URLs. For example `/posts/` (not `/posts`). This is required for `highlightCurrentMenu` to work.
+{{< /callout >}}
 
 Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
-
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/menus.toml" type="toml" showLineNos=true >}}
 
 ## Theme Parameters
 
 Kayal provides large number of configuration options to fit and suite your needs. These configurations are managed through `config/_default/params.toml`.
 
+You can find the `params.toml` config file for this site [here](https://github.com/mnjm/kayal/blob/exampleSite/config/_default/params.toml) for reference.
+
 ### Global
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=5 endLine=24 type="toml" showLineNos=true >}}
-
-{{< callout >}}
-`logo` is optional and should be the path to the site logo image relative to the `mywebsite/assets/` folder with Minimum size of 64x64px.
-{{< /callout >}}
+| Name                        | Default               | Description                                                                                                               |
+| --------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `logo`                      | `Not set`             | **Optional**: Path to the site logo image located in the `assets/` folder in your site's root. <br> Displayed before the Site Title in the header. Minimum size: 64x64px. |
+| `description`               | `"A Hugo Theme"`      | Site's description. This will be used by search engines when listing your site.                                           |
+| `copyright`                 | `Not set`             | **Optional**: Copyright owner's name.                                                                                     |
+| `enableCodeCopy`            | `true`                | Whether to enable the copy button in code blocks.                                                                        |
+| `showThemeSwitcher`         | `true`                | Show the icon that switches between dark and light themes when clicked.                                                   |
+| `defaultTheme`              | `"auto"`              | Default theme to start from. Valid options: `"light"`, `"dark"`, `"auto"`. <br> If `"auto"`, Kayal will detect the previous preference. If no previous preference is found, Kayal will use the browser's preference. |
+| `highlightCurrentMenu`      | `true`                | When enabled, highlights the current menu item in the menu bar.                                                           |
+| `mainSections`              | `["posts"]`           | The sections to display in the recent articles list. If not provided, the section with the most articles is used.         |
+| `removeAttribution`         | `false`               | Whether to remove Hugo and theme attribution in the footer.                                                               |
+| `showHeadingAnchors`        | `true`                | Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.    |
 
 ### Homepage
 
+| Name              | Default    | Description                                                                         |
+| ----------------- | ---------- | ----------------------------------------------------------------------------------- |
+| `showRecent`      | `true`     | Whether to display recent items on the homepage.                                   |
+| `showRecentLabel` | `"Featured"` | Label for the heading of recent items.                                              |
+| `showRecentItems` | `4`        | Number of recent items to display.                                                   |
+| `showMore`        | `true`     | Whether to show a "Show more" link at the end of the recent items section.         |
+| `showMoreDest`    | `"/posts"` | Destination URL for the "Show more" link.                                           |
+
+{{< callout >}} The content for the homepage page is read from `content/_index.md`. {{</ callout >}}
+
 By default Kayal uses a profile layout for homepage. You can override this by providing a layout html file in your site's `layout/partials/homepage.html`. Check [here]({{<ref "advanced-customization#custom-homepage" >}}) for more info.
 
-{{< callout >}} The content for the homepage is sourced from `content/_index.md`. {{</ callout >}}
+#### Profile settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=33 endLine=51 type="toml" showLineNos=true >}}
-
-{{< callout >}}
-`image` is optional and should be a path to the profile image in the `mywebsite/assets/` folder. Minimum size: 200x200 px.
-{{< /callout >}}
+| Name      | Default                   | Description                                                                                     |
+| --------- | ------------------------- | ------------------------------------------------------------------------------------------------- |
+| `headline` | `"👋 Welcome to my site"` | **Optional**: A brief, one-line intro displayed at the top of your profile.                  |
+| `image`   | `"imgs/profile.svg"`      | **Optional**: Path to the profile image located in the `assets/` folder in your site's root. Minimum size: 200x200px. |
+| `where`   | `"right"`                 | Position of the image. Valid options: `"right"`, `"left"`, `"top"`.                            |
 
 ### Article Settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=53 endLine=74 type="toml" showLineNos=true >}}
+| Name                | Default    | Description                                                                                                      |
+| ------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------- |
+| `showDate`          | `true`     | Whether to display the published date in the article.                                                            |
+| `showModDate`       | `true`     | Whether to display the modified date in the article.                                                             |
+| `showReadingTime`   | `true`     | Whether to display the estimated reading time in the article.                                                     |
+| `showTags`          | `true`     | Whether to display tags mentioned in the front matter.                                                            |
+| `showPagination`    | `true`     | Whether to display next/previous article links in the article footer.                                             |
+| `invertPagination`  | `true`     | Whether to reverse the direction of next/previous article links.                                                  |
+| `showToC`           | `true`     | Whether to display the table of contents on article pages.                                                        |
+| `openToC`           | `false`    | Whether to automatically open the Table of Contents when the page is loaded.                                      |
+| `showComments`      | `false`    | Whether to display comments. Check [Comments]({{< ref "advanced-customization#comments" >}}) for more details.  |
+| `showBreadcrumbs`   | `false`    | Whether to display breadcrumbs in the article.                                                                   |
 
-These settings can be overridden by page-specific front matter with the same name. Additionally, two additional front matter parameters are provided:
+These settings can be overridden by page-specific front matter with the same names. Additionally, two extra front matter parameters are available:
 
-1. `hidden`: When set to true, hides the page from appearing in the recent homepage section.
-2. `externalURL`: Links to third-party published pages as list entries. Specifying a URL prevents generating a content page, linking directly to the third-party website.
+1. **`hidden`**: When set to `true`, this hides the page from appearing in the recent homepage section.
+2. **`externalURL`**: Links to third-party published pages as list entries. Specifying a URL prevents generating a content page and directly links to the third-party website.
+3. **`coverImg`**:  The cover image for the article. This will be displayed at the top of the article page.
 
 ### List template settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=77 endLine=83 type="toml" showLineNos=true >}}
+| Name             | Default | Description                                    |
+| ---------------- | ------- | ---------------------------------------------- |
+| `groupByYear`    | `false` | Whether to group articles by year.            |
+| `showBreadcrumbs` | `false` | Whether to display breadcrumbs.               |
+| `cardView`       | `true`  | Whether to display pages in a card view.      |
+
 These settings can be overridden by page-specific front matter (in `_index.md` files for lists) with the same name.
 
 ### Taxonomy and Term Settings
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=85 endLine=97 type="toml" showLineNos=true >}}
+#### Taxonomy settings
+
+| Name        | Default | Description                                                  |
+| ----------- | ------- | ------------------------------------------------------------ |
+| `showCount` | `true`  | Whether to display counts for each taxonomy term.           |
+| `cardView`  | `true`  | Whether to display taxonomies as a grid of cards.            |
+
+#### Term settings
+
+| Name             | Default | Description                                    |
+| ---------------- | ------- | ---------------------------------------------- |
+| `groupByYear`    | `false` | Whether to group articles by year.            |
+| `showBreadcrumbs` | `false` | Whether to display breadcrumbs.               |
+| `cardView`       | `true`  | Whether to display pages in a card view.      |
 
 ### Social Links
 
-Social links are provided as a TOML list, with each entry containing
-- `name`
-- `icon`: Icon name. All available icons are listed [here](https://github.com/mnjm/kayal/tree/main/assets/icons).
-- `url`
+Social links are configured as a TOML list, with each entry containing:
 
-Also new icons can be added, Check [Icons Section]({{< ref "advanced-customization/#icons" >}}) in Advanced Customization
+| Name   | Default | Description                                                                              |
+| ------ | ------- | ---------------------------------------------------------------------------------------- |
+| `name` | Unique Identifier | The unique identifier for the social link.                                               |
+| `icon` | Icon name | The icon name. All available icons are listed [here](https://github.com/mnjm/kayal/tree/main/assets/icons). |
+| `url`  | Link destination | The URL for the social media link.                                                          |
 
-{{< codeimport url="https://raw.githubusercontent.com/mnjm/kayal/main/config/_default/params.toml" startLine=99 type="toml" showLineNos=true >}}
+Example:
+```toml {linenos=true}
+[[social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://linkedin.com"
+
+[[social]]
+name = "Email"
+icon = "email"
+url = "mailto:name@example.com"
+```
+
+Also, New icons can be added. Check the [Icons Section]({{< ref "advanced-customization/#icons" >}}) in the Advanced Customization documentation.
 
 ## Favicons
 
-Place favicon assets in the `static` folder (`mywebsite/static`). Use the filenames listed below. If using [favicon.io](https://favicon.io), it will generate these filenames automatically.
+Place favicon assets in the `static` folder of your site (`mywebsite/static`). Use the filenames listed below. If you use [favicon.io](https://favicon.io), it will automatically generate these filenames for you.
 
 ```
 static/

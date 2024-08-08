@@ -28,15 +28,16 @@ showHeadingAnchors = true
 # yandex = ""
 
 [homepage]
-headline = "👋 Welcome to the demo page of Kayal"
-image = "imgs/profile.svg"
-where = "right" # right, left, top
 showRecent = true
 showRecentLabel = "Featured"
 showRecentItems = 4
 showReadMore = true
 showMore = true
 showMoreDest = "docs"
+[homepage.profile]
+headline = "👋 Welcome to the demo page of Kayal"
+image = "imgs/profile.svg"
+where = "right" # right, left, top
 
 [list]
 showBreadcrumbs = true

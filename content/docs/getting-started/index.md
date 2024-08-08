@@ -96,7 +96,7 @@ In the root folder of your website, delete the `hugo.toml` file that was generat
 
 Depending on how you installed the theme you will find the theme config files in different places:
 
-- **Hugo Modules:** In the Hugo cache directory, or [download a copy](https://github.com/mnjm/kayal/tree/main/config/_default) from GitHub.
+- **Hugo Modules:** In the Hugo cache directory, or [download a copy](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fmnjm%2Fkayal%2Ftree%2Fmain%2Fconfig%2F_default) from GitHub.
 - **Git submodule or Manual install:** `themes/kayal/config/_default/`
 
 Once you've copied the files, your config folder should look like this:
