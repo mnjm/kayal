@@ -1,11 +1,11 @@
 {{/* headline */}}
-{{ with .Site.Params.homepage.headline }}
+{{ with .Site.Params.homepage.profile.headline }}
   <span class="hm-hl">{{ . | markdownify }}</span>
 {{ end }}
 
 {{/* image */}}
-{{ $img := .Site.Params.homepage.image }}
-{{ $where := .Site.Params.homepage.where }}
+{{ $img := .Site.Params.homepage.profile.image }}
+{{ $where := .Site.Params.homepage.profile.where }}
 {{ if $img }}
   <div class="avatar {{ $where }}">
   {{ $imgData := dict "Page" . "URL" $img "Alt" "Profile Image" "Size" "200x200" }}
