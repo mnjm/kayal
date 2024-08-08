@@ -11,7 +11,7 @@ languageCode = 'en-us'
 # theme = "kayal" # UNCOMMENT THIS LINE
 
 # Number of articles per page in the listing.
-paginate = 10
+paginate = 5
 
 # Enable processing of emojis in markdown.
 enableEmoji = true
@@ -20,11 +20,14 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Length of default summaries.
-summaryLength = 70
+summaryLength = 0
 
 # Build drafts during site generation.
 buildDrafts = true
+# Build pages with future dates during site generation.
+buildFuture = true
 
+# Sitemap setting
 [sitemap]
   changefreq = 'daily'
   filename = 'sitemap.xml'

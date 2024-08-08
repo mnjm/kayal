@@ -1,0 +1,38 @@
+{{ $groupByYear := .args.groupByYear }}
+{{ $cardView := .args.cardView }}
+{{ $showBreadcrumbs := .args.showBreadcrumbs }}
+
+{{ $partial := "list/basic.html" }}
+{{ $class := "lst-basic" }}
+{{ if $cardView }}
+{{ $partial = "list/card.html" }}
+{{ $class = "lst-card" }}
+{{ end }}
+
+{{ with .context }}
+    {{/* Breadcrumbs */}}
+    {{ if $showBreadcrumbs }}
+    {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="pg-title">{{ .Title | emojify }}</h1>
+    {{ .Content }}
+    <section class="lst-content">
+    {{ if $groupByYear }}
+      {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+      <h2 class="lst-type"> {{ .Key }} </h2>
+      <ul class="{{ $class }}">
+        {{ range .Pages.ByWeight }}
+          {{ partial $partial (dict "page" . "lvl" "3") }}
+        {{ end }}
+        </ul>
+      {{ end }}
+    {{ else }}
+    <ul class="{{ $class }}">
+    {{ range (.Paginate .Pages).Pages }}
+      {{ partial $partial (dict "page" . "lvl" "2") }}
+    {{ end }}
+    </ul>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+    </section>
+{{ end }}

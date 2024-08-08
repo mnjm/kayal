@@ -1,0 +1,46 @@
+{{ $optimizeImg := .Page.Site.Params.optimizeImg | default true }}
+{{ $url := urls.Parse .URL }}
+{{ $altText := .Alt }}
+{{ $caption := .Caption }}
+{{ $style := .Style }}
+{{ $size := .Size }}
+
+{{/* Exclude types list */}}
+{{ $excludeTypes := slice "svg" }}
+{{ if not hugo.IsExtended }}
+  {{ $excludeTypes = $excludeTypes | append "webp" }}
+{{ end }}
+
+{{ if $caption }}<figure>{{ end }}
+{{/* Optimize only local image */}}
+{{ if not (findRE "^https?" $url.Scheme) }}
+
+  {{ $imgResrc := .Page.Resources.GetMatch $url.String }}
+  {{/* Fetch from global asset if image not found in page bundle */}}
+  {{ if not $imgResrc }}
+    {{ $imgResrc = resources.GetMatch $url.String }}
+  {{ end }}
+
+  {{ with $imgResrc }}
+    <img loading="lazy" {{ with $style }}class="{{ . }}"{{ end }}
+    {{ if and $optimizeImg (not (in $excludeTypes .MediaType.SubType)) }}
+      {{ if $size }}
+        src="{{ (.Fill $size).RelPermalink }}"
+      {{ else }}
+        srcset="
+        {{ (.Resize "330x").RelPermalink }} 330w,
+        {{ (.Resize "660x").RelPermalink }} 660w,
+        {{ (.Resize "1024x").RelPermalink }} 1024w,
+        {{ (.Resize "1320x").RelPermalink }} 2x"
+        src="{{ (.Resize "660x").RelPermalink }}"
+      {{ end }}
+    {{ else }}
+      src="{{ .RelPermalink }}"
+    {{ end }}
+      alt="{{ $altText }}" />
+  {{ end }}
+
+{{ else }}
+  <img loading="lazy" src="{{ $url.String }}" alt="{{ $altText }}" />
+{{ end }}
+{{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption></figure>{{ end }}

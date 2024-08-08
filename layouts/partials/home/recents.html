@@ -10,18 +10,11 @@
   <h1>{{ $showRecentLabel }}</h1>
   {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+  <ul class="lst-card">
   {{ range first $showRecentItems $paginator.Pages }}
-  <section class="list-item">
-    <h2 class="ft-title"><a href="{{ .RelPermalink }}">{{.Title | emojify }}</a></h2>
-    <div class="meta">
-      {{ partial "single/meta.html" . }}
-    </div>
-    {{ template "partials/home/pg-desc.html" . }}
-    {{ if $showReadMore }}
-      <div class="readmore"> <a href="{{ .RelPermalink }}">Read more &rarr;</a> </div>
-    {{ end }}
-  </section>
+    {{ partial "list/card.html" (dict "page" . "lvl" 2) }}
   {{ end }}
+  </ul>
   {{ if $showMore }}
   <div class="showmore">
     <button onclick="window.location.href = '{{ $showMoreDest }}'" aria-label="Show More"> Show More </a>
