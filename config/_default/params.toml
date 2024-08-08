@@ -32,12 +32,6 @@ showHeadingAnchors = true
 
 # Homepage settings
 [homepage]
-# [Optional] Displayed at the top of your homepage.
-# headline = "👋 Welcome to my site"
-# [Optional] Path to the profile image relative to assets/ folder. Minimum size: 200x200px.
-# image = "imgs/profile.svg"
-# Image position.
-where = "right"  # Options: right, left, top
 # Whether to show recent items on the homepage.
 showRecent = true
 # Heading label for recent items.
@@ -47,6 +41,13 @@ showRecentItems = 4
 # Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
 showMore = true
 showMoreDest = "/posts"
+[homepage.profile]
+# [Optional] Displayed at the top of your homepage.
+# headline = "👋 Welcome to my site"
+# [Optional] Path to the profile image relative to assets/ folder. Minimum size: 200x200px.
+# image = "imgs/profile.svg"
+# Image position.
+where = "right"  # Options: right, left, top
 
 # Article settings
 [article]

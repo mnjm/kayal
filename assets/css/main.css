@@ -756,7 +756,7 @@ h6:hover .anchor {
 
 ::-webkit-scrollbar {
   width: 0.5vw;
-  height: 10px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
