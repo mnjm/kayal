@@ -1,6 +1,7 @@
 {{ $groupByYear := .args.groupByYear }}
 {{ $cardView := .args.cardView }}
 {{ $showBreadcrumbs := .args.showBreadcrumbs }}
+{{ $showRSS := .args.showRSS }}
 
 {{ $partial := "list/basic.html" }}
 {{ $class := "lst-basic" }}
@@ -14,7 +15,16 @@
     {{ if $showBreadcrumbs }}
     {{ partial "breadcrumbs.html" . }}
     {{ end }}
-    <h1 class="pg-title">{{ .Title | emojify }}</h1>
+    <h1 class="pg-title">
+    {{ .Title | emojify }}
+    {{ if $showRSS }}
+      {{ with .OutputFormats.Get "rss" }}
+        <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
+        {{ partial "icon.html" "rss" }}
+        </a>
+      {{ end }}
+    {{ end }}
+    </h1>
     {{ .Content }}
     <section class="lst-content">
     {{ if $groupByYear }}

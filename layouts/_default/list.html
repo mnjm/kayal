@@ -2,7 +2,7 @@
   {{ $groupByYear := .Params.groupByYear | default (.Site.Params.list.groupByYear | default false) }}
   {{ $cardView := .Params.cardView | default (.Site.Params.list.cardView | default false) }}
   {{ $showBreadcrumbs := .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
-  {{ $args := dict "groupByYear" $groupByYear "cardView" $cardView "showBreadcrumbs" $showBreadcrumbs }}
+  {{ $showRSS := .Params.showRSS | default (.Site.Params.list.showRSS | default false) }}
+  {{ $args := dict "groupByYear" $groupByYear "cardView" $cardView "showBreadcrumbs" $showBreadcrumbs "showRSS" $showRSS }}
   {{ partial "list/main.html" (dict "context" . "args" $args) }}
-
 {{ end }}
