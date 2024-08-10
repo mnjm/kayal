@@ -840,3 +840,8 @@ pre code::-webkit-scrollbar-thumb:hover {
   border: none;
   opacity: 0.6;
 }
+
+.headline {
+  font-weight: bold;
+  font-size: 1.05em;
+}
