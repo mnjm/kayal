@@ -830,3 +830,13 @@ pre code::-webkit-scrollbar-thumb:hover {
   width: 100%;
   height: auto;
 }
+
+.pg-title svg {
+  height: 1.5rem;
+  width: auto;
+}
+
+.pg-title a {
+  border: none;
+  opacity: 0.6;
+}

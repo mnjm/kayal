@@ -1,6 +1,7 @@
 # -- Theme Options --
-# These options control how the theme functions and allow you to
-# customize the display of your website.
+# These options control how the theme functions and allow you to customize the display of your website.
+# Refer to the theme docs for more details about each of these parameters.
+# https://mnjm.github.io/kayal/docs/configuration/#theme-parameters
 
 # [Optional] Path to the site logo image relative to assets/ folder. Displayed before the Site Title in the header. Minimum size: 64x64px.
 # logo = "/imgs/logo.png"
@@ -8,6 +9,8 @@
 description = "A Hugo Theme"
 # [Optional] Copyright owner name.
 copyright = ""
+# Whether to optimize images per view port.
+optimizeImg = true
 # Whether to enable copy button in code blocks.
 enableCodeCopy = true
 # Show the icon that switches between dark and light themes when clicked.
@@ -80,6 +83,8 @@ groupByYear = false
 showBreadcrumbs = false
 # Whether to display pages as a card
 cardView = true
+# Whether to display RSS link
+showRSS = false
 
 # Taxonomy settings
 [taxonomy]
@@ -96,6 +101,8 @@ groupByYear = false
 showBreadcrumbs = false
 # Whether to display pages as a card
 cardView = true
+# Whether to display RSS link
+showRSS = false
 
 # Social links
 # [[social]]
