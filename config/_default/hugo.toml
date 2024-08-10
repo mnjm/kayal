@@ -20,10 +20,12 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Length of default summaries.
-summaryLength = 70
+summaryLength = 0
 
 # Build drafts during site generation.
 buildDrafts = true
+# Build pages with future dates during site generation.
+buildFuture = true
 
 [sitemap]
   changefreq = 'daily'

@@ -1,24 +1,30 @@
 # -- Theme Options --
 # These options control how the theme functions and allow you to
 # customise the display of your website.
-#
 # Refer to the theme docs for more details about each of these parameters.
 # https://mnjm.github.io/kayal/docs/configuration/#theme-parameters
 
-# Site logo, this will be added before Site Title in the header
+# [Optional] Path to the site logo image relative to assets/ folder. Displayed before the Site Title in the header. Minimum size: 64x64px.
 logo = "/imgs/logo.png"
-# Site description
+# Site description.
 description = "Kayal is a Hugo theme designed to be minimal, lightweight with warm markdown-ish aesthetics for personal blogsites."
-# Copyright owner name
+# [Optional] Copyright owner name.
 copyright = "Manjunath Mohan"
-
+# Whether to optimize images per view port.
 optimizeImg = true
+# Whether to enable copy button in code blocks.
 enableCodeCopy = true
+# Show the icon that switches between dark and light themes when clicked.
 showThemeSwitcher = true
-defaultTheme = "auto" # light, dark, auto
+# Default theme to start from. If "auto", it detects the previous preference/system theme.
+defaultTheme = "auto"  # Valid Options: light, dark, auto
+# When enabled, highlight the current menu item in the menu bar.
 highlightCurrentMenu = true
+# The sections to display in the recent articles list. If not provided, the section with the most articles is used.
 mainSections = ["docs"]
+# Whether to remove Hugo and theme attribution in the footer.
 removeAttribution = false
+# Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.
 showHeadingAnchors = true
 
 # [verification]
@@ -27,45 +33,77 @@ showHeadingAnchors = true
 # pinterest = ""
 # yandex = ""
 
+# Homepage settings
 [homepage]
+# Whether to show recent items on the homepage.
 showRecent = true
+# Heading label for recent items.
 showRecentLabel = "Featured"
+# Number of recent items to show.
 showRecentItems = 4
-showReadMore = true
+# Whether to display a "Show more" link at the end of recent section that directs to `showMoreDest`.
 showMore = true
-showMoreDest = "docs"
+showMoreDest = "/docs"
 [homepage.profile]
+# [Optional] Displayed at the top of your homepage.
 headline = "👋 Welcome to the demo page of Kayal"
+# [Optional] Path to the profile image relative to assets/ folder. Minimum size: 200x200px.
 image = "imgs/profile.svg"
-where = "right" # right, left, top
+# Image position.
+where = "right"  # Options: right, left, top
 
+# List template settings
 [list]
-showBreadcrumbs = true
+# Whether to group articles by year.
 groupByYear = false
+# Whether to display breadcrumbs
+showBreadcrumbs = true
+# Whether to display pages as a card
 cardView = true
+# Whether to display RSS link
+showRSS = true
 
+# Article settings
 [article]
-hidden = false
-externalURL = false
+# Whether to display article dates.
 showDate = true
+# Whether to display modified dates of articles.
 showModDate = true
+# Whether to display reading time of articles.
 showReadingTime = true
+# Whether to display tags mentioned in the front matter.
 showTags = true
+# Whether to display next/previous article links in the article footer.
 showPagination = true
+# Whether to reverse the direction of next/previous article links.
 invertPagination = true
+# Whether to display the table of contents on articles.
 showToC = true
+# Whether to open the Table of Contents when the page is loaded.
 openToC = false
+# Check https://mnjm.github.io/kayal/docs/advanced-customization/#comments
 showComments = false
-showBreadcrumbs = true
+# Whether to display breadcrumbs
+showBreadcrumbs = false
 
+# Taxonomy settings
 [taxonomy]
+# Whether to show counts of each taxonomy term.
 showCount = true
+# Whether to display taxonomies as a grid of cards.
 cardView = true
 
+# Term settings
 [term]
-showBreadcrumbs = true
+# Whether to group articles by year.
 groupByYear = false
+# Whether to display breadcrumbs
+showBreadcrumbs = true
+# Whether to display pages as a card
 cardView = true
+# Whether to display RSS link
+showRSS = true
+
 
 [[social]]
 name = "GitHub"
@@ -86,3 +124,8 @@ url = "https://linkedin.com"
 name = "Email"
 icon = "email"
 url = "mailto:name@example.com"
+
+[[social]]
+name = "RSS"
+icon = "rss"
+url = "/index.xml"

@@ -13,7 +13,7 @@ weight = 2
 [[main]]
 name = "Shortcodes"
 title = "Shortcodes"
-url = "/shortcodes/"
+url = "/docs/shortcodes/"
 weight = 3
 
 [[main]]

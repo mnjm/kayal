@@ -84,7 +84,8 @@ You can find the `params.toml` config file for this site [here](https://github.c
 | `logo`                      | `Not set`             | **Optional**: Path to the site logo image located in the `assets/` folder in your site's root. <br> Displayed before the Site Title in the header. Minimum size: 64x64px. |
 | `description`               | `"A Hugo Theme"`      | Site's description. This will be used by search engines when listing your site.                                           |
 | `copyright`                 | `Not set`             | **Optional**: Copyright owner's name.                                                                                     |
-| `enableCodeCopy`            | `true`                | Whether to enable the copy button in code blocks.                                                                        |
+| `optimizeImg`               | `true`                | Whether to optimize images per view port scales.                                                                          |
+| `enableCodeCopy`            | `true`                | Whether to enable the copy button in code blocks.                                                                         |
 | `showThemeSwitcher`         | `true`                | Show the icon that switches between dark and light themes when clicked.                                                   |
 | `defaultTheme`              | `"auto"`              | Default theme to start from. Valid options: `"light"`, `"dark"`, `"auto"`. <br> If `"auto"`, Kayal will detect the previous preference. If no previous preference is found, Kayal will use the browser's preference. |
 | `highlightCurrentMenu`      | `true`                | When enabled, highlights the current menu item in the menu bar.                                                           |
