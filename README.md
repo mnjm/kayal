@@ -21,6 +21,7 @@ Source for the Demo site is available in [exampleSite](https://github.com/mnjm/k
 - KaTeX Support
 - Mermaid Diagrams Support
 - Cross-linking: Ability to link posts on third party sites.
+- RSS Feed
 - Table of Contents
 - Code Copy
 - Heading Anchors
@@ -28,6 +29,7 @@ Source for the Demo site is available in [exampleSite](https://github.com/mnjm/k
 - SVG Icons from FontAwesome 6
 - SEO Friendly.
 - Breadcrumbs
+- Article Cover image
 - Extensibility: Includes placeholders for
     - Custom Homepage
     - Other Analytics
