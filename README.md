@@ -30,6 +30,7 @@ Source for the Demo site is available in [exampleSite](https://github.com/mnjm/k
 - SEO Friendly.
 - Breadcrumbs
 - Article Cover image
+- Responsive Image optimization
 - Extensibility: Includes placeholders for
     - Custom Homepage
     - Other Analytics
