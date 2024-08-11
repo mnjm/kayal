@@ -111,8 +111,8 @@ By default Kayal uses a profile layout for homepage. You can override this by pr
 
 | Name      | Default                   | Description                                                                                     |
 | --------- | ------------------------- | ------------------------------------------------------------------------------------------------- |
-| `headline` | `"👋 Welcome to my site"` | **Optional**: A brief, one-line intro displayed at the top of your profile.                  |
-| `image`   | `"imgs/profile.svg"`      | **Optional**: Path to the profile image located in the `assets/` folder in your site's root. Minimum size: 200x200px. |
+| `headline` | `Not set` | **Optional**: A brief, one-line intro displayed at the top of your profile.                  |
+| `image`   | `Not set`      | **Optional**: Path to the profile image located in the `assets/` folder in your site's root. Minimum size: 200x200px. |
 | `where`   | `"right"`                 | Position of the image. Valid options: `"right"`, `"left"`, `"top"`.                            |
 
 ### Article Settings
@@ -130,11 +130,24 @@ By default Kayal uses a profile layout for homepage. You can override this by pr
 | `showComments`      | `false`    | Whether to display comments. Check [Comments]({{< ref "advanced-customization#comments" >}}) for more details.  |
 | `showBreadcrumbs`   | `false`    | Whether to display breadcrumbs in the article.                                                                   |
 
-These settings can be overridden by page-specific front matter with the same names. Additionally, two extra front matter parameters are available:
+These settings can be overridden by the page's front matter using the same names. For example, if you don't want to display the ToC on a specific page, you can add `showToC: false` to its front matter, as shown below:
 
-1. **`hidden`**: When set to `true`, this hides the page from appearing in the recent homepage section.
-2. **`externalURL`**: Links to third-party published pages as list entries. Specifying a URL prevents generating a content page and directly links to the third-party website.
-3. **`coverImg`**:  The cover image for the article. This will be displayed at the top of the article page.
+```yaml
+---
+title: 'Example'
+date: 2024-07-21T21:28:49+05:30
+showToC: false
+---
+<!-- Markdown content -->
+```
+
+Additionally, a few extra front matter parameters are available:
+
+| Name | Description |
+| ---- | ---- |
+| `coverImg` | The cover image for the article. This will be displayed at the top of the article page. |
+| `hidden` | When set to `true`, this hides the page from appearing in the recent homepage section. |
+| `externalURL` | Links to third-party published pages as list entries. Specifying a URL prevents generating a content page and directly links to the third-party website. |
 
 ### List template settings
 
@@ -143,8 +156,9 @@ These settings can be overridden by page-specific front matter with the same nam
 | `groupByYear`    | `false` | Whether to group articles by year.            |
 | `showBreadcrumbs` | `false` | Whether to display breadcrumbs.               |
 | `cardView`       | `true`  | Whether to display pages in a card view.      |
+| `showRSS`        | `false`  | Whether to display RSS link.                  |
 
-These settings can be overridden by page-specific front matter (in `_index.md` files for lists) with the same name.
+These settings can be overridden by page's front matter (in `_index.md` files for lists) with the same name.
 
 ### Taxonomy and Term Settings
 
@@ -162,6 +176,7 @@ These settings can be overridden by page-specific front matter (in `_index.md` f
 | `groupByYear`    | `false` | Whether to group articles by year.            |
 | `showBreadcrumbs` | `false` | Whether to display breadcrumbs.               |
 | `cardView`       | `true`  | Whether to display pages in a card view.      |
+| `showRSS`        | `false`  | Whether to display RSS link.                  |
 
 ### Social Links
 
