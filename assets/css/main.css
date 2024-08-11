@@ -147,13 +147,13 @@ table {
 }
 
 table th{
-  padding: 6px 13px;
+  padding: 6px;
   border-bottom: 2px solid var(--tertiary-color);
   font-size: large;
 }
 
 table td{
-  padding: 6px 13px;
+  padding: 6px;
   border-top: 1px solid var(--secondary-color-dark);
 }
 
