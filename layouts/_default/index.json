@@ -1,0 +1,20 @@
+{{- $index := slice -}}
+{{- $pages := .Site.RegularPages -}}
+{{- range $pages -}}
+  {{- $data := dict
+    "title" (.Title | emojify | safeJS)
+    "summary" (.Summary | safeJS)
+    "content" (.Plain | safeJS)
+    "type" .Type
+    -}}
+  {{- if .Date -}}
+    {{- $data = $data | merge (dict "date" (.Date | time.Format (.Site.Language.Params.dateFormat | default ":date_long"))) -}}
+  {{- end -}}
+  {{- if .Params.externalUrl -}}
+    {{- $data = $data | merge (dict "permalink" .Params.externalUrl) -}}
+  {{- else -}}
+    {{- $data = $data | merge (dict "permalink" .RelPermalink) -}}
+  {{- end -}}
+  {{- $index = $index | append $data -}}
+{{- end -}}
+{{- $index | jsonify -}}
