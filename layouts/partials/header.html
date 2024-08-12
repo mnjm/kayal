@@ -24,6 +24,7 @@
     </ul>
   </nav>
     <div class="side-menu">
+    {{ partial "search.html" . }}
     {{ if .Site.Params.showThemeSwitcher | default false }}
     <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher">
       <div id="moon">
