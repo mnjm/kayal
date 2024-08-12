@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/mnjm/kayal#readme",
   "dependencies": {
+    "fuse.js": "^7.0.0",
     "katex": "^0.16.11",
     "mermaid": "^10.9.1",
     "vendor-copy": "^3.0.1"
@@ -48,6 +49,10 @@
     {
       "from": "node_modules/katex/dist/fonts/",
       "to": "assets/lib/katex/fonts/"
+    },
+    {
+      "from": "node_modules/fuse.js/dist/fuse.min.js",
+      "to": "assets/lib/fuse/fuse.min.js"
     }
   ]
 }
