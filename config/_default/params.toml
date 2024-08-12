@@ -25,6 +25,8 @@ mainSections = ["posts"]
 removeAttribution = false
 # Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.
 showHeadingAnchors = true
+# Whether to enable search. Needs JSON output for this to work.
+enableSearch = true
 
 # Site search engine verification tags.
 # [verification]

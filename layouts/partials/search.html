@@ -1,0 +1,23 @@
+{{ if .Site.Params.enableSearch | default false }}
+<button id="search-open" class="menu-btn" aria-label="Search button">
+  {{ partial "icon.html" "search" }}
+</button>
+{{ end }}
+<div id="search-container">
+  <div class="search">
+    <div class="panel">
+      <form>
+        {{ partial "icon.html" "search" }}
+        <input type="text" id="search-query" placeholder="Search" tabindex=0 />
+        <button id="search-btn" title="Search">
+          {{ partial "icon.html" "arrow-right" }}
+        </button>
+      </form>
+    </div>
+    <div class="close-btn-ctr"><button id="search-close" title="Cancel (ESC)">
+      {{ partial "icon.html" "xmark" }}
+    </button> </div>
+    <div id="search-results">
+    </div>
+  </div>
+</div>
