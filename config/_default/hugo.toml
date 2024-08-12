@@ -27,6 +27,10 @@ buildDrafts = true
 # Build pages with future dates during site generation.
 buildFuture = true
 
+# Hugo outputs, JSON is needed for search to function.
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 # Sitemap setting
 [sitemap]
   changefreq = 'daily'
