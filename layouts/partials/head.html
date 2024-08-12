@@ -40,7 +40,13 @@
   {{ end -}}
 
   {{ template "_internal/opengraph.html" . }}
+  {{ with .Params.coverImg }}
+    <meta property="og:image" content="{{ . | absURL }}" />
+  {{ end }}
   {{ template "_internal/twitter_cards.html" . }}
+  {{ with .Params.coverImg }}
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{ end }}
 
   {{/* vendor */}}
   {{ partial "head/vendor.html" . }}
