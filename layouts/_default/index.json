@@ -3,7 +3,7 @@
 {{- range $pages -}}
   {{- $data := dict
     "title" (.Title | emojify | safeJS)
-    "summary" (.Summary | safeJS)
+    "summary" (.Summary | plainify)
     "content" (.Plain | safeJS)
     "type" .Type
     -}}
