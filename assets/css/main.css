@@ -964,7 +964,6 @@ pre code::-webkit-scrollbar-thumb:hover {
   border-radius: var(--radius);
 }
 
-#search-results li a:hover,
 #search-results li a:focus {
   outline: 1px solid var(--tertiary-color);
 }
