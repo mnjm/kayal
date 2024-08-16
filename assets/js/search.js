@@ -6,6 +6,7 @@ var searchBtn = null;
 var searchTxt = null;
 var isSearchOpen = false;
 var isJsonIndexed = false;
+var isResEmpty = true;
 var fuse;
 
 function fetchJSON(path, callback) {
@@ -63,6 +64,30 @@ function closeSearch() {
   }
 }
 
+function executeQuery(query) {
+  let results = fuse.search(query);
+  let resultsHtml = "";
+  if (results.length > 1) {
+    results.forEach(function (value, key) {
+      var meta = value.item.section + " | ";
+      meta = meta + value.item.date ? value.item.date + " | ": "";
+      meta = meta + `<span class="srch-link">${value.item.permalink}</span>`
+      resultsHtml = resultsHtml +
+        `<li><a href="${value.item.permalink}">
+          <p class="srch-title">${value.item.title}</p>
+          <p class="srch-meta">${meta}</p>
+          <p class="srch-smry">${value.item.summary}</p>
+        </a></li>`;
+    });
+    isResEmpty = false;
+  } else {
+    resultsHtml = "";
+    isResEmpty = true;
+  }
+
+  resultCntr.innerHTML = resultsHtml;
+}
+
 window.addEventListener("DOMContentLoaded", (event) => {
   seachOpnBtn = document.getElementById("search-open");
   searchBtn = document.getElementById("search-btn");
@@ -73,17 +98,48 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   seachOpnBtn.addEventListener("click", openSearch);
   closeBtn.addEventListener("click", closeSearch);
+
+  searchTxt.onkeyup = function (event) {
+    executeQuery(this.value);
+  };
+
+  searchTxt.onkeydown = function (event) {
+    if ((event.key == "Enter") && (!isResEmpty)) {
+      // Enter to focus on the first search result
+      resultCntr.firstChild.firstElementChild.focus();
+      event.preventDefault();
+    }
+  }
 });
 
 document.addEventListener("keydown", function (event) {
-  // Forward slash to open search
   if (event.key == "/") {
     event.preventDefault();
     openSearch();
   }
-  // Esc to close search
-  if (event.key == "Escape") {
-    event.preventDefault();
-    closeSearch();
+
+  if (isSearchOpen) {
+    if (event.key == "Escape") {
+      event.preventDefault();
+      closeSearch();
+    } else if ((event.key == "ArrowDown") && (!isResEmpty)) {
+      if (document.activeElement == searchTxt) {
+        resultCntr.firstChild.firstElementChild.focus();
+      } else if (document.activeElement == resultCntr.lastChild.firstElementChild) {
+        searchTxt.focus();
+      } else {
+        document.activeElement.parentElement.nextSibling.firstElementChild.focus();
+      }
+      event.preventDefault();
+    } else if ((event.key == "ArrowUp") && (!isResEmpty)) {
+      if (document.activeElement == searchTxt) {
+        resultCntr.lastChild.firstElementChild.focus();
+      } else if (document.activeElement == resultCntr.firstChild.firstElementChild) {
+        searchTxt.focus();
+      } else {
+        document.activeElement.parentElement.previousSibling.firstElementChild.focus();
+      }
+      event.preventDefault();
+    }
   }
 });

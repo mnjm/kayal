@@ -29,3 +29,15 @@
     integrity="{{ $mermaidJS.Data.Integrity }}"
   ></script>
 {{ end }}
+
+{{/* Fuse */}}
+{{ if .Site.Params.enableSearch | default false }}
+  {{ with resources.Get "lib/fuse/fuse.min.js" | resources.Fingerprint "sha512" }}
+    <script
+      defer
+      type="text/javascript"
+      src="{{ .RelPermalink }}"
+      integrity="{{ .Data.Integrity }}"
+    ></script>
+  {{ end }}
+{{ end }}

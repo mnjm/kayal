@@ -8,26 +8,23 @@
     <div class="panel">
       <form>
         {{ partial "icon.html" "search" }}
-        <input type="text" id="search-query" placeholder="Search" tabindex=0 />
-        <button id="search-btn" title="Search">
-          {{ partial "icon.html" "arrow-right" }}
+        <input type="search" id="search-query" placeholder="Search" tabindex=0 />
+        <button id="search-close" title="Cancel (ESC)">
+          {{ partial "icon.html" "xmark" }}
         </button>
       </form>
     </div>
-    <div class="close-btn-ctr"><button id="search-close" title="Cancel (ESC)">
-      {{ partial "icon.html" "xmark" }}
-    </button> </div>
     <ul id="search-results">
-      <li><a href="#">
-        <p class="srch-title">Title</p>
-        <p class="srch-meta">Section | 12 Jan 2006 | <span class="srch-link">/examples/markdown/</span></p>
-        <p class="srch-smry">This article offers a sample of basic Markdown formatting that can be used in Kayal, also it shows how some basic HTML elements are decorated.\n</p>
-      </a></li>
-      <li><a href="#">
-        <p class="srch-title">Title</p>
-        <p class="srch-meta">Section | 12 Jan 2006 | <span class="srch-link">/examples/markdown/</span></p>
-        <p class="srch-smry">This article offers a sample of basic Markdown formatting that can be used in Kayal, also it shows how some basic HTML elements are decorated.\n</p>
-      </a></li>
+      <!--<li><a href="#">-->
+      <!--  <p class="srch-title">Title</p>-->
+      <!--  <p class="srch-meta">Section | 12 Jan 2006 | <span class="srch-link">/examples/markdown/</span></p>-->
+      <!--  <p class="srch-smry">This article offers a sample of basic Markdown formatting that can be used in Kayal, also it shows how some basic HTML elements are decorated.\n</p>-->
+      <!--</a></li>-->
+      <!--<li><a href="#">-->
+      <!--  <p class="srch-title">Title</p>-->
+      <!--  <p class="srch-meta">Section | 12 Jan 2006 | <span class="srch-link">/examples/markdown/</span></p>-->
+      <!--  <p class="srch-smry">This article offers a sample of basic Markdown formatting that can be used in Kayal, also it shows how some basic HTML elements are decorated.\n</p>-->
+      <!--</a></li>-->
     </ul>
   </div>
 </div>
