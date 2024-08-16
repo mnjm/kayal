@@ -84,7 +84,7 @@ openToC = false
 # Check https://mnjm.github.io/kayal/docs/advanced-customization/#comments
 showComments = false
 # Whether to display breadcrumbs
-showBreadcrumbs = false
+showBreadcrumbs = true
 
 # Taxonomy settings
 [taxonomy]
