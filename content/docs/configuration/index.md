@@ -147,7 +147,7 @@ Additionally, a few extra front matter parameters are available:
 
 | Name | Description |
 | ---- | ---- |
-| `coverImg` | The cover image for the article. This will be displayed at the top of the article page. |
+| `coverImg` | The cover image for the article. This will be displayed at the top of the article page. This should be served as page resouce. Refer [here]({{< ref "page-bundles.md" >}})|
 | `hidden` | When set to `true`, this hides the page from appearing in the recent homepage section. |
 | `externalURL` | Links to third-party published pages as list entries. Specifying a URL prevents generating a content page and directly links to the third-party website. |
 

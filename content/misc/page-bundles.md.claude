@@ -1,0 +1,63 @@
+---
+title: 'Serving assets in Articles'
+date: 2024-08-16T18:15:25+05:30
+draft: true
+hidden: false
+externalURL: false
+showDate: true
+showModDate: true
+showReadingTime: true
+showTags: true
+showPagination: true
+invertPagination: true
+showToC: true
+openToC: false
+showComments: false
+showHeadingAnchors: true
+---
+
+Kayal utilizes [Page bundles](https://gohugo.io/content-management/page-bundles/) to efficiently serve page resources such as images, videos, and audio files.
+
+## Folder Structure
+
+To add assets like images (including cover images), videos, or audio files to a page, Kayal expects them to be served as [Page Resources](https://gohugo.io/content-management/page-resources/). Here's a guide on how to organize your content:
+
+1. Create a directory with the same name as your article.
+2. Inside this directory, create an `index.md` file with your content.
+3. Place all assets used by the markdown file in this folder.
+
+Your structure should look similar to this:
+
+```
+content
+└── posts
+    └── awesome-post
+        ├── index.md
+        ├── cover-image.jpg
+        ├── img1.png
+        ├── img2.png
+        ├── video.mp4
+        └── ...
+```
+
+## Referencing Assets
+
+You can refer to these assets in your markdown using relative paths:
+
+### Cover Image
+
+To add a cover image, include this line in your markdown frontmatter:
+
+```toml
+coverImg: "cover-image.jpg"
+```
+
+### Including Images and Videos
+
+To include images and videos in your content, use the following markdown syntax:
+
+```markdown
+![Image 1](img1.png)
+![Image 2](img2.png)
+![Video](video.mp4)
+```
