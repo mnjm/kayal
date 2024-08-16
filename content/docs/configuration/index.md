@@ -32,6 +32,8 @@ As outlined in the [installation]({{< ref "getting-started#set-up-theme-configur
 
 The site configuration is managed through the `config/_default/hugo.toml` file. The following outlines all of the settings that Kayal expects to function properly.
 
+Note: the variable names provided in this table use dot notation to simplify the TOML data structure (ie. `outputs.home` refers to `[outputs] home`).
+
 | Name                         | Default                  | Description                                                                                       |
 | ---------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
 | `theme`                      | `"kayal"`                | The theme to use. Should be set to `"kayal"` for the theme to work. <br> **Required** if you didn't use Hugo Modules to install Kayal. |
