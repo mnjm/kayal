@@ -32,6 +32,9 @@
 
 {{/* Fuse */}}
 {{ if .Site.Params.enableSearch | default false }}
+  {{ if and .IsHome (not (.OutputFormats.Get "JSON")) }}
+    {{ errorf "Search is enabled. Add 'JSON' to outputs.home in hugo.toml" }}
+  {{ end }}
   {{ with resources.Get "lib/fuse/fuse.min.js" | resources.Fingerprint "sha512" }}
     <script
       defer
