@@ -24,6 +24,7 @@ Source for the Demo site is available in [exampleSite](https://github.com/mnjm/k
 - Shortcodes: Includes Callouts, Markdown and Code import from 3rd Party sites.
 - KaTeX Support
 - Mermaid Diagrams Support
+- Client-side search powered by [Fuse.js](https://www.fusejs.io/)
 - Cross-linking: Ability to link posts on third party sites.
 - RSS Feed
 - Table of Contents
