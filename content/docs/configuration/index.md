@@ -45,6 +45,7 @@ The site configuration is managed through the `config/_default/hugo.toml` file. 
 | `buildDrafts`                | `true`                   | Includes pages with draft status while building the site.                                         |
 | `buildFuture`                | `true`                   | Includes pages with future dates while building the site.                                         |
 | `services.googleAnalytics`  | `Not Set`                | Used to enable Google Analytics service. Check [here]({{< ref "advanced-customization#google-analytics" >}}) for more details. |
+| `outputs.home`              | `["HTML", "RSS", "JSON"]` | The types of outputs to generate for the homepage. RSS is required to create RSS feeds, and JSON is needed for the search functionality. <br> Kayal requires all 3 to be enabled. |
 
 You can find the `hugo.toml` config file for this site [here](https://github.com/mnjm/kayal/blob/exampleSite/config/_default/hugo.toml) for reference.
 
@@ -92,6 +93,7 @@ You can find the `params.toml` config file for this site [here](https://github.c
 | `mainSections`              | `["posts"]`           | The sections to display in the recent articles list. If not provided, the section with the most articles is used.         |
 | `removeAttribution`         | `false`               | Whether to remove Hugo and theme attribution in the footer.                                                               |
 | `showHeadingAnchors`        | `true`                | Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.    |
+| `enableSearch`              | `true`                | Whether to enable search functionality. `JSON` homepage output is required for this to function. Check [site config]({{< ref "#basic-site-configuration" >}}). |
 
 ### Homepage
 

@@ -32,6 +32,8 @@ buildFuture = true
   filename = 'sitemap.xml'
   priority = 0.5
 
+# The types of outputs to generate for the homepage.
+# RSS is required to create RSS feeds, and JSON is needed for the search to function.
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
