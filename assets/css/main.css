@@ -866,6 +866,13 @@ pre code::-webkit-scrollbar-thumb:hover {
   display: none; /* TODO: Make this nun */
 }
 
+#search-query::-webkit-search-cancel-button,
+#search-query::-webkit-search-decoration,
+#search-query::-webkit-search-results-button,
+#search-query::-webkit-search-results-decoration {
+  display:none
+}
+
 .search {
   flex-grow: 1;
   max-width: 700px;
@@ -886,8 +893,7 @@ pre code::-webkit-scrollbar-thumb:hover {
   justify-content: center;
 }
 
-.search .panel form svg,
-#search-close svg {
+.search .panel form svg {
   flex-grow: 0;
   width: 1.1em;
   height: auto;
@@ -921,10 +927,11 @@ pre code::-webkit-scrollbar-thumb:hover {
 
 #search-results {
   background-color: var(--secondary-color-dark);
-  flex-grow: 1;
+  flex-grow: 0;
   margin: 10px .5em;
   padding: 0;
   border-radius: var(--radius);
+  overflow: auto;
 }
 
 .search .close-btn-ctr {
@@ -932,29 +939,12 @@ pre code::-webkit-scrollbar-thumb:hover {
   justify-content: center;
 }
 
-#search-close {
-  margin: 0.5em;
-  background-color: var(--secondary-color-dark);
-  color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius);
-  border: none;
-}
-
-#search-btn:hover,
 #search-close:hover {
   color: var(--tertiary-color);
 }
 
 #search-results li {
   line-height: 1.1em;
-  margin: 10px;
-  padding: 10px;
-  background-color: var(--secondary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: var(--radius);
 }
 
 #search-results li:before {
@@ -964,7 +954,22 @@ pre code::-webkit-scrollbar-thumb:hover {
   margin-left: 0;
 }
 
-#search-results li p {
+#search-results li a {
+  display: block;
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: var(--radius);
+}
+
+#search-results li a:hover,
+#search-results li a:focus {
+  outline: 1px solid var(--tertiary-color);
+}
+
+#search-results li a p {
   margin: 0px;
 }
 
@@ -972,10 +977,6 @@ pre code::-webkit-scrollbar-thumb:hover {
   color: inherit;
 }
 
-#search-results li:hover,
-#search-results a:focus {
-  border: 1px solid var(--tertiary-color);
-}
 
 .srch-title {
   font-size: 1.1em;
