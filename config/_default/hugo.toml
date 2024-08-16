@@ -27,7 +27,8 @@ buildDrafts = true
 # Build pages with future dates during site generation.
 buildFuture = true
 
-# Hugo outputs, JSON is needed for search to function.
+# The types of outputs to generate for the homepage.
+# RSS is required to create RSS feeds, and JSON is needed for the search to function.
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
