@@ -281,6 +281,7 @@ details[open] div {
   z-index: 30;
   transition: transform 0.3s ease-in-out;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 #mob-hb-icon, #mob-x-icon {
@@ -863,6 +864,7 @@ pre code::-webkit-scrollbar-thumb:hover {
   z-index: 30;
   transition: transform 0.3s ease-in-out;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: none; /* TODO: Make this nun */
 }
 
