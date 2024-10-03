@@ -2,6 +2,7 @@
 title: 'Shortcodes'
 date: 2024-07-20T22:53:59+05:30
 showBreadcrumbs: false
+summary: "in addition to all the default hugo shortcodes, kayals adds a few extras for additional functionality."
 ---
 
 In addition to all the default Hugo shortcodes, Kayals adds a few extras for additional functionality.

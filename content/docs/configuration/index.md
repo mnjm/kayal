@@ -32,7 +32,12 @@ As outlined in the [installation]({{< ref "getting-started#set-up-theme-configur
 
 The site configuration is managed through the `config/_default/hugo.toml` file. The following outlines all of the settings that Kayal expects to function properly.
 
-Note: the variable names provided in this table use dot notation to simplify the TOML data structure (ie. `outputs.home` refers to `[outputs] home`).
+Note: the variable names provided in this table use dot notation to simplify the TOML data structure ie. `outputs.home` refers to
+
+```toml
+[outputs]
+    home = ...
+```
 
 | Name                         | Default                  | Description                                                                                       |
 | ---------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
@@ -40,7 +45,7 @@ Note: the variable names provided in this table use dot notation to simplify the
 | `baseURL`                    | `Not Set`                | **Required** The URL to the root of the website.                                                  |
 | `languageCode`               | `en-us`                  | Language ISO 639 code for your site.                                                              |
 | `title`                      | `Not Set`                | **Required**: The site’s title.                                                                    |
-| `paginate`                   | `5`                      | The number of articles listed on each page of the article listing.                               |
+| `pagination.pagerSize`       | `5`                      | The number of articles listed on each page of the article listing.                               |
 | `enableEmoji`                | `true`                   | Enables emoji processing in markdown.                                                             |
 | `enableRobotsTXT`            | `true`                   | Enables the creation of a `robots.txt` file, which allows search engines to crawl your site.       |
 | `summaryLength`              | `0`                      | Number of words for auto-generating an article summary if not provided in the front matter. A value of 0 uses the first sentence. |
