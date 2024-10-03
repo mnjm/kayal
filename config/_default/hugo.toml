@@ -11,7 +11,8 @@ languageCode = 'en-us'
 # theme = "kayal" # UNCOMMENT THIS LINE
 
 # Number of articles per page in the listing.
-paginate = 5
+[pagination]
+  pagerSize = 5
 
 # Enable processing of emojis in markdown.
 enableEmoji = true
