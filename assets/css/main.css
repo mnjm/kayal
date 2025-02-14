@@ -622,7 +622,7 @@ pre:hover .copy-button {
   margin: 0;
 }
 
-.toc-innr a {
+.toc-innr a, .toc-innr a code {
   border-bottom: none;
 }
 
