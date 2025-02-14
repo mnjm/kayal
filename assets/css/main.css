@@ -93,7 +93,7 @@ figure h4::before {
 /* Code blocks */
 code {
   background-color: var(--secondary-color-dark);
-  padding: .1em .2em;
+  padding: 0 .2em;
   word-break: break-word;
   word-wrap: break-word;
   overflow: break-word;
@@ -622,7 +622,7 @@ pre:hover .copy-button {
   margin: 0;
 }
 
-.toc-innr a {
+.toc-innr a, .toc-innr a code {
   border-bottom: none;
 }
 
@@ -970,7 +970,8 @@ pre code::-webkit-scrollbar-thumb:hover {
   border-radius: var(--radius);
 }
 
-#search-results li a:focus {
+#search-results li a:focus,
+#search-results li a:hover {
   outline: 1px solid var(--tertiary-color);
 }
 
