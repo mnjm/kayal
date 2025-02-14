@@ -93,7 +93,7 @@ figure h4::before {
 /* Code blocks */
 code {
   background-color: var(--secondary-color-dark);
-  padding: .1em .2em;
+  padding: 0 .2em;
   word-break: break-word;
   word-wrap: break-word;
   overflow: break-word;
