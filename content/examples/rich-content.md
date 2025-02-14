@@ -16,20 +16,12 @@ Below is an example using the built-in youtube shortcode.
 {{< youtube ErMSHiQRnc8 >}}
 
 ## Twitter
-This example uses the twitter shortcode to output a Tweet. It requires two named parameters user and id.
+This example uses the X shortcode to output a Tweet. It requires two named parameters user and id.
 
 ```markdown
-{{</* twitter user="HugoConf" id="1684306258533441540" */>}}
+{{</* x user="HugoConf" id="1684306258533441540" */>}}
 ```
-{{< twitter user="HugoConf" id="1684306258533441540" >}}
-
-## Gist
-The gist shortcode can be used to embed a GitHub Gist. It requires two unnamed parameters: the username and ID of the Gist.
-
-```markdown
-{{</* gist mnjm 5857c03e619f805f579929e0d8b04d34 */>}}
-```
-{{< gist mnjm 5857c03e619f805f579929e0d8b04d34 >}}
+{{< x user="HugoConf" id="1684306258533441540" >}}
 
 ## Vimeo
 The vimeo shortcode will embed a Vimeo video.
@@ -57,3 +49,20 @@ Code block can be highlighted with Hugo's internal highlight shortcode. Availabl
 </html>
 {{</* /highlight */>}}
 ```
+
+## Instagram
+This example embeds a Instagram post. More info [here](https://gohugo.io/shortcodes/instagram/)
+
+```markdown
+{{</* instagram CxOWiQNP2MO */>}}
+```
+{{< instagram CxOWiQNP2MO >}}
+
+
+## QR Code
+This example inserts QR code
+
+```markdown
+{{</* qr text="https://mnjm.github.io/kayal/" */>}}
+```
+{{< qr text="https://mnjm.github.io/kayal/" />}}
