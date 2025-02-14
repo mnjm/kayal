@@ -16,6 +16,8 @@ showComments: false
 showHeadingAnchors: true
 ---
 
+<!--more-->
+
 ## Jpg as page resource
 
 ![Image Resource](pexels.jpg "Got it from Pexels")
