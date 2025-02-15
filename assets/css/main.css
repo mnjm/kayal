@@ -99,9 +99,9 @@ code {
   overflow: break-word;
 }
 
-a code {
-  border-bottom: 2px solid var(--tertiary-color);
-}
+/*a code {*/
+/*  border-bottom: 2px solid var(--tertiary-color);*/
+/*}*/
 
 pre {
   line-height: 1.5;
