@@ -58,7 +58,7 @@ jobs:
           HUGO_ENV: production
           TZ: America/Los_Angeles
         run: |
-           hugo --gc --minify --source ./exampleSite --themesDir ../.. --destination ../public --baseURL "${{ steps.pages.outputs.base_url }}/"
+           npm run demo-build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
