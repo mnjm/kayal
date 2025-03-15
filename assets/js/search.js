@@ -25,7 +25,7 @@ function fetchJSON(path, callback) {
 
 function buildIndex() {
   var baseURL = searchCntr.getAttribute("data-url");
-  baseURL = baseURL.replace(/\/?$/, '/');
+  baseURL = baseURL.replace(/\/?$/, "/");
   fetchJSON(baseURL + "index.json", function (data) {
     var options = {
       shouldSort: true,
@@ -67,12 +67,13 @@ function closeSearch() {
 function executeQuery(query) {
   let results = fuse.search(query);
   let resultsHtml = "";
-  if (results.length > 1) {
+  if (results.length >= 1) {
     results.forEach(function (value, key) {
       var meta = value.item.section + " | ";
-      meta = meta + value.item.date ? value.item.date + " | ": "";
-      meta = meta + `<span class="srch-link">${value.item.permalink}</span>`
-      resultsHtml = resultsHtml +
+      meta = meta + value.item.date ? value.item.date + " | " : "";
+      meta = meta + `<span class="srch-link">${value.item.permalink}</span>`;
+      resultsHtml =
+        resultsHtml +
         `<li><a href="${value.item.permalink}">
           <p class="srch-title">${value.item.title}</p>
           <p class="srch-meta">${meta}</p>
@@ -97,19 +98,22 @@ window.addEventListener("DOMContentLoaded", (event) => {
   searchTxt = document.getElementById("search-query");
 
   seachOpnBtn.addEventListener("click", openSearch);
-  closeBtn.addEventListener("click", closeSearch);
+  closeBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    closeSearch();
+  });
 
   searchTxt.onkeyup = function (event) {
     executeQuery(this.value);
   };
 
   searchTxt.onkeydown = function (event) {
-    if ((event.key == "Enter") && (!isResEmpty)) {
+    if (event.key == "Enter" && !isResEmpty) {
       // Enter to focus on the first search result
       resultCntr.firstChild.firstElementChild.focus();
       event.preventDefault();
     }
-  }
+  };
 });
 
 document.addEventListener("keydown", function (event) {
@@ -122,19 +126,23 @@ document.addEventListener("keydown", function (event) {
     if (event.key == "Escape") {
       event.preventDefault();
       closeSearch();
-    } else if ((event.key == "ArrowDown") && (!isResEmpty)) {
+    } else if (event.key == "ArrowDown" && !isResEmpty) {
       if (document.activeElement == searchTxt) {
         resultCntr.firstChild.firstElementChild.focus();
-      } else if (document.activeElement == resultCntr.lastChild.firstElementChild) {
+      } else if (
+        document.activeElement == resultCntr.lastChild.firstElementChild
+      ) {
         searchTxt.focus();
       } else {
         document.activeElement.parentElement.nextSibling.firstElementChild.focus();
       }
       event.preventDefault();
-    } else if ((event.key == "ArrowUp") && (!isResEmpty)) {
+    } else if (event.key == "ArrowUp" && !isResEmpty) {
       if (document.activeElement == searchTxt) {
         resultCntr.lastChild.firstElementChild.focus();
-      } else if (document.activeElement == resultCntr.firstChild.firstElementChild) {
+      } else if (
+        document.activeElement == resultCntr.firstChild.firstElementChild
+      ) {
         searchTxt.focus();
       } else {
         document.activeElement.parentElement.previousSibling.firstElementChild.focus();
@@ -142,4 +150,9 @@ document.addEventListener("keydown", function (event) {
       event.preventDefault();
     }
   }
+});
+
+// Clicking outside the search area will close the search.
+document.getElementById("search-overlay").addEventListener("click", () => {
+  closeSearch();
 });

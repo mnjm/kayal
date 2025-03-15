@@ -318,11 +318,11 @@ details[open] div {
   color: var(--tertiary-color);
 }
 
-body.dark #moon {
+html.dark #moon {
   display: none;
 }
 
-body:not(.dark) #sun {
+html:not(.dark) #sun {
   display: none;
 }
 
@@ -997,4 +997,19 @@ pre code::-webkit-scrollbar-thumb:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Clicking outside the search area will close the search. */
+#search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#search-results,
+.panel {
+  z-index: 2;
 }
