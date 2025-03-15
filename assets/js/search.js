@@ -151,3 +151,8 @@ document.addEventListener("keydown", function (event) {
     }
   }
 });
+
+// Clicking outside the search area will close the search.
+document.getElementById("search-overlay").addEventListener("click", () => {
+  closeSearch();
+});
