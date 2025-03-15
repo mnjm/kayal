@@ -82,4 +82,18 @@
     {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
   {{ end }}
 
+  <!-- Darkmode -->
+  <script>
+    const siteTheme = "{{ .Site.Params.defaultTheme | default "auto" }}";
+    let savedTheme = localStorage.getItem('theme') || siteTheme;
+    if (savedTheme == 'auto') {
+      if ( window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ) {
+        savedTheme = 'dark';
+      }
+    }
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  </script>
 </head>
