@@ -7,4 +7,7 @@
     Built with <a href="https://gohugo.io" target="_blank">Hugo</a> & <a href="https://github.com/mnjm/kayal" target="_blank">Kayal</a>
   </div>
   {{ end }}
+  {{ if .Site.Params.lastUpdate }}
+  <div>Last update {{ now.Format "Jan 2, 2006" }}</div>
+  {{ end }}
 </footer>
