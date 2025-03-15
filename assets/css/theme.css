@@ -13,6 +13,16 @@
   --code-scroll-thumb: #525252;
   --scrollbar-track: #EFEFE6;
   --scrollbar-thumb: #B7B78F;
+
+  --blockquote-info: rgb(100, 130, 180);
+  --blockquote-tip: rgb(120, 170, 160);
+  --blockquote-warning: rgb(200, 150, 50);
+  --blockquote-danger: rgb(180, 100, 100);
+
+  --blockquote-info-bg: rgba(216, 232, 255, 0.7);
+  --blockquote-tip-bg: rgba(226, 245, 236, 0.7);
+  --blockquote-warning-bg: rgba(255, 248, 216, 0.7);
+  --blockquote-danger-bg: rgba(255, 224, 224, 0.7);
 }
 
 .dark {
