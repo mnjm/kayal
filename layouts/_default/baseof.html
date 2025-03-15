@@ -2,19 +2,6 @@
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
   {{ partial "head.html" . }}
   <body>
-    <script>
-      const siteTheme = "{{ .Site.Params.defaultTheme | default "auto" }}";
-      let savedTheme = localStorage.getItem('theme') || siteTheme;
-      if (savedTheme == 'auto') {
-        if ( window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ) {
-          savedTheme = 'dark';
-        }
-      }
-      if (savedTheme === "dark") {
-        document.body.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    </script>
     <div class="content">
       {{ partial "header.html" . }}
       <main>
