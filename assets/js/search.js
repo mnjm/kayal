@@ -98,7 +98,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
   searchTxt = document.getElementById("search-query");
 
   seachOpnBtn.addEventListener("click", openSearch);
-  closeBtn.addEventListener("click", closeSearch);
+  closeBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    closeSearch();
+  });
 
   searchTxt.onkeyup = function (event) {
     executeQuery(this.value);
