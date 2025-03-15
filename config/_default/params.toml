@@ -22,6 +22,8 @@ defaultTheme = "auto"  # Valid Options: light, dark, auto
 highlightCurrentMenu = true
 # The sections to display in the recent articles list. If not provided, the section with the most articles is used.
 mainSections = ["docs"]
+# Add the last build date (i.e., the last updated date) to the footer.
+lastUpdate = false
 # Whether to remove Hugo and theme attribution in the footer.
 removeAttribution = false
 # Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.
