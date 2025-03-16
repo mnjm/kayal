@@ -4,6 +4,7 @@
 {{ $caption := .Caption }}
 {{ $style := .Style }}
 {{ $size := .Size }}
+{{ $loading := .Loading }}
 
 {{/* Exclude types list */}}
 {{ $excludeTypes := slice "svg" }}
@@ -22,7 +23,7 @@
   {{ end }}
 
   {{ with $imgResrc }}
-    <img loading="lazy" {{ with $style }}class="{{ . }}"{{ end }}
+    <img loading="{{ $loading }}" {{ with $style }}class="{{ . }}"{{ end }}
     {{ if and $optimizeImg (not (in $excludeTypes .MediaType.SubType)) }}
       {{ if $size }}
         src="{{ (.Fit $size).RelPermalink }}"
@@ -41,6 +42,6 @@
   {{ end }}
 
 {{ else }}
-  <img loading="lazy" src="{{ $url.String }}" alt="{{ $altText }}" />
+  <img loading="{{ $loading }}" src="{{ $url.String }}" alt="{{ $altText }}" />
 {{ end }}
 {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption></figure>{{ end }}
