@@ -2,6 +2,7 @@
 {{ $lvl := .lvl }}
 {{ with .page }}
 <li>
+    <div>
     <h{{$lvl}}>
     {{ with .Params.externalUrl }}
         <a href="{{ . }}" target="_blank" rel="external">
@@ -12,5 +13,13 @@
     </h{{$lvl}}>
     {{ partial "single/meta.html" . }}
     {{ template "partials/home/pg-desc.html" . }}
+    </div>
+
+    <!-- Thumbnail - Use coverImg as thumbnail -->
+    {{ if .Site.Params.List.showThumbnail }}
+        {{ if .Params.coverImg }} 
+        <img src="{{ .Params.coverImg | relURL }}" alt="{{ .LinkTitle }}" class="thumbnail" />
+        {{ end }}
+    {{ end }}
 </li>
 {{ end }}

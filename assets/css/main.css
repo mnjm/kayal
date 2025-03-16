@@ -454,6 +454,37 @@ html:not(.dark) #sun {
   margin: 0;
 }
 
+
+/* List Card View Thumbnail */
+.lst-card:has(.thumbnail) > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lst-card .thumbnail {
+  width: auto;
+  height: 130px;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .lst-card:has(.thumbnail) > li {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .lst-card:has(.thumbnail) li div{
+    order: 2;
+    align-self: flex-start;
+  }
+
+  .lst-card:has(.thumbnail) li img{
+    order: 1;
+    height: 150px !important;
+  }
+}
+
 /* Page */
 .artile-ttl::before {
   content: none;
