@@ -511,8 +511,12 @@ pre, .highlight {
   position:relative;
 }
 
-div.highlight:hover .copy-button,
-pre:hover .copy-button {
+/* Code Copy Button */
+.code-container {
+  position: relative;
+}
+
+.code-container:hover .copy-button{
   display: block;
 }
 
