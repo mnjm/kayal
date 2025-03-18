@@ -89,7 +89,12 @@ function executeQuery(query) {
     });
     isResEmpty = false;
   } else {
-    resultsHtml = "";
+    if(query === ""){
+      resultsHtml = "";
+    }
+    else{
+      resultsHtml = `<p>No results for <em>${query}</em></p>`;
+    }
     isResEmpty = true;
   }
 
