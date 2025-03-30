@@ -70,14 +70,19 @@ function executeQuery(query) {
   if (results.length >= 1) {
     results.forEach(function (value, key) {
       var meta = value.item.section + " | ";
-      meta = meta + value.item.date ? value.item.date + " | " : "";
-      meta = meta + `<span class="srch-link">${value.item.permalink}</span>`;
+      meta = meta + value.item.date ? value.item.date + " | ": "";
+      meta = meta + `<span class="srch-link">${value.item.permalink}</span>`
+
+      // Highlight search results
+      const markedTitle = value.item.title.replace(RegExp(`(${query})`, 'gi'), "<mark>$1</mark>");
+      const markedSummary = value.item.summary.replace(RegExp(`(${query})`, 'gi'), "<mark>$1</mark>");
+
       resultsHtml =
         resultsHtml +
         `<li><a href="${value.item.permalink}">
-          <p class="srch-title">${value.item.title}</p>
+          <p class="srch-title">${markedTitle}</p>
           <p class="srch-meta">${meta}</p>
-          <p class="srch-smry">${value.item.summary}</p>
+          <p class="srch-smry">${markedSummary}</p>
         </a></li>`;
     });
     isResEmpty = false;
