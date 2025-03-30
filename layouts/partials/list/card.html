@@ -16,10 +16,12 @@
     </div>
 
     <!-- Thumbnail - Use coverImg as thumbnail -->
-    {{ if .Site.Params.List.showThumbnail }}
-        {{ if .Params.coverImg }} 
-        <img src="{{ .Params.coverImg | relURL }}" alt="{{ .LinkTitle }}" class="thumbnail" />
-        {{ end }}
+    {{ if .Params.coverImg }}
+      {{ if (hasPrefix .Params.coverImg "http") }}
+        <img src="{{ .Params.coverImg }}" alt="{{ .LinkTitle }}" class="thumbnail" />
+      {{ else }}
+        <img src="{{ .RelPermalink }}{{ .Params.coverImg | relURL }}" alt="{{ .LinkTitle }}" class="thumbnail" />
+      {{ end }}
     {{ end }}
 </li>
 {{ end }}
