@@ -459,13 +459,13 @@ html:not(.dark) #sun {
 .lst-card:has(.thumbnail) > li {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .lst-card .thumbnail {
   width: auto;
   height: 130px;
-  margin: 0;
+  margin: 0 2px;
 }
 
 @media (max-width: 600px) {
@@ -482,6 +482,8 @@ html:not(.dark) #sun {
   .lst-card:has(.thumbnail) li img{
     order: 1;
     height: 150px !important;
+    margin: 0 auto;
+    display: block;
   }
 }
 
