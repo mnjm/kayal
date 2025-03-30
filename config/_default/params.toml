@@ -64,6 +64,8 @@ groupByYear = false
 showBreadcrumbs = true
 # Whether to display pages as a card
 cardView = true
+# Whether to display thumbnail in list card view.
+showThumbnail = true
 # Whether to display RSS link
 showRSS = true
 
