@@ -17,11 +17,8 @@
 
     <!-- Thumbnail - Use coverImg as thumbnail -->
     {{ if .Params.coverImg }}
-      {{ if (hasPrefix .Params.coverImg "http") }}
-        <img src="{{ .Params.coverImg }}" alt="{{ .LinkTitle }}" class="thumbnail" />
-      {{ else }}
-        <img src="{{ .RelPermalink }}{{ .Params.coverImg | relURL }}" alt="{{ .LinkTitle }}" class="thumbnail" />
-      {{ end }}
+      {{ $imgData := dict "Page" . "URL" .Params.coverImg "Alt" .LinkTitle "Size" "x150" "Style" "thumbnail" }}
+      {{ partial "image-renderer.html" $imgData }}
     {{ end }}
 </li>
 {{ end }}
