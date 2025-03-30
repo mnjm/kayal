@@ -99,6 +99,7 @@ You can find the `params.toml` config file for this site [here](https://github.c
 | `highlightCurrentMenu`      | `true`                | When enabled, highlights the current menu item in the menu bar.                                                           |
 | `mainSections`              | `["posts"]`           | The sections to display in the recent articles list. If not provided, the section with the most articles is used.         |
 | `removeAttribution`         | `false`               | Whether to remove Hugo and theme attribution in the footer.                                                               |
+| `lastUpdate`                | `false`               | Add the last build date (i.e., the last updated date) to the footer.                                                      |
 | `showHeadingAnchors`        | `true`                | Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.    |
 | `enableSearch`              | `true`                | Whether to enable search functionality. `JSON` homepage output is required for this to function. Check [site config]({{< ref "#basic-site-configuration" >}}). |
 
@@ -162,10 +163,11 @@ Additionally, a few extra front matter parameters are available:
 
 | Name             | Default | Description                                    |
 | ---------------- | ------- | ---------------------------------------------- |
-| `groupByYear`    | `false` | Whether to group articles by year.            |
+| `groupByYear`    | `false` | Whether to group articles by year.             |
 | `showBreadcrumbs` | `false` | Whether to display breadcrumbs.               |
-| `cardView`       | `true`  | Whether to display pages in a card view.      |
+| `cardView`       | `true`  | Whether to display pages in a card view.       |
 | `showRSS`        | `false`  | Whether to display RSS link.                  |
+| `showThumbnail`  | `false`  | Whether to display thumbnail in list card view. |
 
 These settings can be overridden by page's front matter (in `_index.md` files for lists) with the same name.
 
