@@ -93,7 +93,7 @@ function executeQuery(query) {
       resultsHtml = "";
     }
     else{
-      resultsHtml = `<p>No results for <em>${query}</em></p>`;
+      resultsHtml = `<p style="padding-left:0.5em;">No results for <em>${query}</em></p>`;
     }
     isResEmpty = true;
   }
