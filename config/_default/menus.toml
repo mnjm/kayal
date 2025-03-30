@@ -29,6 +29,5 @@
 # [[main]]
 # name = "github"
 # pre = "github"
-# name = ""
 # url = "https://github.com/mnjm/kayal"
 # weight = 4
