@@ -9,12 +9,12 @@ document.querySelectorAll(".copy-button").forEach((item) =>
       let code;
       const codeBlock = item.previousElementSibling;
 
-      if (codeBlock.children[0].tagName === "PRE") {
-        // Plain code block. 
+    if (codeBlock.tagName === "PRE" || codeBlock.children[0].tagName === "PRE") {
+        // Plain code block
         code = codeBlock.textContent;
       } else {
-        // Code block with line number. 
-        code = codeBlock.querySelector("td:last-child").textContent;
+        // Code block with line number.
+        code = codeBlock.querySelector("td:last-child code").textContent;
       }
 
       navigator.clipboard.writeText(code);
