@@ -506,6 +506,12 @@ html:not(.dark) #sun {
 .meta-icon {
   display: inline-block;
   vertical-align: bottom;
+  margin-right: 0.2em;
+  margin-left: 0.5em;
+}
+
+.meta-icon:first-of-type {
+    margin-left: 0;
 }
 
 .meta-icon svg {
