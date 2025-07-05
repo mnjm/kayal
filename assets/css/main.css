@@ -754,7 +754,7 @@ pre:hover .copy-button {
 }
 
 .taxny-card {
-  flex: 1 0 200px;
+  flex: 1 0;
   margin: 10px;
   background-color: var(--secondary-color-dark);
   padding: 10px;
