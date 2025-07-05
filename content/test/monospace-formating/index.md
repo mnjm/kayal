@@ -46,3 +46,11 @@ A wonderful serenity has taken possession of my entire soul, like these sweet mo
 ## Example [hyperlink](https://example.com/) in a header
 
 I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary
+
+Normal text [^footnote]
+
+{{< collapse summary="Click to see" >}}
+Collapsible text [^footnote]
+{{< /collapse >}}
+
+[^footnote]: Footnote
