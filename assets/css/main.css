@@ -389,10 +389,6 @@ html:not(.dark) #sun {
   margin: 0.2em;
 }
 
-.icon {
-  position: relative;
-}
-
 .socials-icon svg {
   height:1.5em;
   width:1.5em;
@@ -690,6 +686,7 @@ pre:hover .copy-button {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  margin-right: 0.2em;
 }
 
 .icon svg {
