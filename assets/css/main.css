@@ -97,6 +97,7 @@ code {
   word-break: break-word;
   word-wrap: break-word;
   overflow: break-word;
+  white-space: nowrap;
 }
 
 /*a code {*/
@@ -109,6 +110,9 @@ pre {
 }
 
 pre code {
+  /* `code { white-space: nowrap; }` messes up whitespace in multiline code blocks */
+  white-space: inherit;
+
   background-color: transparent;
   color: inherit;
   font-size: 100%;
