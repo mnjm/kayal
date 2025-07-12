@@ -110,7 +110,7 @@ pre {
 }
 
 pre code {
-  /* `code { white-space: nowrap; }` breaks whitespace in multiline code blocks */
+  /* `code { white-space: nowrap; }` messes up whitespace in multiline code blocks */
   white-space: inherit;
 
   background-color: transparent;
