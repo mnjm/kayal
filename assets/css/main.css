@@ -97,6 +97,7 @@ code {
   word-break: break-word;
   word-wrap: break-word;
   overflow: break-word;
+  white-space: nowrap;
 }
 
 /*a code {*/
