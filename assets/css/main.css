@@ -759,6 +759,7 @@ pre:hover .copy-button {
   background-color: var(--secondary-color-dark);
   padding: 10px;
   border-radius: var(--radius);
+  white-space: nowrap;
 }
 
 .comment {
