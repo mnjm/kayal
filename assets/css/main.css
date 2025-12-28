@@ -74,6 +74,14 @@ ul li:before {
   margin-left: -1em;
 }
 
+/* https://github.com/mnjm/kayal/issues/62 */
+main ul li p:first-of-type {
+  display: inline;
+}
+main ul.lst li div.lst-a {
+  display: inline;
+}
+
 img {
   max-width: 100%;
   height: auto;
