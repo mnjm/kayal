@@ -82,6 +82,14 @@ main ul.lst li div.lst-a {
   display: inline;
 }
 
+/* https://github.com/mnjm/kayal/pull/76 */
+li:has(p) + li:has(p) {
+  margin-top: 7px;
+}
+li p:last-of-type {
+  margin-bottom: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
