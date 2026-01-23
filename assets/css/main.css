@@ -41,6 +41,15 @@ mark {
   color: var(--primary-color);
 }
 
+/* https://github.com/mnjm/kayal/issues/63 */
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
