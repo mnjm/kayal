@@ -74,12 +74,23 @@ ul li:before {
   margin-left: -1em;
 }
 
-/* https://github.com/mnjm/kayal/issues/62 */
+/* https://github.com/mnjm/kayal/issues/62, https://github.com/mnjm/kayal/issues/78 */
+main ul li:has(p)::before {
+  float: left;
+}
 main ul li p:first-of-type {
   display: inline;
 }
+main ul.lst li:has(div.lst-a)::before {
+  float: left;
+}
 main ul.lst li div.lst-a {
   display: inline;
+}
+
+/* Without this, there's more space between <p>s in <li>, than between <li>s themselves */
+main ul li p  {
+  margin-top: 1ch;
 }
 
 /* https://github.com/mnjm/kayal/pull/76 */
