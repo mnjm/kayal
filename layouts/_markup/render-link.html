@@ -5,3 +5,5 @@
     {{- if or (strings.HasPrefix .Destination "http:") (strings.HasPrefix .Destination "https:") }} target="_blank"{{ end }}>
     {{- .Text | safeHTML -}}
 </a>
+<!-- Make sure that there's no trailing newline after this comment.
+     Otherwise, there's an extra space after every link in the generated HTML -->
