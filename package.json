@@ -24,8 +24,8 @@
   "homepage": "https://github.com/mnjm/kayal#readme",
   "dependencies": {
     "fuse.js": "^7.1.0",
-    "katex": "^0.16.25",
-    "mermaid": "^11.12.1",
+    "katex": "^0.16.28",
+    "mermaid": "^11.12.2",
     "vendor-copy": "^3.0.1"
   },
   "vendorCopy": [],
