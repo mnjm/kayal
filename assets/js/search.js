@@ -1,3 +1,5 @@
+import Fuse from "../lib/fuse/fuse.min.mjs";
+
 var seachOpnBtn = null;
 var closeBtn = null;
 var searchCntr = null;

@@ -51,8 +51,8 @@
       "to": "assets/lib/katex/fonts/"
     },
     {
-      "from": "node_modules/fuse.js/dist/fuse.min.js",
-      "to": "assets/lib/fuse/fuse.min.js"
+      "from": "node_modules/fuse.js/dist/fuse.min.mjs",
+      "to": "assets/lib/fuse/fuse.min.mjs"
     }
   ]
 }
