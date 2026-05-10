@@ -71,6 +71,8 @@ Rendered as:
 
 `collapse` shortcode generates an HTML `<details>` element. It allows for collapsible content sections on your Hugo site.
 
+Use Hugo's Markdown shortcode notation, `{{%/* collapse */%}}`, so inner Markdown is rendered in the page context. This is required for features like footnotes to work correctly inside the collapsed content.
+
 | Parameter | Description |
 |-----------|-------------|
 | `summary` | The summary text displayed as the clickable title of the collapsible section. |
@@ -80,14 +82,14 @@ Rendered as:
 **Example**
 
 ```markdown
-{{</* collapse summary="Click to expand" open=true */>}}
+{{%/* collapse summary="Click to expand" open=true */%}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in lectus efficitur, in consequat purus ultricies.
-{{</* /collapse */>}}
+{{%/* /collapse */%}}
 ```
 Rendered as:
-{{< collapse summary="Click to expand" open=true >}}
+{{% collapse summary="Click to expand" open=true %}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum diam in lectus efficitur, in consequat purus ultricies.
-{{< /collapse >}}
+{{% /collapse %}}
 
 ## Icon
 

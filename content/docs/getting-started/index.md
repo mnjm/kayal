@@ -39,7 +39,7 @@ There several different ways to install the Kayal theme into your Hugo website. 
 
 If unsure, choose the Git submodule method.
 
-{{< collapse summary="<b>Install as Git submodule</b>" open=true >}}
+{{% collapse summary="<b>Install as Git submodule</b>" open=true %}}
 
 This method is the quickest and easiest for keeping the theme up-to-date. Besides **Hugo** and **Go**, you'll also need to ensure you have **Git** installed on your local machine.
 
@@ -52,9 +52,9 @@ git submodule add -b main https://github.com/mnjm/kayal.git themes/kayal
 ```
 
 Then continue to [set up the theme configuration files](#set-up-theme-configuration-files).
-{{< /collapse >}}
+{{% /collapse %}}
 
-{{< collapse summary="<b>Install as Hugo Module</b>" >}}
+{{% collapse summary="<b>Install as Hugo Module</b>" %}}
 For this method, use Hugo to manage your themes. Make sure you have **Go** installed before proceeding.
 
 1. [Download](https://golang.org/dl/) and install Go. Verify with `go version` (requires Go version 1.12 or later).
@@ -77,14 +77,14 @@ For this method, use Hugo to manage your themes. Make sure you have **Go** insta
 
 4. Start your server using `hugo server` and the theme will be downloaded automatically.
 5. Continue to [set up the theme configuration files](#set-up-theme-configuration-files).
-{{< /collapse >}}
+{{% /collapse %}}
 
-{{< collapse summary="<b>Install manually</b>" >}}
+{{% collapse summary="<b>Install manually</b>" %}}
 
 1. Download the latest release of the theme source code. Download [link](https://github.com/mnjm/kayal/releases/latest)
 2. Extract the archive, rename the folder to `kayal` and move it to the `themes/` directory inside your Hugo project's root folder.
 3. Continue to [set up the theme configuration files](#set-up-theme-configuration-files).
-{{< /collapse >}}
+{{% /collapse %}}
 
 ### Set up theme configuration files
 
@@ -123,7 +123,7 @@ The basic Kayal installation is now complete. Continue to the [Configuration]({{
 
 Periodically, new [releases](https://github.com/mnjm/kayal/releases) may include fixes and new features. Update theme files on your website based on your initial installation method.
 
-{{< collapse summary="<b>Update using git</b>" open=true >}}
+{{% collapse summary="<b>Update using git</b>" open=true %}}
 
 Git submodules can be updated using the `git` command. Simply execute the following command and the latest version of the theme will be downloaded into your local repository:
 
@@ -132,9 +132,9 @@ git submodule update --remote --merge
 ```
 
 Once the submodule has been updated, rebuild your site and check everything works as expected.
-{{< /collapse >}}
+{{% /collapse %}}
 
-{{< collapse summary="Update using Hugo" >}}
+{{% collapse summary="Update using Hugo" %}}
 Hugo makes updating modules super easy. Simply change into your project directory and execute the following command:
 
 ```shell
@@ -144,9 +144,9 @@ hugo mod get -u
 Hugo will automatically update any modules that are required for your project. It does this by inspecting your `module.toml` and `go.mod` files. If you have any issues with the update, check to ensure these files are still configured correctly.
 
 Then simply rebuild your site and check everything works as expected.
-{{< /collapse >}}
+{{% /collapse %}}
 
-{{< collapse summary="Update manually" >}}
+{{% collapse summary="Update manually" %}}
 Updating Kayal manually requires you to download the latest copy of the theme and replace the old version in your project.
 
 **Note**: Any local customisations you have made to the theme files will be lost during this process.
@@ -154,4 +154,4 @@ Updating Kayal manually requires you to download the latest copy of the theme an
 1. Download the latest theme release [here](https://github.com/mnjm/kayal/releases/latest).
 2. Extract and move `kayal` to `themes/` in your Hugo project.
 3. Rebuild your site and check everything works as expected.
-{{< /collapse >}}
+{{% /collapse %}}

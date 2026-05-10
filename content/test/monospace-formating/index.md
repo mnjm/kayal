@@ -49,8 +49,8 @@ I feel that I never was a greater artist than now. When, while the lovely valley
 
 Normal text [^footnote]
 
-{{< collapse summary="Click to see" >}}
+{{% collapse summary="Click to see" %}}
 Collapsible text [^footnote]
-{{< /collapse >}}
+{{% /collapse %}}
 
 [^footnote]: Footnote
