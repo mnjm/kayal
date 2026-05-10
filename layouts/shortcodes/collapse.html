@@ -1,8 +1,9 @@
 {{ if .Get "summary" }}
-<p><details {{ if (eq (.Get "open") true) }} open=true {{ end }}>
-  <summary markdown="span">{{ .Get "summary" | markdownify }}</summary>
-  {{ .Inner | markdownify }}
-</details></p>
+<details{{ if (eq (.Get "open") true) }} open{{ end }}>
+  <summary>{{ .Get "summary" | markdownify }}</summary>
+
+{{ .InnerDeindent | strings.TrimSpace }}
+</details>
 {{ else }}
 {{ errorf "missing value for param 'summary': %s" .Position }}
 {{ end }}
