@@ -24,7 +24,7 @@
     </image>
     {{- end }}
     <generator>Hugo -- {{ hugo.Version }}</generator>
-    <language>{{ site.Language.LanguageCode }}</language>{{ with site.Params.Author.email }}
+    <language>{{ site.Language.Locale }}</language>{{ with site.Params.Author.email }}
     <managingEditor>{{.}}{{ with site.Params.Author.name }} ({{ . }}){{ end }}</managingEditor>{{ end }}{{ with site.Params.Author.email }}
     <webMaster>{{ . }}{{ with site.Params.Author.name }} ({{ . }}){{ end }}</webMaster>{{ end }}{{ with site.Copyright }}
     <copyright>{{ . | markdownify | plainify | strings.TrimPrefix "© " }}</copyright>{{ end }}{{ if not .Date.IsZero }}
