@@ -4,7 +4,7 @@
 baseURL = 'https://mnjm.github.io/kayal'
 
 # Site's language code
-languageCode = 'en-us'
+locale = 'en-us'
 
 title = "Kayal"
 

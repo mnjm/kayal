@@ -43,7 +43,7 @@ Note: the variable names provided in this table use dot notation to simplify the
 | ---------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------- |
 | `theme`                      | `"kayal"`                | The theme to use. Should be set to `"kayal"` for the theme to work. <br> **Required** if you didn't use Hugo Modules to install Kayal. |
 | `baseURL`                    | `Not Set`                | **Required** The URL to the root of the website.                                                  |
-| `languageCode`               | `en-us`                  | Language ISO 639 code for your site.                                                              |
+| `locale`                     | `en-us`                  | Language ISO 639 code for your site.                                                              |
 | `title`                      | `Not Set`                | **Required**: The site’s title.                                                                    |
 | `pagination.pagerSize`       | `5`                      | The number of articles listed on each page of the article listing.                               |
 | `enableEmoji`                | `true`                   | Enables emoji processing in markdown.                                                             |
@@ -103,6 +103,21 @@ You can find the `params.toml` config file for this site [here](https://github.c
 | `showHeadingAnchors`        | `true`                | Whether to show anchor links in headings. Can be overridden by Page-specific `showHeadingAnchors` in its front matter.    |
 | `enableSearch`              | `true`                | Whether to enable search functionality. `JSON` homepage output is required for this to function. Check [site config]({{< ref "#basic-site-configuration" >}}). |
 
+#### Header
+
+| Name               | Default         | Description |
+| ------------------ | --------------- | ----------- |
+| `header.width`     | `"truncated"`   | Controls the header width. Valid options: `"truncated"` and `"full"`. `"truncated"` keeps the header constrained to the content width. `"full"` stretches the header across the page width while keeping internal spacing aligned. |
+| `header.behavior`  | `"fixed"`       | Controls the header scroll behavior. Valid options: `"fixed"` and `"hover"`. `"fixed"` keeps the header in normal document flow. `"hover"` keeps it visible while scrolling and applies the transparent blurred card treatment. |
+
+Example:
+
+```toml
+[header]
+width = "truncated"
+behavior = "fixed"
+```
+
 ### Homepage
 
 | Name              | Default    | Description                                                                         |
@@ -149,6 +164,19 @@ date: 2024-07-21T21:28:49+05:30
 showToC: false
 ---
 <!-- Markdown content -->
+```
+
+Header settings can also be overridden per page via front matter. For example:
+
+```toml
++++
+title = "Example"
+date = 2024-07-21T21:28:49+05:30
+
+[header]
+width = "full"
+behavior = "hover"
++++
 ```
 
 Additionally, a few extra front matter parameters are available:
