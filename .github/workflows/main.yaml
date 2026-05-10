@@ -56,7 +56,7 @@ jobs:
           HUGO_ENV: production
           TZ: America/Los_Angeles
         run: |
-           npm run demo-build
+           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
