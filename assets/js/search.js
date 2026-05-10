@@ -51,6 +51,7 @@ function openSearch() {
     buildIndex();
   }
   if (!isSearchOpen) {
+    document.body.classList.add("search-open");
     searchCntr.style.display = "flex";
     document.body.style.overflow = "hidden";
     resultCntr.innerHTML = "";
@@ -61,6 +62,7 @@ function openSearch() {
 
 function closeSearch() {
   if (isSearchOpen) {
+    document.body.classList.remove("search-open");
     searchCntr.style.display = "none";
     document.body.style.overflow = "";
     searchTxt.value = "";

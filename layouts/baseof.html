@@ -2,8 +2,8 @@
 <html lang="{{ or site.Language.Locale site.Language.Lang }}" dir="{{ or site.Language.Direction `ltr` }}">
   {{ partial "head.html" . }}
   <body>
+    {{ partial "header.html" . }}
     <div class="content">
-      {{ partial "header.html" . }}
       <main>
         {{ block "main" . }}{{ end }}
       </main>

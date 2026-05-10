@@ -1,8 +1,16 @@
 :root{
   --ff: 'Ubuntu';
   --radius: 6px;
+  --content-width: 900px;
+  --page-gutter: 8px;
+  --full-header-gutter: 24px;
+  --header-top-offset: 0;
+  --header-hover-top-offset: 0.2rem;
+  --header-block-padding: 0.75rem;
+  --header-hover-radius: 16px;
   --primary-color: #292929;
   --secondary-color: #EFEFE6;
+  --secondary-color-rgb: 239, 239, 230;
   --tertiary-color: #E0002D;
   --link-color: #449DD1;
   --tertiary-color-light: #FFB370;
@@ -18,6 +26,7 @@
 .dark {
   --primary-color: #EFEFE6;
   --secondary-color: #292929;
+  --secondary-color-rgb: 41, 41, 41;
   --tertiary-color: #FF7F11;
   --tertiary-color-light: #A34C00;
   --secondary-color-dark: #3D3D29;

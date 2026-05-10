@@ -1,64 +1,99 @@
-<header>
-    {{ if .Site.Params.logo }}
-    <a class="title" href="{{ "" | relLangURL}}">
-      {{ $imgData := dict "Page" . "URL" .Site.Params.logo "Alt" "Site Logo" "Size" "64x64" }}
-      {{ partial "image-renderer.html" $imgData }}
-    </a>
-    {{ end }}
-    <div class="header-cntr">
-    <a class="title" href="{{ "" | relLangURL}}">
-    <span>{{ .Site.Title | emojify }}</span>
-    </a>
-  <div class="menu">
-  <nav id="main-menu" class="mm-normal">
-    <ul>
-    <li> <button id="mob-x-icon" class="menu-btn" arial-label="x-icon"> {{ partial "icon.html" "xmark" }} </button> </li>
-    {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL }}" aria-label="{{ .Name }}">
-      {{ if .Pre }}
-        <span>
-          {{ partial "icon.html" .Pre }}
-        </span>
-          {{ end }}{{ .Title | emojify }}</li></a>
-    {{ end }}
-    </ul>
-  </nav>
-    <div class="side-menu">
-    {{ partial "search.html" . }}
-    {{ if .Site.Params.showThemeSwitcher | default false }}
-    <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher">
-      <div id="moon">
-      {{ partial "icon.html" "moon" }}
+{{ $siteHeader := .Site.Params.header | default dict }}
+{{ $pageHeader := .Params.header | default dict }}
+
+{{ $width := or $pageHeader.width $siteHeader.width "truncated" }}
+{{ if not (in (slice "truncated" "full") $width) }}
+  {{ $width = "truncated" }}
+{{ end }}
+
+{{ $behavior := or $pageHeader.behavior $siteHeader.behavior "fixed" }}
+{{ if not (in (slice "fixed" "hover") $behavior) }}
+  {{ $behavior = "fixed" }}
+{{ end }}
+
+<header class="site-header site-header--{{ $width }} site-header--{{ $behavior }}">
+  <div class="site-header__bar">
+    <div class="site-header__inner">
+      {{ if .Site.Params.logo }}
+      <a class="title" href="{{ "" | relLangURL }}">
+        {{ $imgData := dict "Page" . "URL" .Site.Params.logo "Alt" "Site Logo" "Size" "64x64" }}
+        {{ partial "image-renderer.html" $imgData }}
+      </a>
+      {{ end }}
+      <div class="header-cntr">
+        <a class="title" href="{{ "" | relLangURL }}">
+          <span>{{ .Site.Title | emojify }}</span>
+        </a>
+        <div class="menu">
+          <nav id="main-menu" class="mm-normal">
+            <ul>
+              <li><button id="mob-x-icon" class="menu-btn" aria-label="x-icon">{{ partial "icon.html" "xmark" }}</button></li>
+              {{ range .Site.Menus.main }}
+              <li><a href="{{ .URL }}" aria-label="{{ .Name }}">
+                {{ if .Pre }}
+                <span>
+                  {{ partial "icon.html" .Pre }}
+                </span>
+                {{ end }}{{ .Title | emojify }}</a></li>
+              {{ end }}
+            </ul>
+          </nav>
+          <div class="side-menu">
+            {{ partial "search.html" . }}
+            {{ if .Site.Params.showThemeSwitcher | default false }}
+            <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher">
+              <div id="moon">
+                {{ partial "icon.html" "moon" }}
+              </div>
+              <div id="sun">
+                {{ partial "icon.html" "sun" }}
+              </div>
+            </button>
+            {{ end }}
+          </div>
+          <button id="mob-hb-icon" class="menu-btn" aria-label="Hamburger icon">
+            {{ partial "icon.html" "bars" }}
+          </button>
+        </div>
       </div>
-      <div id="sun">
-      {{ partial "icon.html" "sun" }}
-      </div>
-    </button>
-    {{ end }}
     </div>
-    <button id="mob-hb-icon" class="menu-btn" aria-label="Hamburger icon">
-      {{ partial "icon.html" "bars" }}
-    </button>
   </div>
+  {{ if .Site.Params.enableSearch | default false }}
+  <div id="search-container" data-url="{{ "" | absURL }}">
+    <div class="search">
+      <div class="panel">
+        <form>
+          {{ partial "icon.html" "search" }}
+          <input type="search" id="search-query" placeholder="Search" tabindex=0 autocomplete="off"/>
+          <button id="search-close" title="Cancel (ESC)">
+            {{ partial "icon.html" "xmark" }}
+          </button>
+        </form>
+      </div>
+      <ul id="search-results"></ul>
+      <div id="search-overlay"></div>
+    </div>
+  </div>
+  {{ end }}
   <script>
   (function() {
     document.addEventListener('DOMContentLoaded', function() {
-    const openBtn = document.getElementById('mob-hb-icon');
-    const closeBtn = document.getElementById('mob-x-icon');
-    const mainMenu = document.getElementById('main-menu');
-    const body = document.body;
+      const openBtn = document.getElementById('mob-hb-icon');
+      const closeBtn = document.getElementById('mob-x-icon');
+      const mainMenu = document.getElementById('main-menu');
+      const body = document.body;
 
-    openBtn.addEventListener('click', function() {
+      openBtn.addEventListener('click', function() {
         mainMenu.classList.replace('mm-normal', 'mm-mobile-open');
         closeBtn.style.display = 'block';
         body.style.overflow = 'hidden';
-    });
-    closeBtn.addEventListener('click', function() {
+      });
+      closeBtn.addEventListener('click', function() {
         mainMenu.classList.replace('mm-mobile-open', 'mm-normal');
         closeBtn.style.display = 'none';
         body.style.overflow = '';
+      });
     });
-    })
   })();
   </script>
   {{ if .Site.Params.highlightCurrentMenu }}
@@ -78,5 +113,4 @@
   })();
   </script>
   {{ end }}
-</div>
 </header>
